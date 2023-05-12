@@ -1,0 +1,34 @@
+@import "../../constants";
+
+.button, .button-2 {
+    padding: 15px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $accent-pink;
+    color: $text-light;
+    font-size: $text-small;
+    font-family: "Poppins";
+    font-weight: 700;
+    border-radius: 10px;
+    border-style: none;
+    text-decoration: none;
+    @include phone {
+        font-size: 16px;
+      }
+    
+    &:hover,
+    &:focus {
+        opacity: 0.7;
+        box-shadow: 0 0 11px rgba(255, 96, 120, 0.5);
+        transform: translateY(-5px);
+        transition: 0.1s linear;
+    }
+}
+
+.button-2 {
+    background-color: transparent;
+    color: $accent-pink;
+    border: 2px solid $accent-pink;
+}
+

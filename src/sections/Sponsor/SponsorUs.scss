@@ -1,0 +1,113 @@
+@import "../../constants";
+
+@keyframes rotate {
+  0% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(10px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-10px);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(10px);
+    opacity: 1;
+  }
+}
+
+.sponsor-us {
+  &-container {
+    text-align: left;
+    @include phone {
+      height: auto;
+    }
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: row;
+    @include phone {
+      flex-direction: column;
+    }
+  }
+
+  &-text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    @include phone {
+      width: 100%;
+    }
+  }
+
+  &-images {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    width: 50%;
+    padding-top: 40px;
+    @include phone {
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+    .plant-and-bee {
+      width: 80%;
+      animation: bounce 3s linear infinite;
+      @include phone {
+        padding-top: 0;
+        padding-bottom: 20px;
+      }
+    }
+  }
+
+  &-title {
+    margin-bottom: 16px;
+    @include phone {
+    }
+  }
+
+  &-description {
+    margin-bottom: 8px;
+    p {
+      margin-bottom: 16px;
+    }
+    @include phone {
+      width: 100%;
+      p {
+        margin-bottom: 8px;
+      }
+    }
+  }
+
+  &-image {
+    width: 30%;
+  }
+
+  h2 {
+    margin-top: 1rem;
+    @include phone {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &-showcase {
+    margin: 50px 96px;
+    @include phone {
+      margin: 0px;
+    }
+  }
+}

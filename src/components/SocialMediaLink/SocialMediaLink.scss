@@ -1,0 +1,11 @@
+.social-link-container {
+    padding: 5px;
+}
+
+.social-icon {
+    height: 43px;
+    &:hover {
+        transform: translateY(-5px);
+        transition: 0.1s linear;
+    }
+}
