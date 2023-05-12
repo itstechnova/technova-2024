@@ -1,4 +1,4 @@
-# itsTechNova Website
+# itstechnova Website
 
 **Live website: [www.itstechnova.com](https://itstechnova.com/), [www.itstechnova.org](https://itstechnova.org/)**  
 **Dev website: [technova-2023.netlify.app/](https://technova-2023.netlify.app/)**  
