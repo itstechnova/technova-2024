@@ -1,9 +1,7 @@
 # itsTechNova Website
 
-**Checkout the live website: [www.itstechnova.com](https://itstechnova.com/), [www.itstechnova.org](https://itstechnova.org/)**  
-**Dev site: [itstechnova-dev.netlify.app/](https://itstechnova-dev.netlify.app/)**  
-**Netlify domain: [itstechnova.netlify.app/](https://itstechnova.netlify.app/)**
-
+**Live website: [www.itstechnova.com](https://itstechnova.com/), [www.itstechnova.org](https://itstechnova.org/)**  
+**Dev website: [technova-2023.netlify.app/](https://technova-2023.netlify.app/)**  
 
 ## Getting Started
 
@@ -20,23 +18,6 @@ Run the following to view live changes on http://localhost:3000
 ```
 yarn start
 ```
-
-
-## Deployment
-
-Netlify is set up to **automatically trigger deployments** upon changes to:  
-- dev branch for: [itstechnova-dev.netlify.app/](https://itstechnova-dev.netlify.app/)  
-- main branch for: [www.itstechnova.com](http://itstechnova.com/)     
-
-A preview website will be deployed by Netlify when you create a pull request. Navigate by clicking on the `Details` button below:   
-<img width="922" alt="Screen Shot 2021-05-02 at 4 58 54 PM" src="https://user-images.githubusercontent.com/43832056/116832521-f8dbc400-ab69-11eb-9cf5-dc725645e73d.png">
-
-To see build status and analytics, login by email here: https://app.netlify.com/ 
-```
-email: hacktechnova@gmail.com
-password: {Same as gmail}
-```
-Unfortunately the free plan does not allow for adding team members.
 
 ## Development Tips
 
@@ -56,4 +37,20 @@ Unfortunately the free plan does not allow for adding team members.
 
 - Always run `yarn install` after pulling from master or checking out to a remote branch
 - Always update your local master branch by running `git pull` everytime a PR is merged to minimize the need to resolve conflicts when you are creating a PR
+
+## Deployment
+
+Netlify is set up to **automatically trigger deployments** upon changes to:  
+- dev branch for: [itstechnova-dev.netlify.app/](https://itstechnova-dev.netlify.app/)  
+- main branch for: [www.itstechnova.com](http://itstechnova.com/)     
+
+A preview website will be deployed by Netlify when you create a pull request. Navigate by clicking on the `Details` button below:   
+<img width="922" alt="Screen Shot 2021-05-02 at 4 58 54 PM" src="https://user-images.githubusercontent.com/43832056/116832521-f8dbc400-ab69-11eb-9cf5-dc725645e73d.png">
+
+To see build status and analytics, login by email here: https://app.netlify.com/ 
+```
+email: hacktechnova@gmail.com
+password: {Same as gmail}
+```
+Unfortunately the free plan does not allow for adding team members.
 
