@@ -7,11 +7,10 @@
 
 Clone the project: 
 ```
-git clone https://github.com/itstechnova/itstechnova.com 
+git clone https://github.com/itstechnova/technova-2023.git
 ```
-Navigate to project directory and install required packages:
+Open the project on VS Code and install required packages:
 ```
-cd itstechnova.com
 yarn install
 ```
 Run the following to view live changes on http://localhost:3000
@@ -23,8 +22,8 @@ yarn start
 
 #### Naming Convention
 
-- Name your branches `feature/ticket#-title`, where ticket# refers to the task id you are working on
-- e.g. feature/12-create-nav-bar
+- Name your branches `ticket#-title`, where ticket# refers to the task id you are working on
+- e.g. 2-create-nav-bar
 
 #### Pull Requests & Commits
 
