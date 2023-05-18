@@ -1,7 +1,7 @@
 # itstechnova Website
 
 **Live website: [www.itstechnova.com](https://itstechnova.com/), [www.itstechnova.org](https://itstechnova.org/)**  
-**Dev website: [technova-2023.netlify.app/](https://technova-2023.netlify.app/)**  
+**Dev website: [itstechnova2023-dev.netlify.app/](https://itstechnova2023-dev.netlify.app/)** 
 
 ## Getting Started
 
