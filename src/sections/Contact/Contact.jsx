@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import SectionWrapper from "../../components/SectionWrapper/SectionWrapper";
 import SocialMediaLink from "../../components/SocialMediaLink/SocialMediaLink";
 import Team from "../../sections/Team/Team";
-
+import Footer from "../Footer/Footer";
 import "./Contact.scss";
 import arrow from "../../resources/images/icons/submit.svg";
 import contactImage from "../../resources/images/contact.svg";
@@ -79,7 +79,7 @@ function Contact() {
         return (
             <div className="contact">
                 <h1 className="sub-title">{contact.title}</h1>
-                <div className="email-wrapper">
+                {/* <div className="email-wrapper">
                 {state.screenWidth >= 400 ? 
                 <input className="email-input" placeholder="Enter your email to stay connected" value={state.email} onChange={e => setState({ ...state, email: e.target.value })} />
                 : <input className="email-input" placeholder="Enter your email address" value={state.email} onChange={e => setState({ ...state, email: e.target.value })} />}
@@ -88,9 +88,19 @@ function Contact() {
                             <img src={arrow} className="submit-btn" alt="email submit" />
                         </div>
                     </div>
-                </div>
-
-                {state.success && <p> Thanks for signing up, we'll keep you updated!</p>}
+                </div> */}
+                <Footer />
+                <h2 className="inclusivityStatement">Inclusivity Statement</h2>
+                <br/>
+                <h3 className="statement">TechNova’s mission is to create safe, inclusive and empowering spaces for women and 
+                    non-binary individuals to start, grow and thrive in the technology industry. We ensure that 
+                    all members of the hackathon are respectful of our participants' gender expression. The TechNova
+                     team would also like to acknowledge that “female” or “women” is not an accurate description
+                      for many people and it may make some feel unwelcome. We use the term Women+ to specifically
+                       and intentionally include cis and trans women, as well as non-binary, agender, or intersex
+                        people, and other gender minorities.
+                </h3>
+                {/* {state.success && <p> Thanks for signing up, we'll keep you updated!</p>}
                 {state.error && <p> Please enter a valid email.</p>}
                 <div className="socials-row">
                     <SocialMediaLink src={mail} link={socials.email} />
@@ -98,30 +108,22 @@ function Contact() {
                     <SocialMediaLink src={linkedin} link={socials.linkedin} />
                     <SocialMediaLink src={facebook} link={socials.facebook} />
                     <SocialMediaLink src={twitter} link={socials.twitter} />
-                </div>
-
-                {/* <div className="links-row">
-                    <a className="contact-links" href={contact.href1}>{contact.link1}</a>
-                    <a className="contact-links" href={contact.href2}>{contact.link2}</a>
-                    <a className="contact-links" href={contact.href3}>{contact.link3}</a>
-                    <a className="contact-links" href={contact.href4}>{contact.link4}</a>
                 </div> */}
-
             </div>
         )
     }
 
     return (
         <SectionWrapper id="contact">
+            <Team />
             <div className="contact-container">
                 <div className="contact-row">
                     {contactInfo()}
-                    <div className="contact-image-container">
+                    {/* <div className="contact-image-container">
                         <img alt="" src={contactImage} />
-                    </div>
+                    </div> */}
                 </div>
             </div>
-            <Team />
         </SectionWrapper>
     );
 
