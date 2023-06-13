@@ -1,0 +1,126 @@
+@import "../../constants";
+
+.our-partners {
+  margin: auto;
+  // padding: 4em;
+  background-color: #FFFFFF;
+  display: grid;
+  grid-template-columns: 55% 45%;
+  grid-template-areas: 
+    "wics-description wics-logo"
+    "wics-description wics-button";
+
+  &-title {
+    margin-top: 50px;
+    margin-bottom: 24px;
+    text-align: left;
+  }
+
+  &-divider {
+    border: 1px solid;
+    width: 100%;
+    margin-bottom: 3em;
+  }
+
+  &-header {
+    background-color: #F8B3B8;
+    border-bottom: 3px solid;
+    height: 4em;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: end;
+    .white-box {
+      margin: auto;
+      border-style: solid;
+      border-width: 2px;
+      margin-right: 0.5em;
+      background-color: #FFFFFF;
+      height: 2em;
+      width: 2em;
+    }
+  }
+
+  &-box {
+    border-style: solid;
+    border-width: 3px;
+    width: 95%;
+    box-shadow: 20px 20px #19123C;
+  }
+
+  &-text {
+    grid-area: wics-description;
+    padding: 3em;
+    // @media (max-width: 1235px) {
+    //   margin: 0px 317px 0px 3%;
+    // }
+    // @media (max-width: 1146px) {
+    //   margin: 0px 317px 0px 3%;
+    // }
+
+    // @include tablet {
+    //   background-color: white;
+    //   margin-top: -5px !important;
+    //   padding: 0% 5% 5% 5%;
+    //   margin: 0px;
+    //   p {
+    //     color: black;
+    //   }
+    //   border-radius: 0px 0px 10px 10px;
+    // }
+  }
+
+  &-button {
+    border-style: solid;
+    border-width: 2px;
+    height: 4em;
+    width: 60%;
+    box-shadow: 10px 10px #19123C;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-around;
+    align-items: center;
+    text-decoration: none;
+    p {
+      font-size: 1em;
+    }
+  }
+
+  & {
+    // background-image: url("../../resources/images/WiCSBg.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color: #19123c;
+    text-align: left;
+    .wics_logo {
+      grid-area: wics-logo;
+      width: 300px;
+      margin-left: 20%;
+      padding-bottom: 20px;
+    }
+    .mobile_img {
+      display: none;
+    }
+
+    @include tablet {
+      background-image: none;
+      .mobile_img {
+        display: block;
+      }
+      .wics_logo {
+        display: none;
+      }
+
+      img {
+        width: 100%;
+        margin-left: 0%;
+      }
+    }
+
+    .wics_button {
+      grid-area: wics-button;
+      display: flex;
+      justify-content: center;
+      padding-bottom: 4em;
+    }
+  }
+}
