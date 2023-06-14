@@ -8,6 +8,7 @@ import FAQ from "./sections/FAQ/FAQ";
 import Contact from "./sections/Contact/Contact";
 import Footer from "./sections/Footer/Footer";
 import logo from "./resources/images/logo/logo.png";
+import Testimonials from "./sections/Testimonials/Testimonials";
 
 import nav from "./resources/strings/nav";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
@@ -43,7 +44,7 @@ const App = () => {
                         <NavBar routes={routes} logoRoute={logoRoute} />
                         <Landing />
                         <About />
-                        <Story />
+                        <Testimonials />
                         <SponsorUs />
                         <FAQ />
                         <Contact />     
