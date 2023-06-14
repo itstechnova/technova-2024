@@ -1,19 +1,10 @@
 import React from "react";
 import { useState, useEffect } from 'react';
 import SectionWrapper from "../../components/SectionWrapper/SectionWrapper";
-import SocialMediaLink from "../../components/SocialMediaLink/SocialMediaLink";
 import Team from "../../sections/Team/Team";
 import Footer from "../Footer/Footer";
 import "./Contact.scss";
-import arrow from "../../resources/images/icons/submit.svg";
-import contactImage from "../../resources/images/contact.svg";
-import mail from "../../resources/images/socials/mailFill.svg";
-import ig from "../../resources/images/socials/igFill.svg";
-import linkedin from "../../resources/images/socials/linkedinFill.svg";
-import facebook from "../../resources/images/socials/facebookFill.svg";
-import twitter from "../../resources/images/socials/twitterFill.svg";
 import contact from "../../resources/strings/contact";
-import socials from "../../resources/strings/socials";
 
 function Contact() {
 
@@ -41,37 +32,37 @@ function Contact() {
 
     //console.log(state.screenWidth)
 
-    const validateEmailAddress = (email) => {
-        const emailPrefix = "[A-Z0-9a-z]([A-Z0-9a-z._%+-]{0,30}[A-Z0-9a-z])?";
-        const emailServer = "([A-Z0-9a-z]([A-Z0-9a-z-]{0,30}[A-Z0-9a-z])?\\.){1,5}";
-        const emailRegEx = `${emailPrefix}@${emailServer}[A-Za-z]{2,6}`;
-        return email.match(emailRegEx);
-    };
+    // const validateEmailAddress = (email) => {
+    //     const emailPrefix = "[A-Z0-9a-z]([A-Z0-9a-z._%+-]{0,30}[A-Z0-9a-z])?";
+    //     const emailServer = "([A-Z0-9a-z]([A-Z0-9a-z-]{0,30}[A-Z0-9a-z])?\\.){1,5}";
+    //     const emailRegEx = `${emailPrefix}@${emailServer}[A-Za-z]{2,6}`;
+    //     return email.match(emailRegEx);
+    // };
 
-    async function submitEmail() {
-        console.log("here");
-        const isValidEmail = state.email && validateEmailAddress(state.email);
+    // async function submitEmail() {
+    //     console.log("here");
+    //     const isValidEmail = state.email && validateEmailAddress(state.email);
 
-        if (!isValidEmail) {
-            setState({ ...state, error: true, success: false });
-            setTimeout(() => { setState({ ...state, email: "", error: false }) }, 5000)
-            return;
-        }
+    //     if (!isValidEmail) {
+    //         setState({ ...state, error: true, success: false });
+    //         setTimeout(() => { setState({ ...state, email: "", error: false }) }, 5000)
+    //         return;
+    //     }
 
-        const url = `https://docs.google.com/forms/u/0/d/e/1FAIpQLSdUCqXqrW53nkw3xM5MDDjreqfnCNYGuIMcZZe_EvKZItrgiw/formResponse`
+    //     const url = `https://docs.google.com/forms/u/0/d/e/1FAIpQLSdUCqXqrW53nkw3xM5MDDjreqfnCNYGuIMcZZe_EvKZItrgiw/formResponse`
 
-        await fetch(url, {
-            "method": "POST",
-            "mode": "no-cors",
-            "headers": {
-                "content-type": "application/x-www-form-urlencoded",
-                'access-control-allow-origin': '*',
-            },
-            "body": `entry.1170762674=${state.email}`
-        })
-        setState({ ...state, email: "", success: true, error: false })
-        setTimeout(() => { setState({ ...state, email: "", success: false }) }, 5000)
-    }
+    //     await fetch(url, {
+    //         "method": "POST",
+    //         "mode": "no-cors",
+    //         "headers": {
+    //             "content-type": "application/x-www-form-urlencoded",
+    //             'access-control-allow-origin': '*',
+    //         },
+    //         "body": `entry.1170762674=${state.email}`
+    //     })
+    //     setState({ ...state, email: "", success: true, error: false })
+    //     setTimeout(() => { setState({ ...state, email: "", success: false }) }, 5000)
+    // }
 
     console.log(state);
 

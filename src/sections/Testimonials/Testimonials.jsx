@@ -26,7 +26,7 @@ const Testimonials = () => {
         return () => {
             window.removeEventListener("resize", handleResize)
         }
-    }, [state])
+    })
 
     return (<SectionWrapper id="story">
         <div className="testimonials-container">

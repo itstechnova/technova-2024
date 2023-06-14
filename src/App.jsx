@@ -2,11 +2,9 @@ import "./App.scss";
 import Landing from "./sections/Landing/Landing";
 import NavBar from "./sections/NavBar/NavBar";
 import About from "./sections/About/About";
-import Story from "./sections/Story/Story";
 import SponsorUs from "./sections/Sponsor/SponsorUs";
 import FAQ from "./sections/FAQ/FAQ";
 import Contact from "./sections/Contact/Contact";
-import Footer from "./sections/Footer/Footer";
 import logo from "./resources/images/logo/logo.png";
 import Testimonials from "./sections/Testimonials/Testimonials";
 
