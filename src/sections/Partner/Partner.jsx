@@ -4,14 +4,18 @@ import SectionWrapper from "../../components/SectionWrapper/SectionWrapper";
 import wicsImg from "../../resources/images/logo/wics.svg";
 import pixelHeart from "../../resources/images/graphics/pixel-heart.svg";
 import arrow from "../../resources/images/graphics/arrow.svg";
+import pinkFlower from "../../resources/images/graphics/pink-flower.svg";
+import purpleFlower from "../../resources/images/graphics/purple-flower.svg";
+import tealFlower from "../../resources/images/graphics/teal-flower.svg";
+
 
 const Partner = () => (
   <SectionWrapper id="partner">
     <div className="our-partners-container">
+      <img id="r-pinkflower" src={pinkFlower} />
+      <img id="purple-flower" src={purpleFlower} />
       <h1 className="our-partners-title">In Partnership With</h1>
       <hr className="our-partners-divider"></hr>
-
-
       <div className="our-partners-box">
         <div className="our-partners-header">
           <div className="white-box"></div>
@@ -19,8 +23,7 @@ const Partner = () => (
           <div className="white-box"></div>
         </div>
         <div className="our-partners">
-          
-          {/* <img src={wicsmobile} alt="WiCS" className="mobile_img" /> */}
+          <img src={wicsImg} alt="WiCS" className="wics_logo" />
           <div className="our-partners-text">
             <p>
               We are working in partnership with the University of Waterloo’s
@@ -35,7 +38,6 @@ const Partner = () => (
               an active role in supporting over 2700 students.
             </p>
           </div>
-          <img src={wicsImg} alt="WiCS" className="wics_logo" />
           <div className="wics_button">
               <a className="our-partners-button" href="https://cs.uwaterloo.ca/wics">
                 <img src={pixelHeart} />
@@ -45,6 +47,8 @@ const Partner = () => (
           </div>
         </div>
       </div>
+      <img id="l-pinkflower" src={pinkFlower} />
+      <img id="teal-flower" src={tealFlower} />
     </div>
   </SectionWrapper>
 );

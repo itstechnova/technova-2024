@@ -7,6 +7,7 @@ import SponsorUs from "./sections/Sponsor/SponsorUs";
 import FAQ from "./sections/FAQ/FAQ";
 import Contact from "./sections/Contact/Contact";
 import Footer from "./sections/Footer/Footer";
+import Partner from "./sections/Partner/Partner";
 import logo from "./resources/images/logo/logo.png";
 
 import nav from "./resources/strings/nav";
@@ -45,6 +46,7 @@ const App = () => {
                         <About />
                         <Story />
                         <SponsorUs />
+                        <Partner />
                         <FAQ />
                         <Contact />
                         <Footer />

@@ -2,13 +2,17 @@
 
 .our-partners {
   margin: auto;
-  // padding: 4em;
   background-color: #FFFFFF;
   display: grid;
   grid-template-columns: 55% 45%;
   grid-template-areas: 
     "wics-description wics-logo"
     "wics-description wics-button";
+
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
   &-title {
     margin-top: 50px;
@@ -24,7 +28,7 @@
 
   &-header {
     background-color: #F8B3B8;
-    border-bottom: 3px solid;
+    border-bottom: 2px solid;
     height: 4em;
     display: grid;
     grid-template-columns: auto auto auto;
@@ -42,7 +46,7 @@
 
   &-box {
     border-style: solid;
-    border-width: 3px;
+    border-width: 2px;
     width: 95%;
     box-shadow: 20px 20px #19123C;
   }
@@ -50,23 +54,6 @@
   &-text {
     grid-area: wics-description;
     padding: 3em;
-    // @media (max-width: 1235px) {
-    //   margin: 0px 317px 0px 3%;
-    // }
-    // @media (max-width: 1146px) {
-    //   margin: 0px 317px 0px 3%;
-    // }
-
-    // @include tablet {
-    //   background-color: white;
-    //   margin-top: -5px !important;
-    //   padding: 0% 5% 5% 5%;
-    //   margin: 0px;
-    //   p {
-    //     color: black;
-    //   }
-    //   border-radius: 0px 0px 10px 10px;
-    // }
   }
 
   &-button {
@@ -80,25 +67,21 @@
     justify-content: space-around;
     align-items: center;
     text-decoration: none;
+    column-gap: 5%;
+    padding: 0px 15px;
     p {
       font-size: 1em;
+      text-align: center;
     }
   }
 
   & {
-    // background-image: url("../../resources/images/WiCSBg.png");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    color: #19123c;
     text-align: left;
     .wics_logo {
       grid-area: wics-logo;
-      width: 300px;
-      margin-left: 20%;
+      width: 60%;
+      margin: auto;
       padding-bottom: 20px;
-    }
-    .mobile_img {
-      display: none;
     }
 
     @include tablet {
@@ -107,12 +90,17 @@
         display: block;
       }
       .wics_logo {
-        display: none;
+        width: 40%;
+        margin-top: 20px;
+        margin-bottom: -40px;
       }
-
-      img {
+      .wics_button {
+        width: 70%;
+        margin: auto;
+      }
+      .our-partners-button {
         width: 100%;
-        margin-left: 0%;
+        display: flex;
       }
     }
 
@@ -121,6 +109,50 @@
       display: flex;
       justify-content: center;
       padding-bottom: 4em;
+      align-items: center;
     }
   }
+}
+
+@media (max-width: 375px) {
+  .wics_button img {
+    display: none;
+  }
+}
+
+#r-pinkflower {
+  position: relative;
+  left: 42%;
+  top: 400px;
+  z-index: -100;
+  transform: rotate(40deg);
+  width: 350px;
+}
+
+#l-pinkflower {
+  position: relative;
+  right: 50%;
+  z-index: -100;
+  top: -150px;
+  transform: rotate(20deg);
+  width: 250px;
+}
+
+#purple-flower {
+  position: relative;
+  left: 10%;
+  top: 120px;
+  z-index: -100;
+}
+
+#teal-flower {
+  position: relative;
+  right: 50%;
+  top: -120px;
+  z-index: -100;
+  color: #A8EFE4;
+}
+
+#partner {
+  overflow: hidden;
 }
