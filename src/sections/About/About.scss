@@ -1,0 +1,217 @@
+@import "../../constants";
+
+.about {
+    &-container {
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &-content {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        height: 40%;
+        @include phone {
+            flex-direction: column;
+        }
+    }
+
+    &-divider {
+        border: 1px solid;
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    &-text {
+        padding: 20px, 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        font-family: $font-regular;
+        font-size: $text-medium;
+        p {
+            margin-top: 15px;
+        }
+        @include phone {
+            width: 100%;
+            p {
+                margin-top: 10px;
+            }
+        }
+    }
+
+    &-events {
+        height: 600px;
+        margin-top: 60px;
+        display: grid;
+        text-align: center;
+        grid-template-columns: 33% 33% 33%;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "prep-image hack-image connect-image"
+            "prep-caption hack-caption connect-caption";
+
+        img {
+            align-self: flex-end;
+            justify-self: center;
+            width: 80%;
+            margin: 20px 0;
+        }
+
+        &-selector {
+            display: none;
+            margin: auto !important;
+            width: 10% !important;
+        }
+
+
+        @include tablet {
+            display: none !important;
+        }
+    }
+
+    &-caption {
+        width: 100%;
+        justify-self: center;
+        margin-top: 50px;
+    }
+
+    &-title {
+        border-style: solid;
+        border-width: 2px;
+        background-color: #DFE5FA;
+        width: 90%;
+        height: 60%;
+        margin: auto;
+        @include tablet {
+            width: 100%;
+        }
+    }
+
+    &-description {
+        border-style: solid;
+        border-width: 2px;
+        border-top: none;
+        background-color: #FFFFFF;
+        width: 80%;
+        padding: 0px 5%;
+        overflow: hidden;
+        transition: height 0.3s linear;
+        margin: auto;
+        @media (min-width: 750px) {
+            height: 85px;
+        }
+        @include tablet {
+            min-height: 12em;
+            width: 100%;
+            padding: 0;
+        }
+    } 
+
+    &-details {
+        width: 90%;
+        margin: auto;
+    }
+
+    &-intro {
+        font-size: 1.4em;
+        height: 85px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include tablet {
+            padding-bottom: 0;
+        }
+    }
+}
+
+.animate {
+    transform: translateY(40px);
+    transition: transform 0.3s linear;
+    &:hover {
+    transform: translateY(-40px);
+    transition: transform 0.3s linear;
+    .about-description {
+        height: fit-content;
+        padding-bottom: 20px;
+        transition: height 0.3s linear;
+    }
+    .date {
+        display: none;
+    }
+    .about-events-selector {
+        display: block;
+    }
+    .prep-image {
+        filter: drop-shadow(10px 25px 10px #F0CCD1);
+    }
+    .hack-image {
+        filter: drop-shadow(10px 25px 10px #C6EDE6);
+    }
+    .connect-image {
+        filter: drop-shadow(10px 25px 10px #C3C9FF);
+    }
+    }
+
+    @include phone {
+      transform: none;
+      &:hover {
+        transform: none;
+        .date {
+          display: block;
+        }
+      }
+    }
+    @include tablet {
+      transform: none;
+      &:hover {
+        transform: none;
+        .date {
+          display: block;
+        }
+      }
+    }
+  }
+
+.about-mobile {
+    display: none;
+    @include tablet {
+      display: block;
+      margin-bottom: 50px;
+    }
+}
+
+.about-slider-container {
+    position: relative;
+    margin-bottom: 45px;
+    justify-content: center;
+}
+
+.mobile-image {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+  
+.mobile-text {
+    position: relative;
+    width: 75%;
+    justify-content: center;
+    margin: auto;
+    margin-top: 3em;
+  
+    p {
+      margin-bottom: 10px;
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+}
+
+  
