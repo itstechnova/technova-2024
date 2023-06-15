@@ -4,20 +4,15 @@ import SectionWrapper from "../../components/SectionWrapper/SectionWrapper";
 import Team from "../../sections/Team/Team";
 import "./Contact.scss";
 import contact from "../../resources/strings/contact";
-import './ContactMethod.scss'
-import arrow from "../../resources/images/icons/submit.svg";
-import contactImage from "../../resources/images/contact.svg";
 import SocialMediaLink from "../../components/SocialMediaLink/SocialMediaLink";
 import socials from "../../resources/strings/socials";
-import mail from "../../resources/images/socials/mailFill.svg";
-import ig from "../../resources/images/socials/igFill.svg";
-import linkedin from "../../resources/images/socials/linkedinFill.svg";
-import facebook from "../../resources/images/socials/facebookFill.svg";
-import twitter from "../../resources/images/socials/twitterFill.svg";
-import wie from '../../resources/images/logo/wie.png'
-import wics from '../../resources/images/logo/wics.png'
-import Footer from '../Footer/Footer'
+import mail from "../../resources/images/socials/mail.svg";
+import ig from "../../resources/images/socials/ins.svg";
+import linkedin from "../../resources/images/socials/linkedin.svg";
+import facebook from "../../resources/images/socials/facebook.svg";
+import twitter from "../../resources/images/socials/twitter.svg";
 import Conduct from '../Footer/Conduct';
+import emailVector from "../../resources/images/icons/emailvector.svg";
 
 function Contact() {
 
@@ -40,7 +35,6 @@ function Contact() {
         return () => {
             window.removeEventListener("resize", handleResize)
         }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     const validateEmailAddress = (email) => {
@@ -75,8 +69,6 @@ function Contact() {
         setTimeout(() => { setState({ ...state, email: "", success: false }) }, 5000)
     }
 
-    console.log(state);
-
     const contactInfo = () => {
         return (
             <div className="contact">
@@ -93,6 +85,7 @@ function Contact() {
             </div>
         )
     }
+
     return (
         <SectionWrapper id="contact">
             <Team />
@@ -102,11 +95,31 @@ function Contact() {
             <div className="contact-method-container">
                 <div className="contact-method-shadow-container">
                 <div className="contact-method-tab">
-                    <div className="contact-method-square">  </div>
-                    <div className="contact-method-square">  </div>
-                    <div className="contact-method-square">  </div>
+                    <div className="contact-method-square"></div>
+                    <div className="contact-method-square"></div>
+                    <div className="contact-method-square"></div>
                 </div>
-                    <Footer />
+                <React.Fragment id="footer">
+                        <div className="footer-container">
+                            <span className="footer-title">Reach out to us at 
+                                <span style={{color: "#7676E8"}}> hello@itstechnova.org</span>
+                            </span>
+                            <br/>
+                            <div className="email-wrapper">
+                            {state.screenWidth >= 400 ? 
+                            <input className="email-input" placeholder="  name@example.com" value={state.email} onChange={e => setState({ ...state, email: e.target.value })} />
+                            : <input className="email-input" placeholder="  name@example.com" value={state.email} onChange={e => setState({ ...state, email: e.target.value })} />}
+                                <div className="submit-wrapper" onClick={e => submitEmail()}>
+                                    <div className="wrapper">
+                                        <img src={emailVector} className="submit-btn" alt="Submit" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            {state.success && <p> Thanks for signing up, we'll keep you updated!</p>}
+                            {state.error && <p> Please enter a valid email.</p>}
+                        </div>
+                </React.Fragment>
                     <br/>
                     <div className="socials-row">
                     <SocialMediaLink src={mail} link={socials.email} />

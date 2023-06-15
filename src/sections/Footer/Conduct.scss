@@ -4,30 +4,63 @@
     &-container {
       position: relative;
       box-sizing: border-box;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      width: 20%;
+      height: 70px;
+      width: 350px;
+      margin: 0 auto;
+      margin-bottom: 10%;
 
       background: #FFFFFF;
       border: 2px solid hsl(250, 54%, 15%);
+      box-shadow: 10px 10px #19123C;
 
-        p {
-            padding-top: 5px;
-            font-size: 14px;
-            @include phone {
-                font-size: 16px;
-            }
-        }
         a {
-            margin-top: 5px;
-            font-size: 14px;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 27px;
+            color: #19123C;
+            margin-top: 0px;
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            transform: translate(50%, -50%);
+            background-color: none;
+            text-decoration: none;
         }
+       
         @include phone {
             height: 114px;
         }
-    }
-    &-shadow-container {
-      box-shadow: 20px 20px #19123C;
-    }
+    } 
+    
+}
+
+.pixel {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: #19123C;
+  text-decoration: none;
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  transform: translate(50%, -50%);
+}
+
+.arrow {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: #19123C;
+  text-decoration: none;
+  // float to the right middle of the box
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translate(50%, -50%);
 }
