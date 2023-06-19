@@ -55,8 +55,7 @@
         grid-template-rows: 60% 35% 5%;
         grid-template-areas:
             "landing-text landing-graphic"
-            "landing-button landing-graphic"
-            "landing-learn-more landing-learn-more";
+            "landing-button landing-graphic";
         @include tablet {
             height: 95vh;
             padding-top: 50px;
@@ -64,8 +63,7 @@
             grid-template-rows: minmax(250px, 35%) 50% 50px;
             grid-template-areas:
                 "landing-text landing-text"
-                "landing-button landing-graphic"
-                "landing-learn-more landing-learn-more"; 
+                "landing-button landing-graphic"; 
         }
         @include phone {
             height: 85vh;
@@ -97,6 +95,7 @@
         min-width: 500px;
         grid-area: landing-text;
         text-align: left;
+        row-gap: 12px;
         @include tablet {
             min-width: 0;
         }
@@ -130,12 +129,16 @@
     }
     &-description {
         grid-area: text-description;
+        font-size: $text-medium;
         @include phone {
             display: none;
         }
     }
     &-dates {
         grid-area: text-dates;
+        font-family: "Lexend";
+        font-weight: 600;
+        font-size: $text-medium;
         @include phone {
             font-size: 16px;
             font-weight: 600;
@@ -146,7 +149,8 @@
     }
 
     &-title {
-        font-size: $text-logo;
+        font-size: 96px;
+        font-weight: 600;
         font-family: $font-logo;
         @include tablet {
             font-size: $text-large;
@@ -265,37 +269,6 @@
         }
     }
 
-    &-learn-more-container {
-        grid-area: landing-learn-more;
-        display: flex;
-        justify-content: center;
-        justify-self: center;
-        @include tablet {
-            align-items: flex-start;
-        }
-        @include phone {
-            display: none;
-        }
-    }
-}
-
-.learn-more {
-    &-link {
-        display: inline-flex;
-        flex-direction: column;
-        align-items: center;
-        &:link {
-            text-decoration: none;
-            font-weight: 400;
-        }
-        &:hover {
-            animation: bounce-up-fast 1.5s linear infinite;
-        }
-    }
-    &-arrow {
-        margin-top: 5px;
-        width: 50%;
-    }
 }
 
 h4 {
