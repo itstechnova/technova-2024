@@ -1,22 +1,13 @@
 const landing = {
-    appLink: "https://docs.google.com/forms/d/e/1FAIpQLSfQt5aOA7XQqE0rjVXfwKze1WBko2CeMMn1MKfloYW7-8yYhw/viewform",
-    mentorAppLink: "https://tinyurl.com/technova-21-mentor",
-    title1: "TechNova ",
-    title2: "Presents",
-    prepare: "Prepare",
-    hack: "Hack",
-    connect: "Connect",
-    sloganEnd: " with Us",
-    description: "University of Waterloo’s First Global Women+ in Tech Hackathon",
-    dates: "August 27-29, 2021 • Virtual Event",
-    comingSoon: "Coming Summer 2021",
-    applyCTA: "Apply as a Hacker",
-    mentorApplyCTA: "Apply as a Mentor",
-    applyCTAMobile: "I'm a Hacker",
-    mentorApplyCTAMobile: "I'm a Mentor",
-    sponsor: "Interested in Sponsoring?",
-    emailUs: "Email us at ",
-    email: "hacktechnova@gmail.com"
+    appLink: "",
+    mentorAppLink: "",
+    title1: "TECHNOVA",
+    description: "University of Waterloo’s Women+ in Tech Hackathon",
+    dates: "SEP 22 - 24 2023.",
+    applyCTA: "Hacker Applications",
+    mentorApplyCTA: "Mentor Applications",
+    applyCTAMobile: "Hacker Applications",
+    mentorApplyCTAMobile: "Mentor Applications",
 };
 
 export default landing;
