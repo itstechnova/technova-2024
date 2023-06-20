@@ -1,7 +1,8 @@
 import "./Landing.scss";
 import SectionWrapper from "../../components/SectionWrapper/SectionWrapper";
 import landing from "../../resources/strings/landing";
-import Button from "../../components/Button/Button";
+// import Button from "../../components/Button/Button";
+import LandingButton from "./LandingButton";
 
 const Landing = () => {
     return (
@@ -29,12 +30,12 @@ const Landing = () => {
                     </h4>
                 </div>
                 <div className="landing-button-container">
-                    <Button link={landing.appLink} label={landing.applyCTA} />
-                    <Button link={landing.mentorAppLink} label={landing.mentorApplyCTA} type="button-2"/>
+                    <LandingButton link={landing.appLink} label={landing.applyCTA} />
+                    <LandingButton link={landing.mentorAppLink} label={landing.mentorApplyCTA}/>
                 </div>
                 <div className="landing-button-container-mobile">
-                    <Button link={landing.appLink} label={landing.applyCTAMobile} />
-                    <Button link={landing.mentorAppLink} label={landing.mentorApplyCTAMobile} type="button-2"/>
+                    <LandingButton link={landing.appLink} label={landing.applyCTAMobile} />
+                    <LandingButton link={landing.mentorAppLink} label={landing.mentorApplyCTAMobile}/>
                 </div>
             </div>
         </SectionWrapper>
