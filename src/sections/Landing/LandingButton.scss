@@ -1,21 +1,21 @@
 @import "../../constants";
 
 .landing-button{
-    padding: 20px;
+    padding: 13px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    flex-grow: 1;
     gap: 10px;
     background-color: $background-light;
     color: $text-dark;
-    font-size: $text-small;
+
+    font-size: $text-xsmall;
     font-family: "Poppins";
     font-weight: 700;
-    border-style: solid;
     text-decoration: none;
+    border-style: solid;
     white-space: nowrap;
-    box-shadow: 13px 15px 0px 0px #19123c;
-    
+    box-shadow: 10px 10px 0px 0px #19123c;
     @include phone {
         font-size: 16px;
       }
@@ -28,7 +28,11 @@
         transition: 0.1s linear;
     }
 
-    .label{
-        margin-right: 40px;
+    img {
+        width: 20px;
+    }
+
+    .label {
+        margin-right: auto;
     }
 }
