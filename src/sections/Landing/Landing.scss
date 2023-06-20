@@ -2,7 +2,7 @@
 
 .landing {
     &-container {
-        height: 100vh;
+        height: 110vh;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -129,17 +129,27 @@
     }
         
     &-graphic-container {
-        position: relative;
         z-index: -100;
 
-        #ms-goose {
-            // position: relative;
-            // left: 10%;
-            width: 20em;
+        #ms-goose-flowers {
+            width: 23em;
         }
 
         @include phone {
             display: none;
         }
+    }
+
+}
+
+#teal-asterisk {
+    position: absolute;
+    z-index: -100;
+    left: 0;
+    bottom: -40%;
+
+    @include phone {
+        width: 17em;
+        bottom: -30%;
     }
 }

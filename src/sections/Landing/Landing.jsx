@@ -11,6 +11,7 @@ import asterisk5 from "../../resources/images/graphics/asterisk-5.svg";
 import msGoose from "../../resources/images/graphics/ms-goose.svg";
 import softStar1 from "../../resources/images/graphics/soft-star-1.svg";
 import softStar2 from "../../resources/images/graphics/soft-star-2.svg";
+import msGooseFlowers from "../../resources/images/graphics/ms-goose-flowers.svg";
 
 
 const Landing = () => {
@@ -43,10 +44,10 @@ const Landing = () => {
                         <LandingButton link={landing.mentorAppLink} label={landing.mentorApplyCTA}/>
                     </div>
                 </div>
-
                 <div className="landing-graphic-container">
-                    <img id="ms-goose" src={msGoose} alt="ms goose" />
-                    {/* <img id="asterisk-1" src={asterisk1} alt="asterisk 1" />
+                    <img id="ms-goose-flowers" src={msGooseFlowers} alt="ms goose and flowers" />
+                    {/* <img id="ms-goose" src={msGoose} alt="ms goose" />
+                    <img id="asterisk-1" src={asterisk1} alt="asterisk 1" />
                     <img src={asterisk2} alt="asterisk 2" />
                     <img src={asterisk3} alt="asterisk 3" />
                     <img src={asterisk4} alt="asterisk 4" />
@@ -54,6 +55,7 @@ const Landing = () => {
                     <img src={softStar1} alt="asterisk 1" />
                     <img src={softStar2} alt="asterisk 2" /> */}
                 </div>
+                <img id="teal-asterisk" src={asterisk3} alt="transparent teal asterisk" />
             </div>
         </SectionWrapper>
     );
