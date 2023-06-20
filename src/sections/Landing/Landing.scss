@@ -5,9 +5,10 @@
         height: 110vh;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         @include phone {
             flex-direction: column;
+            justify-content: center;
         }
     }
     &-main-container {
@@ -41,7 +42,7 @@
     }
     
     &-title {
-        font-size: $text-xlarge;
+        font-size: $text-xxlarge;
         font-weight: 600;
         font-family: $font-logo;
         @include tablet {
@@ -111,7 +112,10 @@
         z-index: -100;
 
         #ms-goose-flowers {
-            width: 23em;
+            width: 30em;
+            @include desktop {
+                width: 22em;
+            }
         }
 
         @include phone {
