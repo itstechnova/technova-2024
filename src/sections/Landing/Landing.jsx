@@ -22,9 +22,6 @@ const Landing = () => {
                     <div className="landing-text">
                         <h4 className="landing-logo-text">
                             <span className="landing-title">{landing.title1}</span>
-                        </h4>
-                        <h4 className="landing-logo-text-mobile">
-                            <span className="landing-title" style={{marginBottom: "1px"}}>{landing.title1}</span>
                             <img 
                                 className="mlh-mobile"
                                 style={{height: "18px", marginRight: "2px", marginBottom: "4px"}} 
@@ -32,9 +29,6 @@ const Landing = () => {
                             />
                         </h4>
                         <h4 className="landing-description">
-                            {landing.description}
-                        </h4>
-                        <h4 className="landing-description-mobile">
                             {landing.description}
                         </h4>
                         <h4 className="landing-dates">{landing.dates}</h4>

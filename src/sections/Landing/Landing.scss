@@ -21,6 +21,7 @@
         }
         
         @include phone {
+            max-width: 70vw;
             align-items: center;
         }
     }
@@ -35,7 +36,7 @@
         @include phone {
             align-items: center;
             text-align: center;
-            row-gap: 5px;
+            row-gap: 10px;
         }
     }
     
@@ -47,39 +48,44 @@
             font-size: $text-large;
         }
         @include phone {
-            font-size: 24px;
+            font-size: $text-medium;
         }
     }
-    &-title-mobile {
-        font-family: $font-logo;
-        font-size: 25px;
+    &-logo-text {
+        .mlh-mobile {
+            display: none;
+        }
+
+        @include phone {
+            .mlh-mobile {
+                display: block;
+            }
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+
+            .landing-title {
+                font-size: $text-large;
+                font-weight: 600;
+            }
+        }
     }
 
     &-description {
         font-size: $text-medium;
+        font-weight: 400;
         @include tablet {
             font-size: $text-small;
         }
         @include phone {
-            display: none;
-        }
-    }
-    &-description-mobile {
-        display: none;
-        @include phone {
-            display: block;
-            grid-area: text-description;
-            font-weight: 600;
-            text-align: center;
-            justify-self: center;
+            font-size: $text-xsmall;
             width: 270px;
-            font-size: 14px;
-            font-weight: 400;
-        }
-        @include small-phone {
-            font-size: 14px;
+            line-height: normal;
         }
     }
+
     &-dates {
         grid-area: text-dates;
         font-family: "Lexend";
@@ -88,33 +94,6 @@
         @include phone {
             font-size: 16px;
             font-weight: 600;
-        }
-        @include small-phone {
-            font-size: 14px;
-        }
-    }
-
-
-    &-logo-text {
-        grid-area: text-title;
-        @include phone {
-            display: none;
-        }
-    }
-    
-    &-logo-text-mobile {
-        display: none;
-        @include phone {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 5px;
-            .landing-title {
-                font-size: $text-medium;
-                font-weight: 600;
-                font-family: $font-logo;
-            }
         }
     }
 
