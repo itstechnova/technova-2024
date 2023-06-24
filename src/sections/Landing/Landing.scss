@@ -123,8 +123,16 @@
         }
     }
 
+    
 }
 
+#ms-goose {
+    display: none;
+    @include phone {
+        display: block;
+        width: 9em;
+    }
+}
 #teal-asterisk {
     position: absolute;
     z-index: -100;

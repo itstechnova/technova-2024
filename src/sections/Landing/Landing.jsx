@@ -8,9 +8,9 @@ import LandingButton from "./LandingButton";
 import asterisk3 from "../../resources/images/graphics/asterisk-3.svg";
 // import asterisk4 from "../../resources/images/graphics/asterisk-4.svg";
 // import asterisk5 from "../../resources/images/graphics/asterisk-5.svg";
-// import msGoose from "../../resources/images/graphics/ms-goose.svg";
 // import softStar1 from "../../resources/images/graphics/soft-star-1.svg";
 // import softStar2 from "../../resources/images/graphics/soft-star-2.svg";
+import msGoose from "../../resources/images/graphics/ms-goose.svg";
 import msGooseFlowers from "../../resources/images/graphics/ms-goose-flowers.svg";
 
 
@@ -19,6 +19,8 @@ const Landing = () => {
         <SectionWrapper id="landing" paddingTop="0">
             <div className="landing-container">
                 <div className="landing-main-container">
+                    <img id="ms-goose" src={msGoose} alt="ms goose" />
+                    {/* <img id="ms-goose" src={msGooseFlowers} alt="ms goose" /> */}
                     <div className="landing-text">
                         <h4 className="landing-logo-text">
                             <span className="landing-title">{landing.title1}</span>
