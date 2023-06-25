@@ -41,17 +41,6 @@
         text-align: center;
         justify-content: center;
         align-items: center;
-        p {
-            padding-top: 5px;
-            font-size: 14px;
-            @include phone {
-                font-size: 16px;
-            }
-        }
-        a {
-            margin-top: 5px;
-            font-size: 14px;
-        }
         @include phone {
             height: 114px;
         }

@@ -90,7 +90,7 @@ function Contact() {
         <SectionWrapper id="contact">
             <Team />
             <h1 className="contact-container">{contact.title}</h1>
-            <br/>
+            <hr/>
             <div className="contact-method">
             <div className="contact-method-container">
                 <div className="contact-method-shadow-container">
@@ -107,15 +107,14 @@ function Contact() {
                             <br/>
                             <div className="email-wrapper">
                             {state.screenWidth >= 400 ? 
-                            <input className="email-input" placeholder="  name@example.com" value={state.email} onChange={e => setState({ ...state, email: e.target.value })} />
-                            : <input className="email-input" placeholder="  name@example.com" value={state.email} onChange={e => setState({ ...state, email: e.target.value })} />}
+                            <input className="email-input" placeholder="    name@example.com" value={state.email} onChange={e => setState({ ...state, email: e.target.value })} />
+                            : <input className="email-input" placeholder="      name@example.com" value={state.email} onChange={e => setState({ ...state, email: e.target.value })} />}
                                 <div className="submit-wrapper" onClick={e => submitEmail()}>
                                     <div className="wrapper">
                                         <img src={emailVector} className="submit-btn" alt="Submit" />
                                     </div>
                                 </div>
                             </div>
-
                             {state.success && <p> Thanks for signing up, we'll keep you updated!</p>}
                             {state.error && <p> Please enter a valid email.</p>}
                         </div>

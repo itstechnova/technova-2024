@@ -7,7 +7,7 @@
       height: 70px;
       width: 350px;
       margin: 0 auto;
-      margin-bottom: 10%;
+      margin-bottom: 5%;
 
       background: #FFFFFF;
       border: 2px solid hsl(250, 54%, 15%);
@@ -22,15 +22,10 @@
             color: #19123C;
             margin-top: 0px;
             position: absolute;
-            top: 50%;
-            left: 20px;
-            transform: translate(50%, -50%);
+            top: 30%;
+            left: 25%;
             background-color: none;
             text-decoration: none;
-        }
-       
-        @include phone {
-            height: 114px;
         }
     } 
     
