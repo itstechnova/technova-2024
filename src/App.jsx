@@ -46,8 +46,7 @@ const App = () => {
                         <Story />
                         <SponsorUs />
                         <FAQ />
-                        <Contact />
-                        <Footer />
+                        <Contact />     
                     </div>
                 </Route>
             </Switch>
