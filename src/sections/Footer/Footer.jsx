@@ -6,10 +6,11 @@ const Footer = () => (
         <div className="footer-container">
             <div className="footer-logo-container">
                 <img src={logo} alt="logo" />
-                <span className="footer-title">TechNova</span>
+                <p className="footer-title">Reach out to us at hello@itstechnova.org</p>    
+                <div className="footer-email-box">
+                    <p>name@example.com</p>
+                </div>
             </div>
-            <p className="title">Made with ❤️ by UWaterloo Students</p>
-            <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" >Code of Conduct</a>
         </div>
     </React.Fragment>
 );
