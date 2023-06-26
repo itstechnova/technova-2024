@@ -139,7 +139,7 @@
     }
     @include phone {
       width: 38%;
-      margin-top: 20px;
+      margin-top: 30px;
       gap: 16px;
       a {
         min-width: 0;
@@ -189,7 +189,7 @@
     }
     @include tablet {
       a {
-        margin-top: 20px;
+        margin-top: 30px;
         width: 50%;
       }
     }
@@ -201,6 +201,7 @@
       a {
         width: 80%;
         max-width: 250px;
+        padding: 0 30px;
       }
     }
   }
