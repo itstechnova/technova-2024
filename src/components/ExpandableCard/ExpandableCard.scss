@@ -3,12 +3,11 @@
 .card {
   display: block;
   width: 100%;
-  padding: 24px 32px;
+  padding: 32px 32px;
   background-color: var(--faq-card-bg-color);
-  border: none;
-  border-radius: 10px;
+  border: 2px solid #19123C;
   cursor: pointer;
-  color: inherit;
+  color: #19123C;
   font-family: $font-regular;
   font-weight: 400;
   font-size: inherit;
@@ -31,7 +30,7 @@
 .question {
   font-size: $text-medium;
   font-family: $font-regular;
-  font-weight: 400;
+  font-weight: 700;
   margin-right: 1rem;
   @include phone {
     width: 80%;
@@ -61,6 +60,13 @@
   -ms-user-select: none;
 }
 
+.pink {
+  background-color: #FFA3AF;
+}
+
+.turqoise {
+  background-color: #A8EFE4;
+}
 .answer-container {
   overflow: hidden;
   max-height: calc(1000rem / 16);
