@@ -14,6 +14,14 @@
     flex-wrap: wrap;
   }
 
+  &-container {
+    margin-top: -200px;
+
+    @include phone {
+      margin-top: -400px;
+    }
+  }
+
   &-title {
     margin-top: 50px;
     margin-bottom: 24px;
@@ -54,7 +62,14 @@
   &-text {
     grid-area: wics-description;
     padding: 3em;
+
+    @include phone {
+      padding-left: 1em;
+      padding-right: 1.5em;
+      text-align: center;
+    }
   }
+
 
   &-button {
     border-style: solid;
