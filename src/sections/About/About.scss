@@ -1,40 +1,13 @@
 @import "../../constants";
 
-@keyframes bounce-about {
-    0% {
-        transform: translateY(0px);
-        opacity: 1;
-    }
-    50% {
-        transform: translateY(20px);
-        opacity: 0.7;
-    }
-    100% {
-        transform: translateY(0px);
-        opacity: 1;
-    }
-}
-
-@keyframes bounce-down {
-    0% {
-        transform: translateY(20px);
-        opacity: 0.7;
-    }
-    50% {
-        transform: translateY(0px);
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(20px);
-        opacity: 0.7;
-    }
-}
-
 .about {
     &-container {
         text-align: left;
         display: flex;
         flex-direction: column;
+        @media (min-width: 1200px) {
+            padding-bottom: 150px;
+        }
     }
 
     &-content {
@@ -46,6 +19,12 @@
         @include phone {
             flex-direction: column;
         }
+    }
+
+    &-divider {
+        border: 1px solid;
+        width: 100%;
+        margin-left: 0px;
     }
 
     &-text {
@@ -68,13 +47,13 @@
     }
 
     &-events {
-        margin-top: 30px;
+        height: 600px;
+        margin-top: 120px;
         display: grid;
         text-align: center;
         grid-template-columns: 33% 33% 33%;
-        grid-template-rows: 70px auto auto;
+        grid-template-rows: auto auto;
         grid-template-areas:
-            "prep-title hack-title connect-title"
             "prep-image hack-image connect-image"
             "prep-caption hack-caption connect-caption";
 
@@ -85,70 +64,163 @@
             margin: 20px 0;
         }
 
+        &-selector {
+            display: block;
+            margin-bottom: -60px !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            width: 10% !important;
+            transition: transform 0.2s linear;
+            z-index: -100;
+            position: relative;
+        }
+
         @include tablet {
-            grid-template-columns: 100%;
-            grid-template-rows: 70px auto auto auto auto auto auto auto auto;
-            grid-template-areas:
-                "prep-title"
-                "prep-image"
-                "prep-caption"
-                "hack-title"
-                "hack-image"
-                "hack-caption"
-                "connect-title"
-                "connect-image"
-                "connect-caption";
+            display: none !important;
         }
     }
 
     &-caption {
-        margin: 20px;
-        width: 90%;
+        width: 100%;
         justify-self: center;
+        margin-top: 50px;
+    }
+
+    &-title {
+        border-style: solid;
+        border-width: 2px;
+        background-color: #DFE5FA;
+        width: 90%;
+        height: 60%;
+        margin: auto;
+        @include tablet {
+            width: 100%;
+        }
+    }
+
+    &-description {
+        border-style: solid;
+        border-width: 2px;
+        border-top: none;
+        background-color: #FFFFFF;
+        width: 80%;
+        padding: 0px 5%;
+        overflow: hidden;
+        margin: auto;
+        transition: 0.3s ease;
+        min-height: 80px;
+        max-height: 90px;
+       
+        @include tablet {
+            max-height: 300px;
+            min-height: 200px;
+            width: 100%;
+            padding: 0;
+        }
+    } 
+
+    &-details {
+        width: 90%;
+        margin: auto;
+    }
+
+    &-intro {
+        font-size: 1.4em;
+        height: 85px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include tablet {
+            padding-bottom: 0;
+        }
     }
 }
 
-.prep-image {
-    animation: bounce-about 3s linear infinite;
-}
-.hack-image {
-    animation: bounce-down 3s linear infinite;
-}
-.connect-image {
-    animation: bounce-about 3s linear infinite;
-}
+.animate {
+    transform: translateY(40px);
+    transition: transform 0.3s linear;
+    &:hover {
+        transform: translateY(-40px);
+    transition: transform 0.3s linear;
+        .about-description {
+            max-height: 300px;
+            min-height: 200px;
+            padding-bottom: 30px;
+            transition: 0.3s ease;
+        }
+        .about-events-selector {
+            display: block;
+            transform: translateY(-65px);
+        }
+        .prep-image {
+            filter: drop-shadow(10px 25px 10px #F0CCD1);
+        }
+        .hack-image {
+            filter: drop-shadow(10px 25px 10px #C6EDE6);
+        }
+        .connect-image {
+            filter: drop-shadow(10px 25px 10px #C3C9FF);
+        }
+    }
 
-.button-smaller-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-/*
-.button-smaller {
-    padding: 15px 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $accent-pink;
-    color: $text-light;
-    font-size: $text-small;
-    font-family: "Poppins";
-    font-weight: 700;
-    border-radius: 10px;
-    border-style: none;
-    text-decoration: none;
     @include phone {
-        font-size: 16px;
+      transform: none;
+      &:hover {
+        transform: none;
+        .date {
+          display: block;
+        }
       }
-    
+    }
+    @include tablet {
+      transform: none;
+      &:hover {
+        transform: none;
+        .date {
+          display: block;
+        }
+      }
+    }
+  }
 
-    &:hover,
-    &:focus {
-        opacity: 0.7;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        transform: translateY(-5px);
-        transition: 0.1s linear;
+.about-mobile {
+    display: none;
+    padding-top: 50px;
+    @include tablet {
+      display: block;
+      margin-bottom: 50px;
     }
 }
-*/
+
+.about-slider-container {
+    position: relative;
+    margin-bottom: 45px;
+    justify-content: center;
+}
+
+.mobile-image {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+  
+.mobile-text {
+    position: relative;
+    width: 75%;
+    justify-content: center;
+    margin: auto;
+    margin-top: 3em;
+    text-align: center;
+  
+    p {
+      margin-bottom: 10px;
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+}
+
+  
