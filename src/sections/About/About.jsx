@@ -76,46 +76,47 @@ const About = () => {
                     </div>
                 </div>
             </div >
+
+            <div className="about-mobile">
+            <Slider {...settings}>
+            <div className="about-slider-container">
+                <img className="mobile-image" src={prepareTile} alt="prepare-mobile" />
+                <div className="mobile-text">
+                    <div className="about-title">
+                        <h3>{about.prepareTitle}</h3>
+                    </div>
+                    <div className="about-description">
+                        <p className="about-intro">{about.prepareDates}</p>
+                        <p>{about.prepareCaption}</p>
+                    </div>
+                </div>
+            </div>
+            <div className="about-slider-container">
+                <img className="mobile-image" src={hackTile} alt="hack-mobile" />
+                <div className="mobile-text">
+                    <div className="about-title">
+                        <h3>{about.hackTitle}</h3>
+                    </div>
+                    <div className="about-description">
+                        <p className="about-intro">{about.hackDates}</p>
+                        <p>{about.hackCaption}</p>
+                    </div>
+                </div>
+            </div>
+            <div className="about-slider-container">
+                <img className="mobile-image" src={connectTile} alt="connect-mobile" />
+                <div className="mobile-text">
+                    <div className="about-title">
+                        <h3>{about.connectTitle}</h3>
+                    </div>
+                    <div className="about-description">
+                        <p className="about-intro">{about.connectDates}</p>
+                        <p>{about.connectCaption}</p>
+                    </div>
+                </div>
+            </div>
+            </Slider>
         </div>
-        <div className="about-mobile">
-        <Slider {...settings}>
-          <div className="about-slider-container">
-            <img className="mobile-image" src={prepareTile} alt="prepare-mobile" />
-            <div className="mobile-text">
-                <div className="about-title">
-                    <h3>{about.prepareTitle}</h3>
-                </div>
-                <div className="about-description">
-                    <p className="about-intro">{about.prepareDates}</p>
-                    <p>{about.prepareCaption}</p>
-                </div>
-            </div>
-          </div>
-          <div className="about-slider-container">
-            <img className="mobile-image" src={hackTile} alt="hack-mobile" />
-            <div className="mobile-text">
-                <div className="about-title">
-                    <h3>{about.hackTitle}</h3>
-                </div>
-                <div className="about-description">
-                    <p className="about-intro">{about.hackDates}</p>
-                    <p>{about.hackCaption}</p>
-                </div>
-            </div>
-          </div>
-          <div className="about-slider-container">
-            <img className="mobile-image" src={connectTile} alt="connect-mobile" />
-            <div className="mobile-text">
-                <div className="about-title">
-                    <h3>{about.connectTitle}</h3>
-                </div>
-                <div className="about-description">
-                    <p className="about-intro">{about.connectDates}</p>
-                    <p>{about.connectCaption}</p>
-                </div>
-            </div>
-          </div>
-        </Slider>
         </div>
     </SectionWrapper >
     )
