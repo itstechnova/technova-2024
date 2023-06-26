@@ -26,6 +26,13 @@
             left: 25%;
             background-color: none;
             text-decoration: none;
+            @include phone {
+              font-size: 16px;
+            }
+        }
+        @include phone {
+          height: 60px;
+          width: 250px;
         }
     } 
     

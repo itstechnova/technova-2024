@@ -12,21 +12,8 @@
         display: inline;
         color: #19123C;
         @include phone {
-            font-size: 16px;
-        }
-    }
-
-    &-email {
-        font-family: 'Poppins';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 24px;
-        line-height: 36px;
-        text-align: center;
-        display: inline;
-        color: #19123C;
-        @include phone {
-            font-size: 16px;
+            font-size: 15px;
+            line-height: 20px;
         }
     }
     
@@ -43,16 +30,6 @@
         align-items: center;
         @include phone {
             height: 114px;
-        }
-    }
-    &-logo-container {
-        height: 25px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        img {
-            height: 100%;
-            margin-right: 10px;
         }
     }
     &-email-box {

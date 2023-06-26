@@ -69,23 +69,6 @@ function Contact() {
         setTimeout(() => { setState({ ...state, email: "", success: false }) }, 5000)
     }
 
-    const contactInfo = () => {
-        return (
-            <div className="contact">
-                <h2 className="inclusivityStatement">Inclusivity Statement</h2>
-                <br/>
-                <h3 className="statement">TechNova’s mission is to create safe, inclusive and empowering spaces for women and 
-                    non-binary individuals to start, grow and thrive in the technology industry. We ensure that 
-                    all members of the hackathon are respectful of our participants' gender expression. The TechNova
-                     team would also like to acknowledge that “female” or “women” is not an accurate description
-                      for many people and it may make some feel unwelcome. We use the term Women+ to specifically
-                       and intentionally include cis and trans women, as well as non-binary, agender, or intersex
-                        people, and other gender minorities.
-                </h3>
-            </div>
-        )
-    }
-
     return (
         <SectionWrapper id="contact">
             <Team />
@@ -133,9 +116,15 @@ function Contact() {
             </div>
             <br/><br/><br/>
             <div className="contact-container">
-                <div className="contact-row">
-                    {contactInfo()}
-                </div>
+                <h2 className="inclusivityStatement">Inclusivity Statement</h2>
+                <h3 className="statement">TechNova’s mission is to create safe, inclusive and empowering spaces for women and 
+                    non-binary individuals to start, grow and thrive in the technology industry. We ensure that 
+                    all members of the hackathon are respectful of our participants' gender expression. The TechNova
+                     team would also like to acknowledge that “female” or “women” is not an accurate description
+                      for many people and it may make some feel unwelcome. We use the term Women+ to specifically
+                       and intentionally include cis and trans women, as well as non-binary, agender, or intersex
+                        people, and other gender minorities.
+                </h3>
             </div>
         </SectionWrapper>
     );
