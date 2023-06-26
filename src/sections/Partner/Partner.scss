@@ -1,0 +1,173 @@
+@import "../../constants";
+
+.our-partners {
+  margin: auto;
+  background-color: #FFFFFF;
+  display: grid;
+  grid-template-columns: 55% 45%;
+  grid-template-areas: 
+    "wics-description wics-logo"
+    "wics-description wics-button";
+
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &-container {
+    margin-top: -200px;
+
+    @include phone {
+      margin-top: -400px;
+    }
+  }
+
+  &-title {
+    margin-top: 50px;
+    margin-bottom: 24px;
+    text-align: left;
+  }
+
+  &-divider {
+    border: 1px solid;
+    width: 100%;
+    margin-bottom: 3em;
+  }
+
+  &-header {
+    background-color: #F8B3B8;
+    border-bottom: 2px solid;
+    height: 4em;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: end;
+    .white-box {
+      margin: auto;
+      border-style: solid;
+      border-width: 2px;
+      margin-right: 0.5em;
+      background-color: #FFFFFF;
+      height: 2em;
+      width: 2em;
+    }
+  }
+
+  &-box {
+    border-style: solid;
+    border-width: 2px;
+    width: 95%;
+    box-shadow: 20px 20px #19123C;
+  }
+
+  &-text {
+    grid-area: wics-description;
+    padding: 3em;
+
+    @include phone {
+      padding-left: 1em;
+      padding-right: 1.5em;
+      text-align: center;
+    }
+  }
+
+
+  &-button {
+    border-style: solid;
+    border-width: 2px;
+    height: 4em;
+    width: 60%;
+    box-shadow: 10px 10px #19123C;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-around;
+    align-items: center;
+    text-decoration: none;
+    column-gap: 5%;
+    padding: 0px 15px;
+    p {
+      font-size: 1em;
+      text-align: center;
+    }
+  }
+
+  & {
+    text-align: left;
+    .wics_logo {
+      grid-area: wics-logo;
+      width: 60%;
+      margin: auto;
+      padding-bottom: 20px;
+    }
+
+    @include tablet {
+      background-image: none;
+      .mobile_img {
+        display: block;
+      }
+      .wics_logo {
+        width: 40%;
+        margin-top: 20px;
+        margin-bottom: -40px;
+      }
+      .wics_button {
+        width: 70%;
+        margin: auto;
+      }
+      .our-partners-button {
+        width: 100%;
+        display: flex;
+      }
+    }
+
+    .wics_button {
+      grid-area: wics-button;
+      display: flex;
+      justify-content: center;
+      padding-bottom: 4em;
+      align-items: center;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .wics_button img {
+    display: none;
+  }
+}
+
+#r-pinkflower {
+  position: relative;
+  left: 42%;
+  top: 400px;
+  z-index: -100;
+  transform: rotate(40deg);
+  width: 350px;
+}
+
+#l-pinkflower {
+  position: relative;
+  right: 50%;
+  z-index: -100;
+  top: -150px;
+  transform: rotate(20deg);
+  width: 250px;
+}
+
+#purple-flower {
+  position: relative;
+  left: 10%;
+  top: 120px;
+  z-index: -100;
+}
+
+#teal-flower {
+  position: relative;
+  right: 50%;
+  top: -120px;
+  z-index: -100;
+  color: #A8EFE4;
+}
+
+#partner {
+  overflow: hidden;
+}
