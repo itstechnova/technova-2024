@@ -87,7 +87,8 @@ const OurSponsors = () => (
         </a>
       </div>
     </div> */}
-    <h2 className="our-sponsors-title">Our Partners</h2>
+    <h1 className="our-sponsors-title">Our Partners</h1>
+    <hr className="our-sponsors-divider"></hr>
     <div className="our-sponsors-shadow-container">
       <div className="our-sponsors-tab">
         <div className="our-sponsors-square"> </div>

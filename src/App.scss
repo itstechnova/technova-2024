@@ -37,7 +37,7 @@ body {
     &-container {
       border-bottom: 2px solid #19123c;
       transition: all 0.25s linear;
-      background-color: #FFFAF3;
+      background-color: #fffaf3;
     }
     &-link {
       color: var(--text-color);
@@ -88,7 +88,9 @@ body {
 }
 
 h1 {
-  font-family: "Quicksand Bold";
+  color: #19123c;
+  font-family: Lexend;
+  font-weight: 600;
   font-size: $text-xlarge;
   margin: 0;
   @include phone {
