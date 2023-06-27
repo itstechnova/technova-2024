@@ -42,7 +42,7 @@ const Partner = () => (
           <div className="wics_button">
             <LandingButton
               link="https://cs.uwaterloo.ca/wics"
-              label="Learn more about WiCS"
+              label="Learn more"
             />
             
           </div>
