@@ -88,7 +88,7 @@ function Contact() {
 
     return (
         <SectionWrapper id="contact">
-            <Team />
+            {/* <Team /> */}
             <h1 className="contact-container">{contact.title}</h1>
             <hr/>
             <div className="contact-method">

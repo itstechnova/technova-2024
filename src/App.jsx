@@ -44,9 +44,9 @@ const App = () => {
                         <NavBar routes={routes} logoRoute={logoRoute} />
                         <Landing />
                         <About />
-                        <Story />
-                        <SponsorUs />
+                        {/* <Story /> */}
                         <Partner />
+                        <SponsorUs />
                         <FAQ />
                         <Contact />     
                     </div>

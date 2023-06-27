@@ -9,18 +9,18 @@ import OurSponsors from "./OurSponsors";
 import "./SponsorUs.scss";
 
 var showcase = [
-    {
-        quote: "For people who like to invent, there's no better place to explore opportunities than at Amazon. We're currently hiring for Software Developers (Interns and Full Time - 2022) in Canada. Join our team and help us build the future!",
-        link: "https://www.amazon.jobs/student-programs",
-        image: amazon,
-    },
-]
-
+  {
+    quote:
+      "For people who like to invent, there's no better place to explore opportunities than at Amazon. We're currently hiring for Software Developers (Interns and Full Time - 2022) in Canada. Join our team and help us build the future!",
+    link: "https://www.amazon.jobs/student-programs",
+    image: amazon,
+  },
+];
 
 const SponsorUs = () => (
-    <SectionWrapper id="sponsor">
-        <div className="sponsor-us-container">
-            <div className="sponsor-us-content">
+  <SectionWrapper id="sponsor">
+    <div className="sponsor-us-container">
+      {/* <div className="sponsor-us-content">
                 <div className="sponsor-us-text">
                     <h1 className="sponsor-us-title">Sponsor Us</h1>
                     <div className="sponsor-us-description">
@@ -38,10 +38,10 @@ const SponsorUs = () => (
             <h2 style={{marginTop:"24px"}}>Sponsor Showcase</h2>
             <div className="sponsor-us-showcase">
                 {<Carousel content={showcase} type={CarouselTypes.sponsor} />}
-            </div>            
-            <OurSponsors />
-        </div>
-    </SectionWrapper>
+            </div>             */}
+      <OurSponsors />
+    </div>
+  </SectionWrapper>
 );
 
 export default SponsorUs;
