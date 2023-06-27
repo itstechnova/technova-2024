@@ -1,5 +1,10 @@
 @import "../../constants";
 
+.contact-button-container {
+  text-align: center;
+  padding-bottom: 50px;
+}
+
 @keyframes bounce-up {
   0% {
     transform: translateY(50px);
@@ -13,13 +18,6 @@
     transform: translateY(50px);
     opacity: 1;
   }
-}
-
-hr {
-  border: 1px solid #19123c;
-  align-self: stretch;
-  margin-top: 32px;
-  margin-bottom: 60px;
 }
 
 .contact-container {
@@ -66,6 +64,13 @@ hr {
   margin-top: 16px;
   position: relative;
   margin-bottom: 16px;
+  display: flex;
+  width: 90%;
+  input {
+    padding: 0px 5px;
+    width: 100px;
+    flex-grow: 1;
+  }
 }
 
 .submit-wrapper {
@@ -74,28 +79,19 @@ hr {
   width: 47px;
   height: 39px;
   margin-top: 5px;
-  left: 287px;
+  right: 0;
   border-radius: 3px;
   display: inline;
   position: absolute;
   &:hover {
     opacity: 0.7;
   }
-  @include phone {
-    left: auto;
-    right: 8%;
-  }
 }
 
 .submit-btn {
-  width: 30px;
-  height: 30px;
-  margin-right: 100%;
-  @include phone {
-    margin-right: -70%;
-    width: 20px;
-    height: 20px;
-  }
+  width: 25px;
+  height: 25px;
+  margin: auto;
 }
 
 .wrapper {
@@ -151,7 +147,6 @@ hr {
     min-width: 0;
   }
 }
-
 .contact-links {
   text-decoration: none;
 }
@@ -191,22 +186,26 @@ hr {
   margin-top: 32px;
 }
 
-.inclusivityStatement {
-  font-family: "Quicksand";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 45px;
-  color: #19123c;
-}
+.inclusivity-statement {
+  &-container {
+    text-align: left;
+  }
+  &-title {
+    font-family: $font-title;
+    font-size: 25px;
+    line-height: 45px;
+    margin: 50px 0px 20px 0px;
+  }
+  &-content {
+    font-family: "Poppins";
 
-.statement {
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  color: #19123c;
-  width: "100vw";
+    font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 100px;
+    @include phone {
+      margin-bottom: 50px;
+    }
+  }
 }
 
 .contact-method {
@@ -491,14 +490,14 @@ hr {
   }
   &-shadow-container {
     background-color: white;
-    border: 1px solid #19123c;
+    border: 2px solid #19123c;
     box-shadow: 20px 20px 0px #19123c;
   }
   &-tab {
     background-color: #a8efe4;
     display: flex;
     height: 60px;
-    border: 1px solid #19123c;
+    border-bottom: 2px solid #19123c;
     justify-content: flex-end;
     align-items: center;
   }
@@ -507,7 +506,7 @@ hr {
     background-color: white;
     height: 25px;
     width: 25px;
-    border: 1px solid #19123c;
+    border: 2px solid #19123c;
   }
   &-partners {
     background-color: white !important;

@@ -104,6 +104,11 @@
       padding-bottom: 20px;
     }
 
+    .wics_button {
+      text-align: center;
+      margin: auto auto 30px auto;
+    }
+
     @include tablet {
       background-image: none;
       .mobile_img {
@@ -114,29 +119,7 @@
         margin-top: 20px;
         margin-bottom: -40px;
       }
-      .wics_button {
-        width: 70%;
-        margin: auto;
-      }
-      .our-partners-button {
-        width: 100%;
-        display: flex;
-      }
     }
-
-    .wics_button {
-      grid-area: wics-button;
-      display: flex;
-      justify-content: center;
-      padding-bottom: 4em;
-      align-items: center;
-    }
-  }
-}
-
-@media (max-width: 375px) {
-  .wics_button img {
-    display: none;
   }
 }
 
@@ -176,8 +159,3 @@
 #partner {
   overflow: hidden;
 }
-
-// .our-partners-container {
-//   /* margin: -200px 0px; */
-//   margin-top: -360px;
-//   margin-bottom: -135px;

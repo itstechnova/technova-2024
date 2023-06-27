@@ -33,6 +33,12 @@ body {
   details {
     background-color: var(--faq-card-bg-color);
   }
+  hr {
+    border: 1px solid #19123c;
+    align-self: stretch;
+    margin-top: 32px;
+    margin-bottom: 60px;
+  }
   .nav {
     &-container {
       border-bottom: 2px solid #19123c;

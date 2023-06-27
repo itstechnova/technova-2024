@@ -7,7 +7,7 @@ import arrow from "../../resources/images/graphics/arrow.svg";
 import pinkFlower from "../../resources/images/graphics/pink-flower.svg";
 import purpleFlower from "../../resources/images/graphics/purple-flower.svg";
 import tealFlower from "../../resources/images/graphics/teal-flower.svg";
-
+import LandingButton from "../Landing/LandingButton";
 
 const Partner = () => (
   <SectionWrapper id="partner">
@@ -28,22 +28,23 @@ const Partner = () => (
             <p>
               We are working in partnership with the University of Waterloo’s
               David R. Cheriton School of Computer Science - Women in Computer
-              Science (WiCS). 
+              Science (WiCS).
             </p>
             <br />
-            <p>  
-              WiCS is dedicated to promoting gender equity for
-              students interested in studying computer science and looking to
-              pursue careers in computing for the past 14 years, currently playing
-              an active role in supporting over 2700 students.
+            <p>
+              WiCS is dedicated to promoting gender equity for students
+              interested in studying computer science and looking to pursue
+              careers in computing for the past 14 years, currently playing an
+              active role in supporting over 2700 students.
             </p>
           </div>
+
           <div className="wics_button">
-              <a className="our-partners-button" href="https://cs.uwaterloo.ca/wics">
-                <img src={pixelHeart} />
-                <p>Find out more about WiCS</p>
-                <img src={arrow} />
-              </a>
+            <LandingButton
+              link="https://cs.uwaterloo.ca/wics"
+              label="Learn more about WiCS"
+            />
+            
           </div>
         </div>
       </div>
