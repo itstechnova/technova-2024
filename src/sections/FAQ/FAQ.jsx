@@ -71,16 +71,6 @@ const FAQ = () => (
           </ExpandableCard>
         </div>
       </div>
-
-      <div className="faq-contact">
-        <p>
-          Did we miss anything?
-          <br />
-          Send us an email at{" "}
-          <a href="mailto:hello@itstechnova.org">hello@itstechnova.org</a>
-        </p>
-        <img src={speech} alt="speech bubble"></img>
-      </div>
     </div>
   </SectionWrapper>
 );
