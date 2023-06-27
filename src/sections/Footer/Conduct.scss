@@ -27,12 +27,14 @@
             background-color: none;
             text-decoration: none;
             @include phone {
-              font-size: 16px;
+                font-size: 13px;
+                line-height: 20px;
             }
         }
         @include phone {
-          height: 60px;
-          width: 250px;
+          width: 220px;
+          height: 50px;
+          margin-bottom: 10%;
         }
     } 
     
