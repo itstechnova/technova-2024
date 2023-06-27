@@ -16,7 +16,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 const logoRoute = { logoSrc: logo, sectionId: "landing" };
 const routes = [
     { label: nav.about, sectionId: "about" },
-    { label: nav.sponsor, sectionId: "sponsor" },
+    { label: nav.partner, sectionId: "partner" },
     { label: nav.faq, sectionId: "faq" },
     { label: nav.contact, sectionId: "contact" },
 ];
