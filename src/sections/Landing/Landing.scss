@@ -1,146 +1,143 @@
 @import "../../constants";
 
 .landing {
-    &-container {
-        height: 110vh;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        @include phone {
-            flex-direction: column;
-            justify-content: center;
-        }
+  &-container {
+    height: 60vh;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include phone {
+      flex-direction: column;
+      justify-content: center;
     }
-    &-main-container {
-        display: flex;
-        flex-direction: column;
-        
-        row-gap: 15px;
-        @include tablet {
-            max-width: 44vw;
-            
-        }
-        
-        @include phone {
-            max-width: 70vw;
-            align-items: center;
-        }
+  }
+  &-main-container {
+    display: flex;
+    flex-direction: column;
+
+    row-gap: 15px;
+    @include tablet {
+      max-width: 44vw;
     }
 
-    &-text {
-        display: flex;
-        flex-direction: column;
-        font-family: $font-regular;
-        width: 100%;
-        text-align: left;
-        row-gap: 12px;
-        @include phone {
-            align-items: center;
-            text-align: center;
-            row-gap: 10px;
-        }
+    @include phone {
+      max-width: 70vw;
+      align-items: center;
     }
-    
-    &-title {
-        font-size: $text-xxlarge;
+  }
+
+  &-text {
+    display: flex;
+    flex-direction: column;
+    font-family: $font-regular;
+    width: 100%;
+    text-align: left;
+    row-gap: 12px;
+    @include phone {
+      align-items: center;
+      text-align: center;
+      row-gap: 10px;
+    }
+  }
+
+  &-title {
+    font-size: $text-xxlarge;
+    font-weight: 600;
+    font-family: $font-logo;
+    @include tablet {
+      font-size: $text-large;
+    }
+    @include phone {
+      font-size: $text-medium;
+    }
+  }
+  &-logo-text {
+    .mlh-mobile {
+      display: none;
+    }
+
+    @include phone {
+      .mlh-mobile {
+        display: block;
+      }
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+
+      .landing-title {
+        font-size: $text-large;
         font-weight: 600;
-        font-family: $font-logo;
-        @include tablet {
-            font-size: $text-large;
-        }
-        @include phone {
-            font-size: $text-medium;
-        }
+      }
     }
-    &-logo-text {
-        .mlh-mobile {
-            display: none;
-        }
+  }
 
-        @include phone {
-            .mlh-mobile {
-                display: block;
-            }
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-
-            .landing-title {
-                font-size: $text-large;
-                font-weight: 600;
-            }
-        }
+  &-description {
+    font-size: $text-medium;
+    font-weight: 400;
+    @include tablet {
+      font-size: $text-small;
     }
-
-    &-description {
-        font-size: $text-medium;
-        font-weight: 400;
-        @include tablet {
-            font-size: $text-small;
-        }
-        @include phone {
-            font-size: $text-xsmall;
-            width: 270px;
-            line-height: normal;
-        }
+    @include phone {
+      font-size: $text-xsmall;
+      width: 270px;
+      line-height: normal;
     }
+  }
 
-    &-dates {
-        grid-area: text-dates;
-        font-family: "Lexend";
-        font-weight: 600;
-        font-size: $text-medium;
-        @include phone {
-            font-size: 16px;
-            font-weight: 600;
-        }
+  &-dates {
+    grid-area: text-dates;
+    font-family: "Lexend";
+    font-weight: 600;
+    font-size: $text-medium;
+    @include phone {
+      font-size: 16px;
+      font-weight: 600;
+    }
+  }
+
+  &-button-container {
+    margin-top: 30px;
+    height: auto;
+    display: flex;
+    gap: 30px;
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+
+  &-graphic-container {
+    z-index: -100;
+    #ms-goose-flowers {
+      width: 30em;
+      @include desktop {
+        width: 15em;
+      }
     }
 
-    
-    &-button-container {
-        height: auto;
-        display: flex;
-        gap: 30px;
-        @include tablet {
-            flex-direction: column;
-        }
+    @include phone {
+      display: none;
     }
-        
-    &-graphic-container {
-        z-index: -100;
-
-        #ms-goose-flowers {
-            width: 30em;
-            @include desktop {
-                width: 22em;
-            }
-        }
-
-        @include phone {
-            display: none;
-        }
-    }
-
-    
+  }
 }
 
 #ms-goose {
-    display: none;
-    @include phone {
-        display: block;
-        width: 9em;
-    }
+  display: none;
+  @include phone {
+    display: block;
+    width: 9em;
+  }
 }
 #teal-asterisk {
-    position: absolute;
-    z-index: -100;
-    left: 0;
-    bottom: -40%;
+  position: absolute;
+  z-index: -100;
+  left: 0;
+  bottom: -30%;
 
-    @include phone {
-        width: 17em;
-        bottom: -30%;
-    }
+  @include phone {
+    width: 17em;
+    bottom: -30%;
+  }
 }

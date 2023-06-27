@@ -15,10 +15,10 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 const logoRoute = { logoSrc: logo, sectionId: "landing" };
 const routes = [
-    { label: nav.about, sectionId: "about" },
-    { label: nav.partner, sectionId: "partner" },
-    { label: nav.faq, sectionId: "faq" },
-    { label: nav.contact, sectionId: "contact" },
+  { label: nav.about, sectionId: "about" },
+  { label: nav.partner, sectionId: "partner" },
+  { label: nav.faq, sectionId: "faq" },
+  { label: nav.contact, sectionId: "contact" },
 ];
 
 // PDF locations in public folder
@@ -28,32 +28,32 @@ const SponsorPackage = `${process.env.PUBLIC_URL}/pdfs/sponsorship_package.pdf`;
 //const SponsorPackage = `${process.env.PUBLIC_URL}/pdfs/sponsorship_package.pdf`;
 
 const App = () => {
-    return (
-        <BrowserRouter>
-            <Switch>
-                <Route
-                    // Redirect itstechnova.org/sponsorship-package to pdf location
-                    path="/sponsorship-package"
-                    component={() => {
-                        window.location.href = SponsorPackage;
-                        return null;
-                    }}
-                />
-                <Route exact path="/">
-                    <div className="App">
-                        <NavBar routes={routes} logoRoute={logoRoute} />
-                        <Landing />
-                        <About />
-                        {/* <Story /> */}
-                        <Partner />
-                        <SponsorUs />
-                        <FAQ />
-                        <Contact />     
-                    </div>
-                </Route>
-            </Switch>
-        </BrowserRouter>
-    );
+  return (
+    <BrowserRouter>
+      <Switch>
+        <Route
+          // Redirect itstechnova.org/sponsorship-package to pdf location
+          path="/sponsorship-package"
+          component={() => {
+            window.location.href = SponsorPackage;
+            return null;
+          }}
+        />
+        <Route exact path="/">
+          <div className="App">
+            <NavBar routes={routes} logoRoute={logoRoute} />
+            <Landing />
+            <About />
+            {/* <Story /> */}
+            <Partner />
+            <SponsorUs />
+            <FAQ />
+            <Contact />
+          </div>
+        </Route>
+      </Switch>
+    </BrowserRouter>
+  );
 };
 
 export default App;
