@@ -9,7 +9,7 @@
   background-color: white;
   color: $text-dark;
 
-  font-size: $text-small;
+  font-size: 16px;
   font-family: "Poppins";
   font-weight: 700;
   text-decoration: none;
@@ -17,7 +17,7 @@
   white-space: nowrap;
   box-shadow: 10px 10px 0px 0px #19123c;
   @include phone {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   &:hover,

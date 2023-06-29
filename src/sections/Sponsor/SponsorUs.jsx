@@ -36,8 +36,8 @@ const SponsorUs = () => (
             </p>
           </div>
           <div className="sponsor-us-button-container">
-            <LandingButton link="" label="Sponsorship Package" />
-            <LandingButton link="" label="Join us as a sponsor" />
+            <LandingButton link="https://www.itstechnova.org/pdfs/sponsorship_package.pdf" label="Sponsorship Package" />
+            <LandingButton link="mailto:sponsors@itstechnova.org" label="Join us as a sponsor" />
           </div>
         </div>
         <div className="sponsor-us-images">
