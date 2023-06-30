@@ -2,16 +2,10 @@
 
 .faq {
   &-container {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    align-items: center;
+    text-align: center;
   }
   &-title {
-    font-family: $font-title;
-    font-size: $text-xlarge;
-    margin-bottom: 3rem;
-    align-self: flex-start;
+    align-self: center;
     @include tablet {
       margin-bottom: 2rem;
       font-size: $text-large;
