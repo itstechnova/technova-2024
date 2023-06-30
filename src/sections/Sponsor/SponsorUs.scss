@@ -58,15 +58,17 @@
     align-items: flex-start;
     justify-content: space-evenly;
     width: 50%;
-    padding-top: 40px;
+    padding-top: 0px;
+    padding-left: 100px;
     @include phone {
       width: 100%;
       justify-content: center;
       align-items: center;
+      padding-left: 0px;
+      padding-top: 40px;
     }
-    .plant-and-bee {
-      width: 80%;
-      animation: bounce 3s linear infinite;
+    .flowers {
+      width: 50%;
       @include phone {
         padding-top: 0;
         padding-bottom: 20px;
@@ -74,14 +76,19 @@
     }
   }
 
-  &-title {
-    margin-bottom: 16px;
-    @include phone {
+  &-button-container {
+    margin-top: 30px;
+    height: auto;
+    display: flex;
+    gap: 30px;
+    @include tablet {
+      flex-direction: column;
     }
   }
 
   &-description {
     margin-bottom: 8px;
+    font-weight: 600;
     p {
       margin-bottom: 16px;
     }

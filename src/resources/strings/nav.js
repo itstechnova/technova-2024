@@ -3,7 +3,7 @@ const nav = {
     about: "About",
     contact: "Contact Us",
     faq: "FAQ",
-    sponsor: "Sponsors",
+    partner: "Partners",
     story: "Our Story",
 };
 
