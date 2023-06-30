@@ -16,7 +16,7 @@ const landing = {
     mentorApplyCTAMobile: "I'm a Mentor",
     sponsor: "Interested in Sponsoring?",
     emailUs: "Email us at ",
-    email: "hacktechnova@gmail.com"
+    email: "hello@itstechnova.org"
 };
 
 export default landing;
