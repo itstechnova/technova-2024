@@ -6,11 +6,11 @@ import Story from "./sections/Story/Story";
 import SponsorUs from "./sections/Sponsor/SponsorUs";
 import FAQ from "./sections/FAQ/FAQ";
 import Contact from "./sections/Contact/Contact";
-import Footer from "./sections/Footer/Footer";
 import logo from "./resources/images/logo/logo.png";
-
+import Footer from "./sections/Footer/Footer";
 import nav from "./resources/strings/nav";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+import FooterBar from "./sections/Footer/FooterBar";
 
 const logoRoute = { logoSrc: logo, sectionId: "landing" };
 const routes = [
@@ -46,7 +46,8 @@ const App = () => {
                         <Story />
                         <SponsorUs />
                         <FAQ />
-                        <Contact />     
+                        <Contact /> 
+                        <FooterBar />
                     </div>
                 </Route>
             </Switch>
