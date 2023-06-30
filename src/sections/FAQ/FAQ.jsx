@@ -18,7 +18,7 @@ const FAQ = () => (
             No! Our event is open to all women and nonbinary people in high school or post-secondary.
           </ExpandableCard>
           <ExpandableCard question={"How many people can form a team?"}>
-            Teams can consist of up to 4 hackers. You can apply with or without a team, and there will be opportunities prior to our hackathon to meet others and form your team.
+          You can apply with or without a team and we will set you up with one!  There will be plenty of opportunities to connect with your teammates and others during the hackathon.
           </ExpandableCard>
           <ExpandableCard color = "pink" question={"What kind of workshops are there?"}>
             There will be a variety of workshops, including both technical and career-related topics. Additionally, there will be workshops for both beginner and advanced hackers. Some examples could be Resume Writing, Networking, Intro to X, Artifical Intelligence. 
