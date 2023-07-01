@@ -8,9 +8,9 @@ import about from "../../resources/strings/about";
 import prepareTile from "../../resources/images/graphics/prepare-tile.svg";
 import hackTile from "../../resources/images/graphics/hack-tile.svg";
 import connectTile from "../../resources/images/graphics/connect-tile.svg";
-import hackSelector from "../../resources/images/graphics/hack-selector.svg";
-import connectSelector from "../../resources/images/graphics/connect-selector.svg";
-import prepareSelector from "../../resources/images/graphics/prepare-selector.svg";
+import createSelector from "../../resources/images/graphics/create-selector.png";
+import careerSelector from "../../resources/images/graphics/career-selector.png";
+import communitySelector from "../../resources/images/graphics/community-selector.png";
 
 const About = () => {
     const settings = {
@@ -36,7 +36,7 @@ const About = () => {
             <div className="about-events">
                 <div className="animate">
                     <div className="hover_box">
-                        <img className="about-events-selector" src={prepareSelector} alt="prepare-selector" />
+                        <img className="about-events-selector" src={communitySelector} alt="community-selector" />
                         <img className="prep-image" style={{ gridArea: "prep-image" }} src={prepareTile} alt="prepare-tile" />
                         <div style={{ gridArea: "prep-caption"}} className="about-caption">
                             <div className="about-title">
@@ -50,7 +50,7 @@ const About = () => {
                     </div>  
                 </div>
                 <div className="animate">
-                    <img className="about-events-selector " src={hackSelector} alt="hack-selector" />
+                    <img className="about-events-selector " src={createSelector} alt="create-selector" />
                     <img className="hack-image" style={{ gridArea: "hack-image" }} src={hackTile} alt="hack-tile" />
                     <div style={{ gridArea: "hack-caption"}} className="about-caption">
                         <div className="about-title">
@@ -63,7 +63,7 @@ const About = () => {
                     </div>
                 </div>
                 <div className="animate">
-                    <img className="about-events-selector" src={connectSelector} alt="hack-selector" />
+                    <img className="about-events-selector" src={careerSelector} alt="career-selector" />
                     <img className="connect-image" style={{gridArea: "connect-image"}} src={connectTile} alt="connect-tile" />
                     <div style={{ gridArea: "connect-caption"}} className="about-caption">
                         <div className="about-title">
