@@ -188,7 +188,12 @@
 
 .inclusivity-statement {
   &-container {
+    padding-top: 80px;
     text-align: left;
+
+    @include phone {
+      padding-top: 60px;
+    }
   }
   &-title {
     font-family: $font-title;
@@ -200,7 +205,7 @@
     font-family: "Poppins";
 
     font-weight: 400;
-    font-size: 20px;
+    font-size: 15px;
     margin-bottom: 100px;
     @include phone {
       margin-bottom: 50px;
