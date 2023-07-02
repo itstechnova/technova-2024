@@ -26,9 +26,9 @@ const FAQ = () => (
             school or post-secondary.
           </ExpandableCard>
           <ExpandableCard question={"How many people can form a team?"}>
-            Teams can consist of up to 4 hackers. You can apply with or without
-            a team, and there will be opportunities prior to our hackathon to
-            meet others and form your team.
+            Teams can consist of up to 4 hackers. You can apply with or without a team
+            and we will set you up with one!  There will be plenty of opportunities to
+            connect with your teammates and others during the hackathon.
           </ExpandableCard>
           <ExpandableCard
             color="pink"
