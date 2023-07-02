@@ -1,0 +1,161 @@
+@import "../../constants";
+
+.our-partners {
+  margin: auto;
+  background-color: #ffffff;
+  display: grid;
+  grid-template-columns: 55% 45%;
+  grid-template-areas:
+    "wics-description wics-logo"
+    "wics-description wics-button";
+
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &-container {
+    margin-top: -200px;
+    margin-bottom: -135px;
+
+    @include phone {
+      margin-top: -400px;
+    }
+  }
+
+  &-title {
+    text-align: left;
+  }
+
+  &-divider {
+    border: 1px solid;
+    width: 100%;
+    margin-bottom: 3em;
+  }
+
+  &-header {
+    background-color: #f8b3b8;
+    border-bottom: 2px solid;
+    height: 4em;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: end;
+    .white-box {
+      margin: auto;
+      border-style: solid;
+      border-width: 2px;
+      margin-right: 0.5em;
+      background-color: #ffffff;
+      height: 2em;
+      width: 2em;
+    }
+  }
+
+  &-box {
+    border-style: solid;
+    border-width: 2px;
+    width: 95%;
+    box-shadow: 20px 20px #19123c;
+  }
+
+  &-text {
+    grid-area: wics-description;
+    padding: 3em;
+
+    @include phone {
+      padding-left: 1em;
+      padding-right: 1.5em;
+      text-align: center;
+    }
+  }
+
+  &-button {
+    border-style: solid;
+    border-width: 2px;
+    height: 4em;
+    width: 60%;
+    box-shadow: 10px 10px #19123c;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-around;
+    align-items: center;
+    text-decoration: none;
+    column-gap: 5%;
+    padding: 0px 15px;
+    p {
+      font-size: 1em;
+      text-align: center;
+    }
+    &:hover,
+    &:focus {
+      opacity: 0.7;
+      box-shadow: 0 0 11px rgba(255, 96, 120, 0.5);
+      transform: translateY(-5px);
+      transition: 0.1s linear;
+    }
+  }
+
+  & {
+    text-align: left;
+    .wics_logo {
+      grid-area: wics-logo;
+      width: 60%;
+      margin: auto;
+      padding-bottom: 20px;
+    }
+
+    .wics_button {
+      text-align: center;
+      margin: auto auto 30px auto;
+    }
+
+    @include tablet {
+      background-image: none;
+      .mobile_img {
+        display: block;
+      }
+      .wics_logo {
+        width: 40%;
+        margin-top: 20px;
+        margin-bottom: -40px;
+      }
+    }
+  }
+}
+
+#r-pinkflower {
+  position: relative;
+  left: 42%;
+  top: 400px;
+  z-index: -100;
+  transform: rotate(40deg);
+  width: 350px;
+}
+
+#l-pinkflower {
+  position: relative;
+  right: 50%;
+  z-index: -100;
+  top: -150px;
+  transform: rotate(20deg);
+  width: 250px;
+}
+
+#purple-flower {
+  position: relative;
+  left: 10%;
+  top: 120px;
+  z-index: -100;
+}
+
+#teal-flower {
+  position: relative;
+  right: 50%;
+  top: -120px;
+  z-index: -100;
+  color: #a8efe4;
+}
+
+#partner {
+  overflow: hidden;
+}

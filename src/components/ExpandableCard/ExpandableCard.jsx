@@ -6,7 +6,7 @@ const ExpandableCard = (props) => {
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <button onClick={() => setExpanded(!expanded)} className="card">
+    <button onClick={() => setExpanded(!expanded)} className={`card + ${props.color}`}>
       <div className="summary">
         <h1 className="question">{props.question}</h1>
         {/* eslint-disable-next-line jsx-a11y/role-supports-aria-props */}
