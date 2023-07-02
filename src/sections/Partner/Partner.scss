@@ -15,12 +15,7 @@
   }
 
   &-container {
-    margin-top: -200px;
-    margin-bottom: -135px;
-
-    @include phone {
-      margin-top: -400px;
-    }
+    margin-top: -50px;
   }
 
   &-title {
@@ -130,6 +125,7 @@
   z-index: -100;
   transform: rotate(40deg);
   width: 350px;
+  margin-top: -300px;
 }
 
 #l-pinkflower {
@@ -139,6 +135,7 @@
   top: -150px;
   transform: rotate(20deg);
   width: 250px;
+  margin-bottom: -150px;
 }
 
 #purple-flower {
@@ -146,14 +143,16 @@
   left: 10%;
   top: 120px;
   z-index: -100;
+  margin-top: -160px;
 }
 
 #teal-flower {
   position: relative;
   right: 50%;
-  top: -120px;
+  top: 20px;
   z-index: -100;
   color: #a8efe4;
+  margin-top: -120px;
 }
 
 #partner {
