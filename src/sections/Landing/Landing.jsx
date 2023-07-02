@@ -11,7 +11,7 @@ import asterisk3 from "../../resources/images/graphics/asterisk-3.svg";
 // import softStar1 from "../../resources/images/graphics/soft-star-1.svg";
 // import softStar2 from "../../resources/images/graphics/soft-star-2.svg";
 import msGoose from "../../resources/images/graphics/ms-goose.svg";
-import msGooseFlowers from "../../resources/images/graphics/ms-goose-flowers.svg";
+import msGooseFlowers from "../../resources/images/graphics/ms-goose-flowers.png";
 
 const Landing = () => {
   return (

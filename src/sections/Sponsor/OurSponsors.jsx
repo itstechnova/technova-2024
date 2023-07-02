@@ -96,10 +96,10 @@ const OurSponsors = () => (
         <div className="our-sponsors-square"> </div>
       </div>
       <div className="our-sponsors-partners">
-        <a href="https://cs.uwaterloo.ca/wics">
+        <a href="https://cs.uwaterloo.ca/wics" target="_blank" rel="noreferrer noopener">
           <img src={wics} alt="wics" />
         </a>
-        <a href="https://uwaterloo.ca/women-in-engineering/">
+        <a href="https://uwaterloo.ca/women-in-engineering/" target="_blank" rel="noreferrer noopener">
           <img src={wie} alt="wie" />
         </a>
       </div>

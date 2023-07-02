@@ -30,14 +30,14 @@ const SponsorUs = () => (
               Support more than 300+ young women in the next step of their
               journey by sponsoring the next generation of leaders. <br />
               Interested in sponsoring? Email us at{" "}
-              <a href="mailto:sponsors@itstechnova.org">
+              <a href="mailto:sponsors@itstechnova.org" target="_blank" rel="noreferrer noopener">
                 sponsors@itstechnova.org
               </a>
             </p>
           </div>
           <div className="sponsor-us-button-container">
-            <LandingButton link="https://www.itstechnova.org/pdfs/sponsorship_package.pdf" label="Sponsorship Package" />
-            <LandingButton link="mailto:sponsors@itstechnova.org" label="Join us as a sponsor" />
+            <LandingButton link="https://www.itstechnova.org/pdfs/sponsorship_package.pdf" label="Sponsorship Package"  target="_blank" rel="noreferrer noopener"/>
+            <LandingButton link="mailto:sponsors@itstechnova.org" label="Join us as a sponsor"  target="_blank" rel="noreferrer noopener"/>
           </div>
         </div>
         <div className="sponsor-us-images">
