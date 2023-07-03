@@ -3,14 +3,22 @@
     "version": "0.1.0",
     "private": true,
     "dependencies": {
+        "@babel/core": "^7.0.0",
+        "@babel/helper-create-class-features-plugin": "7.22.5",
+        "@babel/plugin-syntax-private-property-in-object": "7.14.5",
+        "@popperjs/core": "^2.11.7",
+        "@testing-library/dom": ">=7.21.4",
         "@testing-library/jest-dom": "^5.11.4",
         "@testing-library/react": "^11.1.0",
         "@testing-library/user-event": "^12.1.10",
         "bootstrap": "^5.0.1",
         "caniuse-lite": "^1.0.30001243",
+        "jquery": ">=1.8.0",
+        "prop-types": ">=15.3.0 <19",
         "react": "^17.0.2",
         "react-bootstrap": "^1.6.0",
         "react-dom": "^17.0.2",
+        "react-is": ">=16.8.0",
         "react-router-dom": "^5.2.0",
         "react-router-hash-link": "^2.4.3",
         "react-scripts": "4.0.3",
@@ -20,6 +28,8 @@
         "sass": "^1.62.1",
         "slick-carousel": "^1.8.1",
         "styled-components": "^5.3.0",
+        "tsutils": "3.21.0",
+        "typescript": "^3.7.0-beta",
         "web-vitals": "^1.0.1"
     },
     "scripts": {
@@ -46,9 +56,15 @@
             "last 1 safari version"
         ]
     },
+    "peerDependencies": {
+        "@babel/core": "^7.0.0",
+        "typescript": ">=2.8.0",
+        "react": "^16.0.0",
+        "react-dom": "^16.0.0"
+    },
     "devDependencies": {
+        "@babel/plugin-proposal-private-property-in-object": "^7.0.0",
         "eslint": "^7.26.0",
-        "eslint-plugin-react": "^7.23.2",
-        "@babel/plugin-proposal-private-property-in-object": "^7.0.0"
+        "eslint-plugin-react": "^7.23.2"
     }
 }
