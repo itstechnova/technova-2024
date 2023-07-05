@@ -9,7 +9,6 @@ const ExpandableCard = (props) => {
     <button onClick={() => setExpanded(!expanded)} className={`card + ${props.color}`}>
       <div className="summary">
         <h1 className="question">{props.question}</h1>
-        {/* eslint-disable-next-line jsx-a11y/role-supports-aria-props */}
         <img
           src={expand}
           alt="expand card"
