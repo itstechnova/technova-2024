@@ -42,7 +42,6 @@ export const Carousel = ({ content, type }) => {
         return () => {
             window.removeEventListener("resize", updateWindowDimensions)
         }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     });
 
     useEffect(() => {
