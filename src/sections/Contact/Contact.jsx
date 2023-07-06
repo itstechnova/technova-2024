@@ -88,13 +88,7 @@ function Contact() {
             <React.Fragment id="footer">
               <div className="footer-container">
                 <span className="footer-title">
-                  Reach out to us at{" "}
-                  <a
-                    style={{ color: "#7676E8", textDecoration: "none" }}
-                    href="mailto:hello@itstechnova.org"
-                  >
-                    hello@itstechnova.org
-                  </a>
+                  Sign up for our newsletter!
                 </span>
                 <br />
 
