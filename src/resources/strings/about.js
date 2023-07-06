@@ -6,7 +6,7 @@ const about = {
     connectCaption: "Tech fair to meet fellow hackers, make friends, and build bridges with industry professionals who want to connect with hackers like you!",
     connectDates: "Come connect with us",
     connectTitle: "Career",
-    hackCaption: "A 36-hour virtual hackathon to work with a team to design, create, and build... bringing your project to life!",
+    hackCaption: "A 36-hour in person hackathon to work with a team to design, create, and build... bringing your project to life!",
     hackDates: "Come build with us",
     hackTitle: "Create",
     prepareCaption: "Technical workshops and community building events to prepare for the hackathon and your career in technology!",
