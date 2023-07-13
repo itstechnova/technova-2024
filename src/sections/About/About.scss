@@ -5,7 +5,7 @@
     text-align: left;
     display: flex;
     flex-direction: column;
-    
+
     padding-bottom: 20px;
     @media (min-width: 1200px) {
       padding-bottom: 300px !important;
@@ -158,13 +158,13 @@
       transform: translateY(-65px);
     }
     .prep-image {
-      filter: drop-shadow(10px 25px 10px #f0ccd1);
+      filter: drop-shadow(10px 25px 10px #c3c9ff);
     }
     .hack-image {
       filter: drop-shadow(10px 25px 10px #c6ede6);
     }
     .connect-image {
-      filter: drop-shadow(10px 25px 10px #c3c9ff);
+      filter: drop-shadow(10px 25px 10px #f0ccd1);
     }
   }
 

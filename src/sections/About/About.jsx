@@ -36,8 +36,8 @@ const About = () => {
             <div className="about-events">
                 <div className="animate">
                     <div className="hover_box">
-                        <img className="about-events-selector" src={communitySelector} alt="community-selector" />
-                        <img className="prep-image" style={{ gridArea: "prep-image" }} src={prepareTile} alt="prepare-tile" />
+                        <img className="about-events-selector" src={careerSelector} alt="community-selector" />
+                        <img className="prep-image" style={{ gridArea: "prep-image" }} src={connectTile} alt="prepare-tile" />
                         <div style={{ gridArea: "prep-caption"}} className="about-caption">
                             <div className="about-title">
                                 <h3>{about.prepareTitle}</h3>
@@ -63,8 +63,8 @@ const About = () => {
                     </div>
                 </div>
                 <div className="animate">
-                    <img className="about-events-selector" src={careerSelector} alt="career-selector" />
-                    <img className="connect-image" style={{gridArea: "connect-image"}} src={connectTile} alt="connect-tile" />
+                    <img className="about-events-selector" src={communitySelector} alt="career-selector" />
+                    <img className="connect-image" style={{gridArea: "connect-image"}} src={prepareTile} alt="connect-tile" />
                     <div style={{ gridArea: "connect-caption"}} className="about-caption">
                         <div className="about-title">
                             <h3>{about.connectTitle}</h3>
