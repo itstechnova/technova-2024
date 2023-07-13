@@ -22,7 +22,7 @@ const FAQ = () => (
             color="turqoise"
             question={"Is this event only for Waterloo students?"}
           >
-            No! Our event is open to all women and nonbinary people in post-secondary.
+            No! Our event is open to all women and nonbinary people in high school or post-secondary.
           </ExpandableCard>
           <ExpandableCard question={"How many people can form a team?"}>
             Teams can consist of up to 4 hackers. You can apply with or without a team
