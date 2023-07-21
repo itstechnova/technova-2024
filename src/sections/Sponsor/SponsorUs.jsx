@@ -7,7 +7,6 @@ import flowers from "../../resources/images/graphics/sponsor-us-flowers.svg";
 import amazon from "../../resources/images/sponsors/amazon.png";
 import OurSponsors from "./OurSponsors";
 import "./SponsorUs.scss";
-import LandingButton from "../Landing/LandingButton";
 
 var showcase = [
   {
@@ -36,8 +35,8 @@ const SponsorUs = () => (
             </p>
           </div>
           <div className="sponsor-us-button-container">
-            <LandingButton link="https://www.itstechnova.org/pdfs/sponsorship_package.pdf" label="Sponsorship Package"  target="_blank" rel="noreferrer noopener"/>
-            <LandingButton link="mailto:sponsors@itstechnova.org" label="Join us as a sponsor"  target="_blank" rel="noreferrer noopener"/>
+            <Button link="https://www.itstechnova.org/pdfs/sponsorship_package.pdf" label="Sponsorship Package"  target="_blank" rel="noreferrer noopener"/>
+            <Button link="mailto:sponsors@itstechnova.org" label="Join us as a sponsor"  target="_blank" rel="noreferrer noopener"/>
           </div>
         </div>
         <div className="sponsor-us-images">
