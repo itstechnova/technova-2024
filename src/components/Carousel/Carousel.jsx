@@ -2,6 +2,8 @@ import React from "react";
 import "./Carousel.scss";
 import LandingButton from "../../sections/Landing/LandingButton";
 import pixelStar from "../../resources/images/graphics/pixel-star.svg";
+import pixelHeart from "../../resources/images/icons/pixel-heart.svg";
+import arrow from "../../resources/images/icons/arrow.svg";
 
 
 var colourCodes = {
@@ -18,7 +20,7 @@ export const Carousel = ({ content, slideNext }) => {
   }
 
     return (
-        <div className="carousel-wrappersss" id="carousel">
+        <div className="carousel-wrapper" id="carousel">
         <div className="carousel-box">
           <div className="carousel-header" style={{backgroundColor: colourCodes[content.colour]}}>
             <div className="white-box"></div>
@@ -36,19 +38,19 @@ export const Carousel = ({ content, slideNext }) => {
             </div>
 
             <div className="carousel-button-section">
-              <div>
-                {/* <LandingButton
-                  className = "carousel-button"
-                  link={content.link}
-                  label="Explore Career Page"
-                /> */}
+              <div className="carousel-button">
+                <a className="landing-button">
+                    <img className="career-pixel" src={pixelHeart} alt="Pixel Heart" />
+                    <div className="career-text">Explore Career Page</div>
+                    <img className="career-pixel" src={arrow} alt="Pixel Heart" />
+                  </a>
               </div>
 
               <div onClick={next} className="carousel-button">
-                  {/* <a className="landing-button">
+                  <a className="landing-button">
                     <img className="pixel" src={pixelStar} alt="Pixel Star" />
                     <div className="label">Next</div>
-                  </a> */}
+                  </a>
               </div>
               
             </div>

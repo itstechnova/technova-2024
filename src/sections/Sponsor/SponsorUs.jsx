@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -46,17 +46,35 @@ var showcase = [
   },
 ];
 
-const settings = {
-  dots: false,
-  infinite: false,
-  speed: 500,
-  slidesToShow: 1.25,
-  slidesToScroll: 1,
-  arrows: false
-}
 
 
 export const SponsorUs = () => {
+  const [slidesToShow, setSlidesToShow] = useState(1.25); 
+
+  useEffect(() => {
+    const handleResize = () => {
+      const screenWidth = window.innerWidth;
+      if (screenWidth < 520) {
+        setSlidesToShow(1);
+      } else {
+        setSlidesToShow(1.25);
+      }
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const settings = {
+    dots: false,
+    infinite: false,
+    speed: 520,
+    slidesToShow: slidesToShow,
+    slidesToScroll: 1,
+    arrows: false
+  }
   const sliderRef = useRef(null);
 
   const next = () => {
