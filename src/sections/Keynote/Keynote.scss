@@ -1,0 +1,74 @@
+@import "../../constants";
+
+.keynote {
+    &-title {
+        text-align: left;
+    }
+
+    &-card {
+        text-align: left;
+        display: grid;
+        grid-template-areas:
+            "card-img card-title"
+            "card-img card-desc";
+        grid-template-columns: 55% 45%;
+        grid-template-rows: 15% 85%;
+        justify-content: center;
+        align-items: center;
+        row-gap: 45px;
+
+
+        @media (max-width: 600px) {
+            grid-template-areas:
+                "card-img"
+                "card-title"
+                "card-desc";
+            grid-template-columns: 100%;
+            grid-template-rows: 30% 15% 55%;
+            row-gap: 20px;
+        }
+
+        &-img {
+            grid-area: card-img;
+            max-width: 60%;
+            max-height: 90%;
+            border: 2px solid;
+            margin: auto;
+        }
+
+        &-title {
+            background-color: white;
+            border: 2px solid;
+            font-weight: 600;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            column-gap: 20px;
+            padding: 10px;
+            text-align: center;
+            // margin-bottom: 50px;
+        }
+
+        &-star {
+            grid-area: card-title;
+            padding: 10px;
+        }
+        &-name {
+            grid-area: card-title;
+        }
+        &-role {
+            grid-area: card-title;
+        }
+
+        &-desc {
+            grid-area: card-desc;
+        }
+
+        &-desc-wrapper {
+            height: 100%;
+            display: flex;
+            align-items: start;
+        }
+    }
+}
