@@ -118,7 +118,7 @@ const About = () => {
             </Slider>
         </div>
         </div>
-    </SectionWrapper >
+    </SectionWrapper>
     )
 };
 
