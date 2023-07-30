@@ -3,6 +3,7 @@ import { HashLink as Link } from "react-router-hash-link";
 import "./NavBar.scss";
 import cross from "../../resources/images/icons/cross.svg";
 import hamburger from "../../resources/images/icons/hamburger.svg";
+import ExpandableCard from "../../components/ExpandableCard/ExpandableCard";
 
 const NavBar = ({ routes, logoRoute }) => {
   const [showNav, setShowNav] = useState(false);
@@ -72,27 +73,6 @@ const NavBar = ({ routes, logoRoute }) => {
                 {route.label}
               </Link>
             ))}
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                width: "100%",
-                marginTop: "20px",
-              }}
-            >
-              <a
-                href="https://mlh.io/seasons/2022/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2022-season&utm_content=white"
-                rel="noreferrer"
-                target="_blank"
-                style={{
-                  textDecoration: "none",
-                  fontWeight: "normal",
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "5px",
-                }}
-              ></a>
-            </div>
           </div>
         )}
       </div>

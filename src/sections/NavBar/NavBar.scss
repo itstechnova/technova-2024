@@ -60,7 +60,6 @@
   }
 
   &-mobile-links {
-    display: none;
     @include phone {
       position: fixed;
       top: 0;
@@ -70,10 +69,8 @@
       justify-content: center;
       align-items: flex-start;
       z-index: 100;
-      background-color: $light-pink;
       padding: 20px;
       width: 100%;
-      box-sizing: border-box;
     }
   }
 }
@@ -91,22 +88,11 @@
   }
 }
 
-.mlh-banner {
-  height: 180px;
-  padding-right: 40px;
-  overflow-x: visible;
-  @include tablet {
-    //right: 10px;
-  }
-  @include phone {
-    display: none;
-  }
-  img {
-    height: 100%;
-  }
-}
-
 .mobile-menu {
+  &:hover {
+    opacity: 0.5;
+    transition: linear 0.2s;
+  }
   opacity: 1;
   display: none;
   width: 30px;
@@ -115,7 +101,7 @@
     display: block;
   }
   z-index: 1000;
-  cursor: pointer;
+  cursor: pointer;  
 }
 
 .mobile {
