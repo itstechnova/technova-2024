@@ -118,9 +118,18 @@
   &-carousel {
     padding-top: 50px;
     display: block;
-    width: 100% !important;
-    @media (min-width: 900px) and (max-width: 1340px) {
-      width: calc(var(--screensize) - 100px) !important;
+    width: 104vw;
+    left: 0;
+    position: absolute;
+    padding-bottom: 50px;
+  }
+
+  &-carousel-wrapper {
+    @media (min-width: 800px){
+      padding-bottom: 700px;
+    }
+    @media (max-width: 800px) {
+      padding-bottom: 800px;
     }
   }
 }

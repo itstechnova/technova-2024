@@ -54,7 +54,7 @@ export const SponsorUs = () => {
   useEffect(() => {
     const handleResize = () => {
       const screenWidth = window.innerWidth;
-      if (screenWidth < 520) {
+      if (screenWidth < 475) {
         setSlidesToShow(1);
       } else {
         setSlidesToShow(1.25);
@@ -111,6 +111,7 @@ export const SponsorUs = () => {
             />
           </div>
         </div>
+        <div className="sponsor-us-carousel-wrapper">
         <div className="sponsor-us-carousel">
           <Slider ref={sliderRef} {...settings} >
             <Carousel content={showcase[0]} slideNext={next} />
@@ -119,6 +120,7 @@ export const SponsorUs = () => {
             <Carousel content={showcase[3]} slideNext={next} />
           </Slider> 
         </div>  
+      </div>
         <OurSponsors />
       </div>
     </SectionWrapper>
