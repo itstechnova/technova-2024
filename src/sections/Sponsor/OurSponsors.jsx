@@ -18,7 +18,7 @@ import rogers from "../../resources/images/sponsors/rogers.png";
 /*
 import splunk from "../../resources/images/sponsors/bronze/splunk.png";
 */
-import wie from "../../resources/images/logo/wie.png";
+import wie from "../../resources/images/logo/wie.jpg";
 import wics from "../../resources/images/logo/wics.png";
 
 const OurSponsors = () => (
