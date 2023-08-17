@@ -8,9 +8,9 @@ import { Carousel, CarouselTypes } from "../../components/Carousel/Carousel";
 
 import flowers from "../../resources/images/graphics/sponsor-us-flowers.svg";
 import amazon from "../../resources/images/sponsors/amazon.png";
-import cockroach from "../../resources/images/sponsors/cockroach.png";
-import google from "../../resources/images/sponsors/google.png";
-import facebook from "../../resources/images/sponsors/facebook.png";
+import wealthsimple from "../../resources/images/sponsors/wealthsimple.png";
+import google from "../../resources/images/sponsors/googlecloud.png";
+import opentext from "../../resources/images/sponsors/opentext.jpg";
 
 import OurSponsors from "./OurSponsors";
 import "./SponsorUs.scss";
@@ -21,7 +21,7 @@ var showcase = [
     quote:
       "For people who like to invent, there's no better place to explore opportunities than at Amazon. We're currently hiring for Software Developers (Interns and Full Time - 2022) in Canada. Join our team and help us build the future!",
     link: "https://www.amazon.jobs/student-programs",
-    image: cockroach,
+    image: wealthsimple,
     colour: "pink"
   },
   {
@@ -33,9 +33,9 @@ var showcase = [
   },
   {
     quote:
-      "For people who like to invent, there's no better place to explore opportunities than at Amazon. We're currently hiring for Software Developers (Interns and Full Time - 2022) in Canada. Join our team and help us build the future!",
-    link: "https://www.amazon.jobs/student-programs",
-    image: facebook,
+      "At OpenText, we recognize the low demographic of women in STEM. As part of our ongoing efforts to encourage women to participate in STEM and feel recognized for their invaluable insights, we invite you to join our Women in Tech program.",
+    link: "https://careers.opentext.com/?locale=en_US",
+    image: opentext,
     colour: "purple"
   },{
     quote:
@@ -49,15 +49,15 @@ var showcase = [
 
 
 export const SponsorUs = () => {
-  const [slidesToShow, setSlidesToShow] = useState(1.25); 
+  const [slidesToShow, setSlidesToShow] = useState(1.5); 
 
   useEffect(() => {
     const handleResize = () => {
       const screenWidth = window.innerWidth;
-      if (screenWidth < 475) {
+      if (screenWidth < 700) {
         setSlidesToShow(1);
       } else {
-        setSlidesToShow(1.25);
+        setSlidesToShow(1.5);
       }
     };
     handleResize();

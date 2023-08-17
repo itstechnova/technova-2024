@@ -39,11 +39,11 @@ export const Carousel = ({ content, slideNext }) => {
 
             <div className="carousel-button-section">
               <div className="carousel-button">
-                <a className="landing-button">
+                <a className="landing-button" href={content.link}>
                     <img className="career-pixel" src={pixelHeart} alt="Pixel Heart" />
                     <div className="career-text">Explore Career Page</div>
                     <img className="career-pixel" src={arrow} alt="Pixel Heart" />
-                  </a>
+                </a>
               </div>
 
               <div onClick={next} className="carousel-button">
