@@ -20,20 +20,11 @@
     font-size: 14px;
   }
 
-  &:hover,
-  &:focus {
+  &:hover {
     opacity: 0.7;
     box-shadow: 0 0 11px rgba(255, 96, 120, 0.5);
     transform: translateY(-5px);
     transition: 0.1s linear;
-  }
-  
-  &.clicked {
-    /* Remove hover and focus styles after clicking the button */
-    opacity: 1;
-    box-shadow: 10px 10px 0px 0px #19123c;
-    transform: none;
-    transition: none;
   }
 
   img {
