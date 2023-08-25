@@ -1,8 +1,8 @@
 import React from "react";
 import "./Keynote.scss";
 import SectionWrapper from "../../components/SectionWrapper/SectionWrapper";
-import msGoose from "../../resources/images/graphics/ms-goose.svg";
 import pixelStar from "../../resources/images/graphics/pixel-star.svg";
+import KeynoteSpeaker from "../../resources/images/keynoteSpeaker.png"
 
 function Keynote() {
     return (
@@ -18,7 +18,7 @@ function Keynote() {
                     <div className="white-box"></div>
                 </div>
                 <div className="keynote-card">
-                    <img className="keynote-card-img" src={msGoose} />
+                    <img className="keynote-card-img" src={KeynoteSpeaker} />
                     <div className="keynote-card-title">
                         <h3 className="keynote-card-name">
                             Stephanie Mills
