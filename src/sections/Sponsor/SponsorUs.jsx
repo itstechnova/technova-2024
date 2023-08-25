@@ -27,7 +27,7 @@ const SponsorUs = () => (
         <div className="sponsor-us-text">
           <div className="sponsor-us-description">
             <p>
-              Support more than 300+ young women in the next step of their
+              Support more than 300+ young women+ in the next step of their
               journey by sponsoring the next generation of leaders. <br />
               Interested in sponsoring? Email us at{" "}
               <a href="mailto:sponsors@itstechnova.org" target="_blank" rel="noreferrer noopener">
