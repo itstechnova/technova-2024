@@ -66,7 +66,7 @@ var showcase = [
   },
   {
     quote:
-      "SPS Commerce is the world’s leading retail network, connecting trading partners around the globe to optimize supply chain operations for all retail partners. We support data-driven partnerships with innovative cloud technology, customer-obsessed service and accessible experts so our customers can focus on what they do best. To date, more than 105,000 companies in retail, distribution, grocery and e-commerce have chosen SPS as their retail network.",
+      "SPS Commerce is the world’s leading retail network, connecting trading partners around the globe to optimize supply chain operations for all retail partners. We support data-driven partnerships with innovative cloud technology, customer-obsessed service and accessible experts so our customers can focus on what they do best.",
     link: "https://www.spscommerce.com/",
     image: sps,
     colour: "darkPink",
