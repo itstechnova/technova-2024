@@ -12,57 +12,64 @@ import wealthsimple from "../../resources/images/sponsors/wealthsimple.png";
 import google from "../../resources/images/sponsors/googlecloud.png";
 import opentext from "../../resources/images/sponsors/opentext.jpg";
 import cloudflare from "../../resources/images/sponsors/cloudflare.png";
+import zynga from "../../resources/images/sponsors/zynga.png";
+import sps from "../../resources/images/sponsors/sps.png";
 
 import OurSponsors from "./OurSponsors";
 import "./SponsorUs.scss";
 import LandingButton from "../Landing/LandingButton";
 
+var colourCodes = {
+  pink: "#f8b3b8",
+  turquoise: "#A8EFE4",
+  purple: "#7676E8",
+  darkPink: "#FC6D83",
+};
+
 var showcase = [
+  // {
+  //   // no quote, no link
+  //   quote:
+  //     "For people who like to invent, there's no better place to explore opportunities than at Amazon. We're currently hiring for Software Developers (Interns and Full Time - 2022) in Canada. Join our team and help us build the future!",
+  //   link: "https://www.amazon.jobs/student-programs",
+  //   image: wealthsimple,
+  //   colour: "pink",
+  // },
+  // {
+  //   // no quote, no link
+  //   quote:
+  //     "For people who like to invent, there's no better place to explore opportunities than at Amazon. We're currently hiring for Software Developers (Interns and Full Time - 2022) in Canada. Join our team and help us build the future!",
+  //   link: "https://www.amazon.jobs/student-programs",
+  //   image: google,
+  //   colour: "darkPink",
+  // },
   {
-    // no quote, no link
     quote:
-      "For people who like to invent, there's no better place to explore opportunities than at Amazon. We're currently hiring for Software Developers (Interns and Full Time - 2022) in Canada. Join our team and help us build the future!",
-    link: "https://www.amazon.jobs/student-programs",
-    image: wealthsimple,
-    colour: "pink",
-  },
-  {
-    // no quote, no link
-    quote:
-      "For people who like to invent, there's no better place to explore opportunities than at Amazon. We're currently hiring for Software Developers (Interns and Full Time - 2022) in Canada. Join our team and help us build the future!",
-    link: "https://www.amazon.jobs/student-programs",
-    image: google,
-    colour: "darkPink",
-  },
-  {
-    // no image
-    quote:
-      "Zynga is a global leader in interactive entertainment with a mission to connect the world through games, come work with us!",
+      "Zynga is a global leader in interactive entertainment with a mission to connect the world through games and a wholly-owned label of Take-Two Interactive Software, Inc.",
     link: "https://www.zynga.com/jobs/job-openings/",
-    image: google,
-    colour: "darkPink",
-  },
-  {
-    // not a sponsor?
-    quote:
-      "For people who like to invent, there's no better place to explore opportunities than at Amazon. We're currently hiring for Software Developers (Interns and Full Time - 2022) in Canada. Join our team and help us build the future!",
-    link: "https://www.amazon.jobs/student-programs",
-    image: amazon,
-    colour: "turquoise",
+    image: zynga,
+    colour: "pink",
   },
   {
     quote:
       "At OpenText, we recognize the low demographic of women in STEM. As part of our ongoing efforts to encourage women to participate in STEM and feel recognized for their invaluable insights, we invite you to join our Women in Tech program.",
     link: "https://careers.opentext.com/?locale=en_US",
     image: opentext,
+    colour: "turquoise",
+  },
+  {
+    quote:
+      "Cloudflare is the security, performance, and reliability company on a mission to help build a better Internet. Today it runs one of the world’s largest networks that powers anything connected to the Internet, with its services being used by everyone, from nonprofits and SMBs to Global 2000 companies and top government organizations.",
+    link: "https://www.cloudflare.com/",
+    image: cloudflare,
     colour: "purple",
   },
   {
     quote:
-      "The future of apps is AI - learn how you can build better assistive and generative AI apps on the Cloudflare global network.",
-    link: "https://ai.cloudflare.com/",
-    image: cloudflare,
-    colour: "purple",
+      "SPS Commerce is the world’s leading retail network, connecting trading partners around the globe to optimize supply chain operations for all retail partners. We support data-driven partnerships with innovative cloud technology, customer-obsessed service and accessible experts so our customers can focus on what they do best. To date, more than 105,000 companies in retail, distribution, grocery and e-commerce have chosen SPS as their retail network.",
+    link: "https://www.spscommerce.com/",
+    image: sps,
+    colour: "darkPink",
   },
 ];
 
