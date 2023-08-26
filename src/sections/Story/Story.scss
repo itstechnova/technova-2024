@@ -16,9 +16,9 @@
   font-family: "Poppins";
   font-weight: 400;
   font-size: 20px;
-  margin-top: 20px;
+  margin-top: 10px;
   @include phone {
-    margin-bottom: 50px;
+    margin-bottom: 15px;
   }
 }
 
@@ -199,14 +199,14 @@
 }
 
 .name {
-  padding-top: 3%;
-  padding-left: 30%;
+  padding-top: 4%;
+  padding-left: 20%;
   font-family: Poppins;
   font-size: 20px;
   font-weight: 500;
   line-height: 30px;
   letter-spacing: 0em;
-  text-align: center;
+  text-align: left;
 }
 
 .testimonials {
@@ -217,6 +217,7 @@
   line-height: 30px;
   letter-spacing: 0em;
   text-align: center;
+  min-width: 250px;
 }
 
 .star {
@@ -229,6 +230,7 @@
   padding-top: 1.5%;
   padding-bottom: 1%;
   padding-left: 2%;
+  width: 35px;
 }
 
 .speech1 {
