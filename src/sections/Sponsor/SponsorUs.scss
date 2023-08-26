@@ -1,5 +1,9 @@
 @import "../../constants";
 
+:root {
+  --screensize: 100vw;
+}
+
 @keyframes rotate {
   0% {
     transform: rotate(5deg);
@@ -110,10 +114,21 @@
     }
   }
 
-  &-showcase {
-    margin: 50px 96px;
-    @include phone {
-      margin: 0px;
+  &-carousel {
+    padding-top: 50px;
+    display: block;
+    width: 104vw;
+    left: 0;
+    position: absolute;
+    padding-bottom: 50px;
+  }
+
+  &-carousel-wrapper {
+    @media (min-width: 800px){
+      padding-bottom: 700px;
+    }
+    @media (max-width: 800px) {
+      padding-bottom: 800px;
     }
   }
 }
