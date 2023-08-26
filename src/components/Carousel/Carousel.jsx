@@ -49,7 +49,7 @@ export const Carousel = ({ content, slideNext }) => {
                   src={pixelHeart}
                   alt="Pixel Heart"
                 />
-                <div className="career-text">Explore Career Page</div>
+                <div className="career-text">Explore</div>
                 <img className="career-pixel" src={arrow} alt="Pixel Heart" />
               </a>
             </div>

@@ -46,7 +46,7 @@ var showcase = [
   {
     quote:
       "Zynga is a global leader in interactive entertainment with a mission to connect the world through games and a wholly-owned label of Take-Two Interactive Software, Inc.",
-    link: "https://www.zynga.com/jobs/job-openings/",
+    link: "https://www.zynga.com/",
     image: zynga,
     colour: "pink",
   },
