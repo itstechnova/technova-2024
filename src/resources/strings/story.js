@@ -1,23 +1,10 @@
-const ourStoryStrings = {
-    title: "Our Story",
-    description: "Hackathons can be intimidating for those  when you are new to the space, and especially if you are a minority.  So there needs to be a way to balance the playing field and offer the opportunity, community and support for women and  to thrive in tech.",
-    quote1Text: "I come from zero tech experience so knowing there is an event like this that is designed exactly for people like me - someone who hadn’t had exposure to computer science or technology - I feel like I am in the right place and I have a community.",
-    quote1Name: "Kaylee A",
-    quote1Role: "Beginner Hacker",
-    quote2Text: "Even as an experienced hacker, I often find regular hackathons rather intimidating and competitive. TechNova creates an encouraging, community-centered space to explore tech freely and without judgement.",
-    quote2Name: "Ayla O",
-    quote2Role: "Experienced Hacker",
-    quote3Text: "When I came into university, I met some of my closest friends through women in tech communities. I felt safe and included seeing others like me succeed ~ so I knew I could do it too.",
-    quote3Name: "Caroline C",
-    quote3Role: "Founder",
-    quote4Text: "Mentorship is a great way for anyone to give back. Personally, I have found mentorship to be an opportunity for me to help out those just starting and reflect on my growth since I started. I also get to meet a network of other mentors and leaders that want to help others grow.",
-    quote4Name: "Daniela C",
-    quote4Role: "Mentor",
-    affiliatedTitle: "In Partnership with",
-    wicsTitle: "Women in Computer Science",
-    wicsDescription: "We are working in partnership with the University of Waterloo’s David R. Cheriton School of Computer Science - Women in Computer Science (WiCS). WiCS is dedicated to promoting gender equity for students interested in studying computer science and looking to pursue careers in computing for the past 14 years, currently playing an active role in supporting over 2700 students.",
-    wieTitle: "Women in Engineering",
-    wieDescription: "Supported by the University of Waterloo’s Faculty of Engineering’s Women in Engineering (WiE). WiE supports current women-identifying engineers and students while encouraging the next generation of women to pursue careers in engineering. ",
+const story = {
+    person1: "Rheea",
+    person2: "Emma",
+    person3: "Vanessa",
+    testimonial1: "Through this experience with TechNova, I got to know what it is like working in a team where everyone used their unique skills to make a vision come to life. I even made good friends out of this experience. In addition, I got a before-hand experience of what coding is like which was useful in my studies.",
+    testimonial2: "I liked meeting other women in tech and learning new things! While I didn't have experience in coding, this event changed my point of view that in order to be involved with tech, you need to be able to code.",
+    testimonial3: "You're not going to find a more energetic, supportive community than the one created by TechNova! Competition aside, there were tons of fun events and activities to partake in, I would 100% participate in TechNova again and recommend it to my friends!",
 };
 
-export default ourStoryStrings;
+export default story;

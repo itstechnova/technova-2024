@@ -13,6 +13,7 @@ import Footer from "./sections/Footer/Footer";
 import nav from "./resources/strings/nav";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import FooterBar from "./sections/Footer/FooterBar";
+import Team from "./sections/Team/Team";
 
 const logoRoute = { logoSrc: logo, sectionId: "landing" };
 const routes = [
@@ -45,13 +46,13 @@ const App = () => {
             <NavBar routes={routes} logoRoute={logoRoute} />
             <Landing />
             <About />
-            {/* <Story /> */}
+            <Story />
             <Partner />
             <SponsorUs />
             <Keynote />
             <FAQ />
             <Contact />
-            <FooterBar />
+            <FooterBar />       
           </div>
         </Route>
       </Switch>

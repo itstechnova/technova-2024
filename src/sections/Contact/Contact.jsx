@@ -1,7 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import SectionWrapper from "../../components/SectionWrapper/SectionWrapper";
-import Team from "../../sections/Team/Team";
 import "./Contact.scss";
 import contact from "../../resources/strings/contact";
 import SocialMediaLink from "../../components/SocialMediaLink/SocialMediaLink";
