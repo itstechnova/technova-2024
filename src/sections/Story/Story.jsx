@@ -9,9 +9,9 @@ import pic3 from "../../resources/images/testimonials/pic3.png";
 import pixelStar from "../../resources/images/icons/pixelStar.svg";
 import flower from "../../resources/images/icons/HalfFlower.png";
 import "./Story.scss";
-import speech1 from "../../resources/images/testimonials/speechLeft.png";
-import speech2 from "../../resources/images/testimonials/speechMiddle.png";
-import speech3 from "../../resources/images/testimonials/speechRight.png";
+import speech1 from "../../resources/images/testimonials/bubbleLeft.png";
+import speech2 from "../../resources/images/testimonials/bubbleMiddle.png";
+import speech3 from "../../resources/images/testimonials/bubbleRight.png";
 
 const Story = () => {
     const [state, setState] = useState({
@@ -107,7 +107,15 @@ const Story = () => {
                         <p className="story-intro">Rheea</p>    
                     </div>
                     {
-                        hover1 ? <img className="speech1" src={speech1} alt="speech 1"/> : null
+                        hover1 ? 
+                        <div className="bubble-container1">
+                            <img className="bubble-image" src={speech1} alt="speech 1"/>
+                            <p className="bubble-text">Through this experience with TechNova, I got
+                             to know what it is like working in a team where everyone used their unique
+                              skills to make a vision come to life. I even made good friends out of this
+                               experience. In addition, I got a before-hand experience of what coding is
+                                like which was useful in my studies.</p>
+                        </div> : null
                     }
                 </div>
 
@@ -117,7 +125,16 @@ const Story = () => {
                             <img className="star" src={pixelStar} alt="star" />    
                             <p className="story-intro">Emma</p>      
                         </div>
-                        {hover2 ? <img className="speech2" src={speech2} alt="speech 2"/> : null}
+                        {
+                        hover2 ? 
+                        <div className="bubble-container2">
+                            <img className="bubble-image" src={speech2} alt="speech 2"/>
+                            <p className="bubble-text">I liked meeting other women in tech and
+                             learning new things! While I didn't have experience in coding, this
+                              event changed my point of view that in order to be involved with tech,
+                               you need to be able to code.</p>
+                        </div> : null
+                        }
                     </div>
 
                     <img className="connect-image" style={{gridArea: "connect-image"}} src={pic3} alt="connect-tile" onMouseOver={handleHover3}/>
@@ -126,7 +143,16 @@ const Story = () => {
                             <img className="star" src={pixelStar} alt="star"/>
                             <p className="story-intro">Vanessa</p>   
                         </div>
-                        {hover3 ? <img className="speech3" src={speech3} alt="speech 3"/> : null}  
+                        {
+                        hover3 ? 
+                        <div className="bubble-container3">
+                            <img className="bubble-image" src={speech3} alt="speech 3"/>
+                            <p className="bubble-text">You're not going to find a more energetic, 
+                            supportive community than the one created by TechNova! Competition aside,
+                             there were tons of fun events and activities to partake in, I would 100%
+                              participate in TechNova again and recommend it to my friends!</p>
+                        </div> : null
+                        }
                     </div>
             </div >
 
@@ -159,7 +185,6 @@ const Story = () => {
                     <div className="story-title">
                     <img className="star2" src={pixelStar} alt="star" />  
                         <h3 className="name">{story.person3}</h3>
-                        
                     </div>
                     <p className="testimonials">{story.testimonial3}</p>
                 </div>
