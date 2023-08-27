@@ -54,7 +54,6 @@
 
       &-img {
         margin: auto;
-        //
       }
       &-title {
         text-align: center;
@@ -63,10 +62,15 @@
           margin: auto;
         }
       }
+      &:hover {
+        .keynote-card-img {
+          box-shadow: none !important;
+        }
+      }
     }
 
     @media (max-width: 450px) {
-      grid-template-rows: 30% 15% 55%;
+      grid-template-rows: 30% 20% 50%;
       &-name {
         font-size: 25px !important;
         line-height: 1.5;
