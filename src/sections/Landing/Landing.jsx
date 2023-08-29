@@ -2,7 +2,7 @@ import "./Landing.scss";
 import SectionWrapper from "../../components/SectionWrapper/SectionWrapper";
 import landing from "../../resources/strings/landing";
 import landingBanner from "../../resources/images/logo/technova_banner.png";
-import LandingButton from "./LandingButton";
+import Button from "../../components/Button/Button";
 import tnLogo from "../../resources/images/logo/logo.png";
 // import asterisk1 from "../../resources/images/graphics/asterisk-1.svg";
 // import asterisk2 from "../../resources/images/graphics/asterisk-2.svg";
@@ -31,8 +31,8 @@ const Landing = () => {
             <h4 className="landing-dates">{landing.dates}</h4>
           </div>
           <div className="landing-button-container">
-            <LandingButton link={landing.appLink} label={landing.applyCTA} />
-            <LandingButton
+            <Button link={landing.appLink} label={landing.applyCTA} />
+            <Button
               link={landing.mentorAppLink}
               label={landing.mentorApplyCTA}
             />

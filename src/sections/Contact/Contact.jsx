@@ -11,7 +11,7 @@ import linkedin from "../../resources/images/socials/linkedin.svg";
 import facebook from "../../resources/images/socials/facebook.svg";
 import twitter from "../../resources/images/socials/twitter.svg";
 import emailVector from "../../resources/images/icons/emailvector.svg";
-import LandingButton from "../Landing/LandingButton";
+import Button from "../../components/Button/Button";
 
 function Contact() {
   const [state, setState] = useState({
@@ -139,7 +139,7 @@ function Contact() {
               <SocialMediaLink src={twitter} link={socials.twitter} />
             </div>
             <div className="contact-button-container">
-              <LandingButton
+              <Button
                 link="https://static.mlh.io/docs/mlh-code-of-conduct.pdf"
                 label="Code of Conduct"
               />

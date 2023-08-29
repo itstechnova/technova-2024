@@ -17,7 +17,6 @@ import sps from "../../resources/images/sponsors/sps.png";
 
 import OurSponsors from "./OurSponsors";
 import "./SponsorUs.scss";
-import LandingButton from "../Landing/LandingButton";
 
 var colourCodes = {
   pink: "#f8b3b8",
