@@ -127,13 +127,13 @@ export const SponsorUs = () => {
               </p>
             </div>
             <div className="sponsor-us-button-container">
-              <LandingButton
+              <Button
                 link="https://www.itstechnova.org/pdfs/sponsorship_package.pdf"
                 label="Sponsorship Package"
                 target="_blank"
                 rel="noreferrer noopener"
               />
-              <LandingButton
+              <Button
                 link="mailto:sponsors@itstechnova.org"
                 label="Join us as a sponsor"
                 target="_blank"

@@ -1,6 +1,5 @@
 import React from "react";
 import "./Carousel.scss";
-import LandingButton from "../../sections/Landing/LandingButton";
 import pixelStar from "../../resources/images/graphics/pixel-star.svg";
 import pixelHeart from "../../resources/images/icons/pixel-heart.svg";
 import arrow from "../../resources/images/icons/arrow.svg";
