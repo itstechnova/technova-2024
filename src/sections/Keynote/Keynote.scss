@@ -133,6 +133,8 @@
     &:hover {
       .keynote-card-img {
         box-shadow: 15px 15px #a8efe4;
+        transform: translateY(-10px);
+    transition: transform 0.3s linear;
       }
     }
   }
