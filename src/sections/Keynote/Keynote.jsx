@@ -2,7 +2,7 @@ import React from "react";
 import "./Keynote.scss";
 import SectionWrapper from "../../components/SectionWrapper/SectionWrapper";
 import pixelStar from "../../resources/images/graphics/pixel-star.svg";
-import KeynoteSpeaker from "../../resources/images/keynoteSpeaker.png"
+import KeynoteSpeaker from "../../resources/images/keynoteSpeaker.jpeg"
 
 function Keynote() {
     return (
@@ -34,12 +34,10 @@ function Keynote() {
                     </div>
                     <div className="keynote-card-desc-wrapper">
                         <p className="keynote-card-desc">
-                        Stephanie Mills is a 2020 Thiel fellow, and the CEO and founder of CodeGem; a people-first management platform built for software teams. 
-
+                        Laura Money is Executive Vice-President, Chief Information and Technology Innovation Officer of Sun Life, advancing digital transformation to support Sun Life's Clients.
                         <br></br>
                         <br></br>
-                        CodeGem was inspired by her combined experience studying management engineering at UWaterloo and working as a software engineer at top companies like Apple, Uber, Dapper, and Deloitte.
-                        </p>
+                        Her leadership and impact have led to recognitions including Canada’s Top 100 Most Powerful Women by the Women’s Executive Network, and one of the Top 10 Canadian CIOs by CIO Review. Laura is Chair of the Board at Bowtie Life Insurance Company and serves as Vice President of the University of Toronto Schools Alumni Association. Laura represents Canada internationally as a member of Age Group Team Canada for Standard Distance Triathlon.                        </p>
                     </div>
                 </div>
             </div>

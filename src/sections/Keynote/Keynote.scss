@@ -68,7 +68,7 @@
     }
 
     @media (max-width: 450px) {
-      grid-template-rows: 30% 20% 50%;
+      grid-template-rows: 15% 20% 65%;
       &-name {
         font-size: 25px !important;
         line-height: 1.5;
@@ -127,6 +127,7 @@
       display: flex;
       align-items: start;
       padding-top: 20px;
+      padding-bottom: 40px;
     }
 
     &:hover {
