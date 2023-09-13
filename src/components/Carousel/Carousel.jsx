@@ -5,12 +5,13 @@ import pixelHeart from "../../resources/images/icons/pixel-heart.svg";
 import arrow from "../../resources/images/icons/arrow.svg";
 
 var colourCodes = {
-  lightGold: "#FFCA69", //gold sponsor
-  lightPurple: "#ADB4F9", //silver sponsor
-  lightPink: "#FFA3AF", //bronze sponsor
-  darkPink: "#FC6D83", //startup
+  lightGold: "#FFCA69", // gold sponsor
+  lightPurple: "#ADB4F9", // silver sponsor
+  lightPink: "#FFA3AF", // bronze sponsor
+  darkPink: "#FC6D83", // startup
+  turquoise: "#A8EFE4", // other sponsors
+  
   // pink: "#f8b3b8",
-  // turquoise: "#A8EFE4",
   // purple: "#7676E8",
   // darkPink: "#FC6D83",
 };
@@ -24,7 +25,7 @@ export const Carousel = ({ content, slideNext }) => {
 
   let carouselContent = null;
 
-  if (sponsorTier === 'bronze') {
+  if (sponsorTier === 'bronze' || sponsorTier === 'other') {
     carouselContent = (
         <div className="carousel-wrapper" id="carousel">
         <div className="carousel-box">
@@ -55,6 +56,14 @@ export const Carousel = ({ content, slideNext }) => {
                 </div>
               ))}
             </div>
+            {sponsorTier === 'bronze' && (
+              <div onClick={handleNextClick} className="carousel-button">
+                <a className="button">
+                  <img className="pixel" src={pixelStar} alt="Pixel Star" />
+                  <div className="label">Next</div>
+                </a>
+              </div>
+            )}
           </div>
         </div>
       </div>

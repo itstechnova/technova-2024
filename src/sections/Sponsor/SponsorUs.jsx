@@ -9,13 +9,19 @@ import { Carousel, CarouselTypes } from "../../components/Carousel/Carousel";
 import flowers from "../../resources/images/graphics/sponsor-us-flowers.svg";
 import amazon from "../../resources/images/sponsors/amazon.png";
 import wealthsimple from "../../resources/images/sponsors/wealthsimple.png";
-import google from "../../resources/images/sponsors/googlecloud.png";
+import googlecloud from "../../resources/images/sponsors/googlecloud.png";
 import opentext from "../../resources/images/sponsors/opentext.jpg";
 import cloudflare from "../../resources/images/sponsors/cloudflare.png";
 import zynga from "../../resources/images/sponsors/zynga.png";
 import sps from "../../resources/images/sponsors/sps.png";
 import bbb from "../../resources/images/sponsors/bigbluebubble.png";
 import hrt from "../../resources/images/sponsors/hrt.png";
+import bam from "../../resources/images/sponsors/bam.png";
+import citadel from "../../resources/images/sponsors/citadel.png";
+import google from "../../resources/images/sponsors/google.png";
+import scotiabank from "../../resources/images/sponsors/scotiabank.png";
+import meta from "../../resources/images/sponsors/meta.png";
+import sunlife from "../../resources/images/sponsors/sunlife.png";
 
 import OurSponsors from "./OurSponsors";
 import "./SponsorUs.scss";
@@ -110,21 +116,52 @@ var showcase = [
         image: zynga,
       },
       {
-        url: "https://cloud.google.com/",
-        image: google,
-      },
-      {
-        url: "https://www.hudsonrivertrading.com/",
-        image: hrt,
-      },
-      {
         url: "https://www.opentext.com/",
         image: opentext,
+      },
+      {
+        url: "https://www.sunlife.ca/en/",
+        image: sunlife,
       },
     ],
     colour: "lightPink",
     sponsorTier: "bronze",
-  }
+  },
+  {
+    quote: "Other Sponsors",
+    links: [
+      {
+        url: "https://www.wealthsimple.com/en-ca/careers",
+        image: amazon,
+      },
+      {
+        url: "https://www.cloudflare.com/",
+        image: hrt,
+      },
+      {
+        url: "https://www.zynga.com/",
+        image: bam,
+      },
+      {
+        url: "https://www.opentext.com/",
+        image: citadel,
+      },
+      {
+        url: "https://cloud.google.com/",
+        image: google,
+      },
+      {
+        url: "https://www.opentext.com/",
+        image: scotiabank,
+      },
+      {
+        url: "https://cloud.google.com/",
+        image: meta,
+      },
+    ],
+    colour: "turquoise",
+    sponsorTier: "other",
+  },
 ];
 
 export const SponsorUs = () => {
