@@ -21,23 +21,23 @@ function Keynote() {
                     <img className="keynote-card-img" src={KeynoteSpeaker} />
                     <div className="keynote-card-title">
                         <h3 className="keynote-card-name">
-                            Stephanie Mills
+                        Laura Money 
                         </h3>
                         <div className="keynote-card-title-box">
                             <div className="keynote-card-star">
                                 <img src={pixelStar} />
                             </div>
                             <p className="keynote-card-role">
-                                CEO and Founder of CodeGem
+                            Chief Information and Technology Innovation Officer, Sun Life
                             </p>
                         </div>
                     </div>
                     <div className="keynote-card-desc-wrapper">
                         <p className="keynote-card-desc">
-                        Laura Money is Executive Vice-President, Chief Information and Technology Innovation Officer of Sun Life, advancing digital transformation to support Sun Life's Clients.
+                        Laura Money is Executive Vice-President, Chief Information and Technology Innovation Officer of Sun Life.
                         <br></br>
                         <br></br>
-                        Her leadership and impact have led to recognitions including Canada’s Top 100 Most Powerful Women by the Women’s Executive Network, and one of the Top 10 Canadian CIOs by CIO Review. Laura is Chair of the Board at Bowtie Life Insurance Company and serves as Vice President of the University of Toronto Schools Alumni Association. Laura represents Canada internationally as a member of Age Group Team Canada for Standard Distance Triathlon.                        </p>
+                        She is a Top 100 Most Powerful Woman in Canada and a Top 10 Canadian CIO, serving as Chair at Bowtie Life Insurance Company and Vice President of the University of Toronto Schools Alumni Association. She's also an international representative for Age Group Team Canada in Standard Distance Triathlon.</p>
                     </div>
                 </div>
             </div>

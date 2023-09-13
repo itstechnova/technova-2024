@@ -63,12 +63,12 @@
         }
       }
       .keynote-card-img {
-        box-shadow: 15px 15px #a8efe4;
+        box-shadow: none !important;
       }
     }
 
     @media (max-width: 450px) {
-      grid-template-rows: 15% 20% 65%;
+      grid-template-rows: 30% 20% 50%;
       &-name {
         font-size: 25px !important;
         line-height: 1.5;
@@ -86,10 +86,11 @@
     &-img {
       grid-area: card-img;
       max-width: 90%;
-      max-height: 90%;
+      max-height: 100%;
       border: 2px solid;
       margin: auto;
       border-radius: 10px;
+      transition: transform 0.3s linear;
     }
 
     &-title-box {
@@ -127,14 +128,14 @@
       display: flex;
       align-items: start;
       padding-top: 20px;
-      padding-bottom: 40px;
+      padding-bottom: 20px;
     }
 
     &:hover {
       .keynote-card-img {
         box-shadow: 15px 15px #a8efe4;
         transform: translateY(-10px);
-    transition: transform 0.3s linear;
+        transition: transform 0.3s linear;
       }
     }
   }
