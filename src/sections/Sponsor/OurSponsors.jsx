@@ -22,6 +22,10 @@ import wie from "../../resources/images/logo/wie.jpg";
 import wics from "../../resources/images/logo/wics.png";
 import ai from  "../../resources/images/logo/ai4good.png";
 import velocity from  "../../resources/images/logo/velocity.png";
+import wolfram from "../../resources/images/logo/wolfram.png";
+import voiceflow from "../../resources/images/logo/voiceflow.png";
+
+
 
 const OurSponsors = () => (
   <div className="our-sponsors-container">
@@ -105,6 +109,9 @@ const OurSponsors = () => (
           <a href="https://uwaterloo.ca/women-in-engineering/" target="_blank" rel="noreferrer noopener">
             <img src={wie} alt="wie" />
           </a>
+          <a href="https://www.wolfram.com/" target="_blank" rel="noreferrer noopener">
+            <img src={wolfram} alt="wolfram" />
+          </a>
         </div>
         <div className="our-sponsors-partners-row">
           <a href="https://uwaterloo.ca/women-in-engineering/" target="_blank" rel="noreferrer noopener">
@@ -112,6 +119,9 @@ const OurSponsors = () => (
           </a>
           <a href="https://uwaterloo.ca/women-in-engineering/" target="_blank" rel="noreferrer noopener">
             <img src={velocity} alt="velocity" />
+          </a>
+          <a href="https://www.voiceflow.com/" target="_blank" rel="noreferrer noopener">
+            <img src={voiceflow} alt="voiceflow" />
           </a>
         </div>
         
