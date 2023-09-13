@@ -114,10 +114,10 @@ const OurSponsors = () => (
           </a>
         </div>
         <div className="our-sponsors-partners-row">
-          <a href="https://uwaterloo.ca/women-in-engineering/" target="_blank" rel="noreferrer noopener">
+          <a href="https://www.ai4goodlab.com/" target="_blank" rel="noreferrer noopener">
             <img src={ai} alt="ai" />
           </a>
-          <a href="https://uwaterloo.ca/women-in-engineering/" target="_blank" rel="noreferrer noopener">
+          <a href="https://velocityincubator.com/" target="_blank" rel="noreferrer noopener">
             <img src={velocity} alt="velocity" />
           </a>
           <a href="https://www.voiceflow.com/" target="_blank" rel="noreferrer noopener">
