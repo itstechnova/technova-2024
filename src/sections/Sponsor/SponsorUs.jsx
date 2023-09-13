@@ -200,54 +200,48 @@ export const SponsorUs = () => {
   return (
     <SectionWrapper id="sponsor">
       <div className="sponsor-us-container">
-        <div className="sponsor-us-intro-container">
-          <div className="sponsor-us-left">
-            <h1 className="sponsor-us-title">Sponsor Us</h1>
-            <hr></hr>
-            <div className="sponsor-us-content">
-              <div className="sponsor-us-text">
-                <div className="sponsor-us-description">
-                  <p>
-                    Support more than 300+ young women in the next step of their
-                    journey by sponsoring the next generation of leaders. <br />
-                    Interested in sponsoring? Email us at{" "}
-                    <a
-                      href="mailto:sponsors@itstechnova.org"
-                      target="_blank"
-                      rel="noreferrer noopener"
-                    >
-                      sponsors@itstechnova.org
-                    </a>
-                  </p>
-                </div>
-                <div className="sponsor-us-button-container">
-                  <Button
-                    link="https://www.itstechnova.org/pdfs/sponsorship_package.pdf"
-                    label="Sponsorship Package"
-                    target="_blank"
-                    rel="noreferrer noopener"
-                  />
-                  <Button
-                    link="mailto:sponsors@itstechnova.org"
-                    label="Join us as a sponsor"
-                    target="_blank"
-                    rel="noreferrer noopener"
-                  />
-                </div>
-              </div>
+        <img id="flowers" src={flowers} alt="plant and bee"/>
+
+        <h1 className="sponsor-us-title">Sponsor Us</h1>
+        <hr></hr>
+        <div className="sponsor-us-content">
+          <div className="sponsor-us-text">
+            <div className="sponsor-us-description">
+              <p>
+                Support more than 300+ young women in the next step of their
+                journey by sponsoring the next generation of leaders. <br />
+                Interested in sponsoring? Email us at{" "}
+                <a
+                  href="mailto:sponsors@itstechnova.org"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  sponsors@itstechnova.org
+                </a>
+              </p>
+            </div>
+            <div className="sponsor-us-button-container">
+              <Button
+                link="https://www.itstechnova.org/pdfs/sponsorship_package.pdf"
+                label="Sponsorship Package"
+                target="_blank"
+                rel="noreferrer noopener"
+              />
+              <Button
+                link="mailto:sponsors@itstechnova.org"
+                label="Join us as a sponsor"
+                target="_blank"
+                rel="noreferrer noopener"
+              />
             </div>
           </div>
-          <div className="sponsor-us-images">
-            <img className="flowers" src={flowers} alt="plant and bee" />
-          </div>
         </div>
-        
         <div className="sponsor-us-carousel-wrapper">
           <div className="sponsor-us-carousel">
             <Slider ref={sliderRef} {...settings}>
               {showcase.map((content, index) => (
                 <Carousel key={index} content={content} slideNext={next} />
-              ))}
+                ))}
             </Slider>
           </div>
         </div>
