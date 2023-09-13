@@ -21,7 +21,7 @@ export const Carousel = ({ content, slideNext }) => {
     slideNext();
   };
 
-  const { quote, links, colour, sponsorTier } = content;
+  const { title, quote, links, colour, sponsorTier } = content;
 
   let carouselContent = null;
 
