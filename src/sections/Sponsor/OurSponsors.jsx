@@ -20,6 +20,8 @@ import splunk from "../../resources/images/sponsors/bronze/splunk.png";
 */
 import wie from "../../resources/images/logo/wie.jpg";
 import wics from "../../resources/images/logo/wics.png";
+import ai from  "../../resources/images/logo/ai4good.png";
+import velocity from  "../../resources/images/logo/velocity.png";
 
 const OurSponsors = () => (
   <div className="our-sponsors-container">
@@ -96,12 +98,23 @@ const OurSponsors = () => (
         <div className="our-sponsors-square"> </div>
       </div>
       <div className="our-sponsors-partners">
-        <a href="https://cs.uwaterloo.ca/wics" target="_blank" rel="noreferrer noopener">
-          <img src={wics} alt="wics" />
-        </a>
-        <a href="https://uwaterloo.ca/women-in-engineering/" target="_blank" rel="noreferrer noopener">
-          <img src={wie} alt="wie" />
-        </a>
+        <div className="our-sponsors-partners-row">
+          <a href="https://cs.uwaterloo.ca/wics" target="_blank" rel="noreferrer noopener">
+            <img src={wics} alt="wics" />
+          </a>
+          <a href="https://uwaterloo.ca/women-in-engineering/" target="_blank" rel="noreferrer noopener">
+            <img src={wie} alt="wie" />
+          </a>
+        </div>
+        <div className="our-sponsors-partners-row">
+          <a href="https://uwaterloo.ca/women-in-engineering/" target="_blank" rel="noreferrer noopener">
+            <img src={ai} alt="ai" />
+          </a>
+          <a href="https://uwaterloo.ca/women-in-engineering/" target="_blank" rel="noreferrer noopener">
+            <img src={velocity} alt="velocity" />
+          </a>
+        </div>
+        
       </div>
     </div>
   </div>
