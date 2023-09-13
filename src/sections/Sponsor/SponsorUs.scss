@@ -39,6 +39,19 @@
     }
   }
 
+  &-intro-container {
+    display: flex;
+  }
+
+  &-left {
+    flex: 2;
+  }
+
+  &-images {
+    flex: 1;
+
+  }
+
   &-content {
     display: flex;
     flex-direction: row;
@@ -72,7 +85,7 @@
       padding-top: 40px;
     }
     .flowers {
-      width: 50%;
+      width: 250px;
       @include phone {
         padding-top: 0;
         padding-bottom: 20px;
