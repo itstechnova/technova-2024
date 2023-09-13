@@ -76,6 +76,7 @@ var showcase = [
   //   colour: "purple",
   // },
   {
+    title: "Gold Sponsor",
     quote:
       "SPS Commerce is the world’s leading retail network, connecting trading partners around the globe to optimize supply chain operations for all retail partners. We support data-driven partnerships with innovative cloud technology, customer-obsessed service and accessible experts so our customers can focus on what they do best.",
     links: [
@@ -88,6 +89,7 @@ var showcase = [
     sponsorTier: "gold",
   },
   {
+    title: "Silver Sponsor",
     quote:
       "Inspiring Worlds of Creativity\
       Big Blue Bubble is an established video game developer with over 19 years of experience creating fun, innovative, and accessible titles. They develop games on a variety of platforms that inspire creativity and encourage people of all ages to embrace their playful side.",
@@ -101,7 +103,8 @@ var showcase = [
     sponsorTier: "silver",
   },
   {
-    quote: "Bronze Sponsors",
+    title: "Bronze Sponsors",
+    quote: "",
     links: [
       {
         url: "https://www.wealthsimple.com/en-ca/careers",
@@ -127,8 +130,9 @@ var showcase = [
     colour: "lightPink",
     sponsorTier: "bronze",
   },
-  {
-    quote: "Other Sponsors",
+  { 
+    title: "Other Sponsors",
+    quote: "",
     links: [
       {
         url: "https://www.wealthsimple.com/en-ca/careers",

@@ -39,7 +39,7 @@ export const Carousel = ({ content, slideNext }) => {
           </div>
           <div className="carousel-card">
             <div className="carousel-title">
-              <p>{quote}</p>
+              <p>{title}</p>
             </div>
             {/* Render each link and its associated image */}
             <div className="carousel-images-box">
@@ -81,6 +81,9 @@ export const Carousel = ({ content, slideNext }) => {
             ))}
           </div>
           <div className="carousel-card">
+            <div className="carousel-title">
+              <p>{title}</p>
+            </div>
             <div className="carousel-img-wrapper">
               <img className="carousel-image" src={links[0].image} alt="Carousel" />
             </div>
