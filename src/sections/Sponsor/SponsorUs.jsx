@@ -14,15 +14,21 @@ import opentext from "../../resources/images/sponsors/opentext.jpg";
 import cloudflare from "../../resources/images/sponsors/cloudflare.png";
 import zynga from "../../resources/images/sponsors/zynga.png";
 import sps from "../../resources/images/sponsors/sps.png";
+import bbb from "../../resources/images/sponsors/bigbluebubble.png";
+import hrt from "../../resources/images/sponsors/hrt.png";
 
 import OurSponsors from "./OurSponsors";
 import "./SponsorUs.scss";
 
 var colourCodes = {
+  lightGold: "#FFCA69", //gold sponsor
+  lightPurple: "#ADB4F9", //silver sponsor
+  lightPink: "#FFA3AF", //bronze sponsor
+  darkPink: "#FC6D83", //startup
+
   pink: "#f8b3b8",
   turquoise: "#A8EFE4",
   purple: "#7676E8",
-  darkPink: "#FC6D83",
 };
 
 var showcase = [
@@ -42,34 +48,83 @@ var showcase = [
   //   image: google,
   //   colour: "darkPink",
   // },
-  {
-    quote:
-      "Zynga is a global leader in interactive entertainment with a mission to connect the world through games and a wholly-owned label of Take-Two Interactive Software, Inc.",
-    link: "https://www.zynga.com/",
-    image: zynga,
-    colour: "pink",
-  },
-  {
-    quote:
-      "At OpenText, we recognize the low demographic of women in STEM. As part of our ongoing efforts to encourage women to participate in STEM and feel recognized for their invaluable insights, we invite you to join our Women in Tech program.",
-    link: "https://careers.opentext.com/?locale=en_US",
-    image: opentext,
-    colour: "turquoise",
-  },
-  {
-    quote:
-      "Cloudflare is the security, performance, and reliability company on a mission to help build a better Internet. Today it runs one of the world’s largest networks that powers anything connected to the Internet, with its services being used by everyone, from nonprofits and SMBs to Global 2000 companies and top government organizations.",
-    link: "https://www.cloudflare.com/",
-    image: cloudflare,
-    colour: "purple",
-  },
+  // {
+  //   quote:
+  //     "Zynga is a global leader in interactive entertainment with a mission to connect the world through games and a wholly-owned label of Take-Two Interactive Software, Inc.",
+  //   link: "https://www.zynga.com/",
+  //   image: zynga,
+  //   colour: "pink",
+  // },
+  // {
+  //   quote:
+  //     "At OpenText, we recognize the low demographic of women in STEM. As part of our ongoing efforts to encourage women to participate in STEM and feel recognized for their invaluable insights, we invite you to join our Women in Tech program.",
+  //   link: "https://careers.opentext.com/?locale=en_US",
+  //   image: opentext,
+  //   colour: "turquoise",
+  // },
+  // {
+  //   quote:
+  //     "Cloudflare is the security, performance, and reliability company on a mission to help build a better Internet. Today it runs one of the world’s largest networks that powers anything connected to the Internet, with its services being used by everyone, from nonprofits and SMBs to Global 2000 companies and top government organizations.",
+  //   link: "https://www.cloudflare.com/",
+  //   image: cloudflare,
+  //   colour: "purple",
+  // },
   {
     quote:
       "SPS Commerce is the world’s leading retail network, connecting trading partners around the globe to optimize supply chain operations for all retail partners. We support data-driven partnerships with innovative cloud technology, customer-obsessed service and accessible experts so our customers can focus on what they do best.",
-    link: "https://www.spscommerce.com/",
-    image: sps,
-    colour: "darkPink",
+    links: [
+      {
+        url: "https://www.spscommerce.com/",
+        image: sps,
+      }
+    ], 
+    colour: "lightGold",
+    sponsorTier: "gold",
   },
+  {
+    quote:
+      "Inspiring Worlds of Creativity\
+      Big Blue Bubble is an established video game developer with over 19 years of experience creating fun, innovative, and accessible titles. They develop games on a variety of platforms that inspire creativity and encourage people of all ages to embrace their playful side.",
+    links: [
+      {
+        url: "https://www.bigbluebubble.com/",
+        image: bbb,
+      }
+    ],
+    colour: "lightPurple",
+    sponsorTier: "silver",
+  },
+  {
+    quote: "Bronze Sponsors",
+    links: [
+      {
+        url: "https://www.wealthsimple.com/en-ca/careers",
+        image: wealthsimple,
+      },
+      {
+        url: "https://www.cloudflare.com/",
+        image: cloudflare,
+      },
+      {
+        url: "https://www.zynga.com/",
+        image: zynga,
+      },
+      {
+        url: "https://cloud.google.com/",
+        image: google,
+      },
+      {
+        url: "https://www.hudsonrivertrading.com/",
+        image: hrt,
+      },
+      {
+        url: "https://www.opentext.com/",
+        image: opentext,
+      },
+    ],
+    colour: "lightPink",
+    sponsorTier: "bronze",
+  }
 ];
 
 export const SponsorUs = () => {
