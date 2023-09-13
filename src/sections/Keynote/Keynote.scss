@@ -62,10 +62,8 @@
           margin: auto;
         }
       }
-      &:hover {
-        .keynote-card-img {
-          box-shadow: none !important;
-        }
+      .keynote-card-img {
+        box-shadow: none !important;
       }
     }
 
@@ -88,10 +86,11 @@
     &-img {
       grid-area: card-img;
       max-width: 90%;
-      max-height: 90%;
+      max-height: 100%;
       border: 2px solid;
       margin: auto;
       border-radius: 10px;
+      transition: transform 0.3s linear;
     }
 
     &-title-box {
@@ -129,11 +128,14 @@
       display: flex;
       align-items: start;
       padding-top: 20px;
+      padding-bottom: 20px;
     }
 
     &:hover {
       .keynote-card-img {
         box-shadow: 15px 15px #a8efe4;
+        transform: translateY(-10px);
+        transition: transform 0.3s linear;
       }
     }
   }
