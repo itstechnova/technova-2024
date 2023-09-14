@@ -3,7 +3,7 @@
 .landing {
   &-container {
     height: 95vh;
-    margin-top: 5vh;
+    margin-top: 7vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -41,6 +41,15 @@
     }
   }
 
+  &-mlh {
+    display: none;
+
+    @include phone {
+      display: block;
+      height: 28px;
+    }
+  }
+
   &-title {
     font-size: $text-xxlarge;
     font-weight: 600;
@@ -69,7 +78,7 @@
         display: none;
       }
       img {
-        height: 35px;
+        height: 30px;
       }
     } 
   }
@@ -99,7 +108,7 @@
   }
 
   &-button-container {
-    margin-top: 30px;
+    // margin-top: 30px;
     height: auto;
     display: flex;
     gap: 30px;

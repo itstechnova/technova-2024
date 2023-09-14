@@ -13,6 +13,7 @@ import asterisk3 from "../../resources/images/graphics/asterisk-3.svg";
 // import softStar2 from "../../resources/images/graphics/soft-star-2.svg";
 import msGoose from "../../resources/images/graphics/ms-goose.svg";
 import msGooseFlowers from "../../resources/images/graphics/ms-goose-flowers.png";
+import mlh from "../../resources/images/logo/mlh.png";
 
 const Landing = () => {
   return (
@@ -22,6 +23,7 @@ const Landing = () => {
           {/* <img id="ms-goose" src={msGoose} alt="ms goose" /> */}
           <img id="ms-goose" src={msGooseFlowers} alt="ms goose" />
           <div className="landing-text">
+            <img src={mlh} className="landing-mlh" alt="mlh" />
             <h4 className="landing-logo-text">
               <img src={tnLogo} className="landing-logo" alt="Tech Nova Logo" />
               <img src={landingBanner} className="landing-banner" alt="TechNova" />
