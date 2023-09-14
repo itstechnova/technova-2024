@@ -201,6 +201,10 @@ export const SponsorUs = () => {
     sliderRef.current.slickNext();
   };
 
+  const prev = () => {
+    sliderRef.current.slickPrev();
+  };
+
   return (
     <SectionWrapper id="sponsor">
       <div className="sponsor-us-container">
@@ -244,7 +248,7 @@ export const SponsorUs = () => {
           <div className="sponsor-us-carousel">
             <Slider ref={sliderRef} {...settings}>
               {showcase.map((content, index) => (
-                <Carousel key={index} content={content} slideNext={next} />
+                <Carousel key={index} content={content} slideNext={next} slidePrev={prev}/>
                 ))}
             </Slider>
           </div>

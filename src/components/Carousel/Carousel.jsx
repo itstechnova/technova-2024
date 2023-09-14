@@ -16,9 +16,13 @@ var colourCodes = {
   // darkPink: "#FC6D83",
 };
 
-export const Carousel = ({ content, slideNext }) => {
+export const Carousel = ({ content, slideNext, slidePrev }) => {
   const handleNextClick = () => {
     slideNext();
+  };
+
+  const handlePrevClick = () => {
+    slidePrev();
   };
 
   const { title, quote, links, colour, sponsorTier } = content;
@@ -56,14 +60,22 @@ export const Carousel = ({ content, slideNext }) => {
                 </div>
               ))}
             </div>
-            {sponsorTier === 'bronze' && (
-              <div onClick={handleNextClick} className="carousel-button">
-                <a className="button">
-                  <img className="pixel" src={pixelStar} alt="Pixel Star" />
-                  <div className="label">Next</div>
-                </a>
+            <div className="carousel-button-section">
+              <div onClick={handlePrevClick} className="carousel-button">
+                  <a className="button">
+                    <img className="pixel" src={pixelHeart} alt="Pixel Heart" />
+                    <div className="label">Previous</div>
+                  </a>
               </div>
-            )}
+              {sponsorTier === 'bronze' && (
+                <div onClick={handleNextClick} className="carousel-button">
+                  <a className="button">
+                    <img className="pixel" src={pixelStar} alt="Pixel Star" />
+                    <div className="label">Next</div>
+                  </a>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>
@@ -92,6 +104,15 @@ export const Carousel = ({ content, slideNext }) => {
             </div>
 
             <div className="carousel-button-section">
+              {sponsorTier != 'gold' && (
+                <div onClick={handlePrevClick} className="carousel-button">
+                  <a className="button">
+                    <img className="pixel" src={pixelHeart} alt="Pixel Heart" />
+                    <div className="label">Previous</div>
+                  </a>
+                </div>
+              )}
+
               <div className="carousel-button">
                 <a
                   className="button"
