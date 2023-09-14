@@ -214,6 +214,7 @@
 
       @include phone {
         flex-direction: column;
+        gap: 20px;
       }
     }
   }
