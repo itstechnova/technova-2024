@@ -135,19 +135,19 @@ var showcase = [
     quote: "",
     links: [
       {
-        url: "https://www.wealthsimple.com/en-ca/careers",
+        url: "https://www.amazon.ca/",
         image: amazon,
       },
       {
-        url: "https://www.cloudflare.com/",
+        url: "https://www.hudsonrivertrading.com/",
         image: hrt,
       },
       {
-        url: "https://www.zynga.com/",
+        url: "https://www.bamfunds.com/",
         image: bam,
       },
       {
-        url: "https://www.opentext.com/",
+        url: "https://www.citadel.com/",
         image: citadel,
       },
       {
@@ -155,11 +155,11 @@ var showcase = [
         image: google,
       },
       {
-        url: "https://www.opentext.com/",
+        url: "https://www.scotiabank.com/ca/en/personal.html",
         image: scotiabank,
       },
       {
-        url: "https://cloud.google.com/",
+        url: "https://about.meta.com/metaverse/",
         image: meta,
       },
     ],
