@@ -14,6 +14,10 @@
     @include tablet {
       height: 580px;
     }
+
+    @include phone {
+      height: 620px;
+    }
   }
 
   &-header {
@@ -103,7 +107,11 @@
       display: block;
       width: 130px;
       @include phone {
-        width: 120px;
+        width: 100px;
+      }
+
+      @include small-phone {
+        width: 85px;
       }
     }
   }
@@ -117,6 +125,10 @@
     
     @include tablet {
       flex-wrap: wrap;
+    }
+
+    @include phone {
+      column-gap: 30px;
     }
   }
   
