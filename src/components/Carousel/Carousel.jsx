@@ -3,6 +3,7 @@ import "./Carousel.scss";
 import pixelStar from "../../resources/images/graphics/pixel-star.svg";
 import pixelHeart from "../../resources/images/icons/pixel-heart.svg";
 import arrow from "../../resources/images/icons/arrow.svg";
+import Cursor from "../../resources/images/icons/cursor.png";
 
 var colourCodes = {
   lightGold: "#FFCA69", // gold sponsor
@@ -63,7 +64,7 @@ export const Carousel = ({ content, slideNext, slidePrev }) => {
             <div className="carousel-button-section">
               <div onClick={handlePrevClick} className="carousel-button">
                   <a className="button">
-                    <img className="pixel" src={pixelHeart} alt="Pixel Heart" />
+                    <img className="cursor" src={Cursor} alt="Pixel Heart" />
                     <div className="label">Previous</div>
                   </a>
               </div>
@@ -107,7 +108,7 @@ export const Carousel = ({ content, slideNext, slidePrev }) => {
               {sponsorTier != 'gold' && (
                 <div onClick={handlePrevClick} className="carousel-button">
                   <a className="button">
-                    <img className="pixel" src={pixelHeart} alt="Pixel Heart" />
+                    <img className="cursor" src={Cursor} alt="Pixel Heart" />
                     <div className="label">Previous</div>
                   </a>
                 </div>
