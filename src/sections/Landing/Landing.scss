@@ -64,7 +64,7 @@
   &-logo-text {
     display: flex;
     gap: 20px;
-    
+
     img {
       height: 60px;
     }
@@ -80,7 +80,30 @@
       img {
         height: 30px;
       }
-    } 
+    }
+  }
+  &-tech-together-container {
+    display: flex;
+    gap: 20px;
+    margin: 0px 43px 0px auto;
+    img {
+      height: 50px;
+      width: 190px;
+    }
+    h4 {
+      margin: auto 0px;
+    }
+    @include phone {
+      margin: auto;
+      gap: 5px;
+      h4 {
+        font-size: $text-xsmall;
+      }
+      img {
+        height: 44px;
+        width: 135px;
+      }
+    }
   }
 
   &-description {
