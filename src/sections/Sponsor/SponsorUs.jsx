@@ -126,6 +126,10 @@ var showcase = [
         url: "https://www.sunlife.ca/en/",
         image: sunlife,
       },
+      {
+        url: "https://cloud.google.com/",
+        image: google,
+      },
     ],
     colour: "lightPink",
     sponsorTier: "bronze",
@@ -149,10 +153,6 @@ var showcase = [
       {
         url: "https://www.citadel.com/",
         image: citadel,
-      },
-      {
-        url: "https://cloud.google.com/",
-        image: google,
       },
       {
         url: "https://www.scotiabank.com/ca/en/personal.html",

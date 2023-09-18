@@ -174,7 +174,7 @@
     align-items: center;
     gap: 40px;
     background-color: white !important;
-    height: 400px;
+    height: 550px;
     justify-content: space-evenly;
     padding: 20px;
     border-bottom: 2px solid #19123c;
@@ -188,12 +188,12 @@
         width: 100%;
       }
     }
-    @include tablet {
-      a {
-        margin-top: 30px;
-        width: 50%;
-      }
-    }
+    // @include tablet {
+    //   a {
+    //     margin-top: 30px;
+    //     width: 50%;
+    //   }
+    // }
     @include phone {
       height: auto;
       padding: 0 0 20px 0;
@@ -211,6 +211,7 @@
       // width: 685px;
       align-items: center;
       gap: 70px;
+      justify-content: center;
 
       @include phone {
         flex-direction: column;
