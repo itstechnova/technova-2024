@@ -24,6 +24,7 @@ import ai from  "../../resources/images/logo/ai4good.png";
 import velocity from  "../../resources/images/logo/velocity.png";
 import wolfram from "../../resources/images/logo/wolfram.png";
 import voiceflow from "../../resources/images/logo/voiceflow.png";
+import auntys from "../../resources/images/sponsors/auntys.jpg";
 
 
 
@@ -122,6 +123,11 @@ const OurSponsors = () => (
           </a>
           <a href="https://www.voiceflow.com/" target="_blank" rel="noreferrer noopener">
             <img src={voiceflow} alt="voiceflow" />
+          </a>
+        </div>
+        <div className="our-sponsors-partners-row">
+          <a href="https://www.auntyskitchen.ca/" target="_blank" rel="noreferrer noopener">
+            <img src={auntys} alt="auntys kitchen" />
           </a>
         </div>
         
