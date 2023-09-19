@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Team.scss";
+import SectionWrapper from "../../components/SectionWrapper/SectionWrapper";
 
 import SocialMediaLink from "../../components/SocialMediaLink/SocialMediaLink";
 import linkedin from "../../resources/images/socials/linkedinFill.svg";
@@ -82,24 +83,26 @@ const PhotoCard = (props) => {
 const Team = () => {
     const [id, setId] = useState(0);
     return (
-        <div className="team-container">
-            <div className="team-text">
-                <h2>Meet the Team</h2>
-                <div>
-                    <SocialMediaLink src={linkedin} link={photos[id].linkedin} />
-                    <p className="team-text-default">{photos[id].name} | {photos[id].role}</p>
-                    <p className="team-text-mobile">{photos[id].name} <br /> {photos[id].role}</p>
-                </div>
+        <SectionWrapper id="team" >
+            <div className="team-container">
+                <div className="team-text">
+                    <h2>Meet the Team</h2>
+                    <div>
+                        <SocialMediaLink src={linkedin} link={photos[id].linkedin} />
+                        <p className="team-text-default">{photos[id].name} | {photos[id].role}</p>
+                        <p className="team-text-mobile">{photos[id].name} <br /> {photos[id].role}</p>
+                    </div>
 
+                </div>
+                <div className="team-photos">
+                    {photos.map((photo, index) => {
+                        return (
+                            <PhotoCard photo={photo} id={index} onHover={() => setId(index)} />
+                        )
+                    })}
+                </div>
             </div>
-            <div className="team-photos">
-                {photos.map((photo, index) => {
-                    return (
-                        <PhotoCard photo={photo} id={index} onHover={() => setId(index)} />
-                    )
-                })}
-            </div>
-        </div>
+        </SectionWrapper>
     );
 }
 
