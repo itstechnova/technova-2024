@@ -2,7 +2,7 @@ import React from "react";
 import "./Keynote.scss";
 import SectionWrapper from "../../components/SectionWrapper/SectionWrapper";
 import pixelStar from "../../resources/images/graphics/pixel-star.svg";
-import KeynoteSpeaker from "../../resources/images/keynoteSpeaker.png"
+import KeynoteSpeaker from "../../resources/images/keynoteSpeaker.jpeg"
 
 function Keynote() {
     return (
@@ -21,25 +21,23 @@ function Keynote() {
                     <img className="keynote-card-img" src={KeynoteSpeaker} />
                     <div className="keynote-card-title">
                         <h3 className="keynote-card-name">
-                            Stephanie Mills
+                        Laura Money 
                         </h3>
                         <div className="keynote-card-title-box">
                             <div className="keynote-card-star">
                                 <img src={pixelStar} />
                             </div>
                             <p className="keynote-card-role">
-                                CEO and Founder of CodeGem
+                            Chief Information and Technology Innovation Officer, Sun Life
                             </p>
                         </div>
                     </div>
                     <div className="keynote-card-desc-wrapper">
                         <p className="keynote-card-desc">
-                        Stephanie Mills is a 2020 Thiel fellow, and the CEO and founder of CodeGem; a people-first management platform built for software teams. 
-
+                        Laura Money is Executive Vice-President, Chief Information and Technology Innovation Officer of Sun Life.
                         <br></br>
                         <br></br>
-                        CodeGem was inspired by her combined experience studying management engineering at UWaterloo and working as a software engineer at top companies like Apple, Uber, Dapper, and Deloitte.
-                        </p>
+                        She is a Top 100 Most Powerful Woman in Canada and a Top 10 Canadian CIO, serving as Chair at Bowtie Life Insurance Company and Vice President of the University of Toronto Schools Alumni Association. She's also an international representative for Age Group Team Canada in Standard Distance Triathlon.</p>
                     </div>
                 </div>
             </div>

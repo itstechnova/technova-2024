@@ -20,6 +20,13 @@ import splunk from "../../resources/images/sponsors/bronze/splunk.png";
 */
 import wie from "../../resources/images/logo/wie.jpg";
 import wics from "../../resources/images/logo/wics.png";
+import ai from  "../../resources/images/logo/ai4good.png";
+import velocity from  "../../resources/images/logo/velocity.png";
+import wolfram from "../../resources/images/logo/wolfram.png";
+import voiceflow from "../../resources/images/logo/voiceflow.png";
+import auntys from "../../resources/images/sponsors/auntys.jpg";
+
+
 
 const OurSponsors = () => (
   <div className="our-sponsors-container">
@@ -96,12 +103,34 @@ const OurSponsors = () => (
         <div className="our-sponsors-square"> </div>
       </div>
       <div className="our-sponsors-partners">
-        <a href="https://cs.uwaterloo.ca/wics" target="_blank" rel="noreferrer noopener">
-          <img src={wics} alt="wics" />
-        </a>
-        <a href="https://uwaterloo.ca/women-in-engineering/" target="_blank" rel="noreferrer noopener">
-          <img src={wie} alt="wie" />
-        </a>
+        <div className="our-sponsors-partners-row">
+          <a href="https://cs.uwaterloo.ca/wics" target="_blank" rel="noreferrer noopener">
+            <img src={wics} alt="wics" />
+          </a>
+          <a href="https://uwaterloo.ca/women-in-engineering/" target="_blank" rel="noreferrer noopener">
+            <img src={wie} alt="wie" />
+          </a>
+          <a href="https://www.wolfram.com/" target="_blank" rel="noreferrer noopener">
+            <img src={wolfram} alt="wolfram" />
+          </a>
+        </div>
+        <div className="our-sponsors-partners-row">
+          <a href="https://www.ai4goodlab.com/" target="_blank" rel="noreferrer noopener">
+            <img src={ai} alt="ai" />
+          </a>
+          <a href="https://velocityincubator.com/" target="_blank" rel="noreferrer noopener">
+            <img src={velocity} alt="velocity" />
+          </a>
+          <a href="https://www.voiceflow.com/" target="_blank" rel="noreferrer noopener">
+            <img src={voiceflow} alt="voiceflow" />
+          </a>
+        </div>
+        <div className="our-sponsors-partners-row">
+          <a href="https://www.auntyskitchen.ca/" target="_blank" rel="noreferrer noopener">
+            <img src={auntys} alt="auntys kitchen" />
+          </a>
+        </div>
+        
       </div>
     </div>
   </div>
