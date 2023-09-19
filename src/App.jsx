@@ -51,6 +51,7 @@ const App = () => {
             <SponsorUs />
             <Keynote />
             <FAQ />
+            <Team />
             <Contact />
             <FooterBar />       
           </div>
