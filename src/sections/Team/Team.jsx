@@ -76,7 +76,7 @@ const teams = [
     "Marketing",
 ]
 
-const PhotoCard = (props) => {
+const MemberCard = (props) => {
     const { photo, name } = props;
     const [imgSrc, setImgSrc] = useState(photo.hot);
 
@@ -89,13 +89,15 @@ const PhotoCard = (props) => {
     }
 
     return (
-        <div className="team-photocard" >
-            <img
-                onMouseOver={handleHover}
-                onMouseOut={handleUnhover}
-                src={imgSrc}
-                alt={name}
-            />
+        <div className="team-member-card" >
+            <div className="team-img-container">
+                <img
+                    onMouseOver={handleHover}
+                    onMouseOut={handleUnhover}
+                    src={imgSrc}
+                    alt={name}
+                />
+            </div>
             <p>{name}</p>
         </div>
     );
@@ -168,10 +170,10 @@ const Team = () => {
                     })}
                 </div>
 
-                <div className="team-photos">
+                <div className="team-members">
                     {filteredPhotos.map((photo, index) => {
                         return (
-                            <PhotoCard 
+                            <MemberCard 
                                 key={`${selectedTeam}-${photo.name}`}
                                 photo={photo}  
                                 name={photo.name} 

@@ -62,11 +62,10 @@
         }
     }
 
-    &-photos {
+    &-members {
         display: grid;
         grid-template-columns: repeat(7, 1fr);
         gap: 20px;
-        align-items: flex-start;
         @include tablet {
             grid-template-columns: repeat(5, 1fr);
         }
@@ -76,18 +75,26 @@
         @include small-phone {
             grid-template-columns: repeat(2, 1fr);
         }
+    }
+
+    &-member-card {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    &-img-container {
+        width: 100px;
+        height: 100px;
+        outline-style: solid;
+        :hover {
+            transform: scale(0.95);
+        }
         img {
             align-self: flex-start;
-            width: 100px;
-            height: 100px;
-            -moz-border-radius: 10px;
-            -webkit-border-radius: 10px;
-            border-radius: 10px;
-            @include phone {
-                width: 90%;
-                height: auto;
-            }
+            width: 100%;
+            height: auto;
         }
-
     }
 }
