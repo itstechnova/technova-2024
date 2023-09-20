@@ -8,6 +8,10 @@
         }
     }
 
+    &-title {
+        text-align: left;
+    }
+
     &-text {
         padding: 2px 0 10px 0;
         @include phone {
@@ -43,6 +47,18 @@
                     width: 48px;
                 }
             }
+        }
+    }
+
+    &-folders {
+        display: flex;
+        width: 100%;
+    }
+
+    &-folder {
+        width: 200px;
+        img {
+            width: 150px;
         }
     }
 
