@@ -3,16 +3,19 @@
 .team {
     &-container {
         padding-bottom: 30px;
+        min-height: 100vh;
         h2 {
             margin-top: 30px;
         }
     }
 
+    &-title {
+        text-align: left;
+    }
+
     &-text {
-        padding: 2px 0 10px 0;
+        // padding: 2px 0 10px 0;
         @include phone {
-            position: -webkit-sticky; /* Safari */
-            position: sticky;
             top: 60px;
             align-self: flex-start;
             width: 100%;
@@ -46,32 +49,92 @@
         }
     }
 
-    &-photos {
+    &-folders {
         display: grid;
-        grid-template-columns: repeat(7, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
         gap: 20px;
-        align-items: flex-start;
+        margin: 20px;
+
         @include tablet {
-            grid-template-columns: repeat(5, 1fr);
+            margin: 10px;
         }
+        @include phone {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    &-folder {
+        height: 200px;
+        img {
+            width: 180px;
+        }
+        cursor: pointer;
+
+        &-img-container {
+            min-height: 155px;
+        }
+    }
+
+    &-members {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        // @include tablet {
+        //     grid-template-columns: repeat(5, 1fr);
+        // }
         @include phone {
             grid-template-columns: repeat(3, 1fr);
         }
         @include small-phone {
             grid-template-columns: repeat(2, 1fr);
         }
+    }
+
+    &-member-card {
+        display: grid;
+        justify-items: center;
+        row-gap: 5px;
+    }
+
+    &-img-container {
+        width: 150px;
+        height: 150px;
+        outline-style: solid;
+        outline-width: 2px;
+        :hover {
+            transform: scale(0.95);
+        }
         img {
             align-self: flex-start;
-            width: 100px;
-            height: 100px;
-            -moz-border-radius: 10px;
-            -webkit-border-radius: 10px;
-            border-radius: 10px;
-            @include phone {
-                width: 90%;
-                height: auto;
+            width: 100%;
+            height: auto;
+        }
+        @include phone {
+            width: 90px;
+            height: 90px;
+        }
+    }
+
+    &-carousel {
+        display: flex;
+        align-items: center;
+        margin: 50px 0px;
+        @include tablet {
+            margin: 25px 0px;
+        }
+    }
+
+    &-pagination {
+        width: 30px;
+        cursor: pointer;
+        &.prev {
+            img {
+                transform: rotate(180deg);
             }
         }
-
+        img {
+            max-width: 100%;
+        }
     }
 }
