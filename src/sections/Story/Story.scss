@@ -285,3 +285,33 @@
   text-align: right;
 }
 
+.mobile-bubble-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.mobile-bubble-container {
+  position: relative;
+  display: inline-block; /* This makes the container's size adjust to its content */
+  margin-top: 10%;
+  margin-bottom: 5%;
+  width: 100%;
+  text-align: center;
+}
+
+.mobile-bubble-text {
+  position: absolute;
+  top: 60%; /* Centering the text vertically */
+  left: 50%; /* Centering the text horizontally */
+  transform: translate(-50%, -50%); /* Ensures true centering */
+  text-align: center;
+  width: 90%; /* Adjust this depending on your speech bubble design */
+  padding: 10px;
+  font-size: 25px;
+  @media (max-width: 430px) {
+    font-size: 11.5px;
+  }
+}
+
+

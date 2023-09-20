@@ -12,6 +12,7 @@ import "./Story.scss";
 import speech1 from "../../resources/images/testimonials/bubbleLeft.png";
 import speech2 from "../../resources/images/testimonials/bubbleMiddle.png";
 import speech3 from "../../resources/images/testimonials/bubbleRight.png";
+import mobileBubble from "../../resources/images/testimonials/mobileBubble.png";
 
 const Story = () => {
     const [state, setState] = useState({
@@ -165,7 +166,10 @@ const Story = () => {
                         <img className="star2" src={pixelStar} alt="star" /> 
                         <h3 className="name">{story.person1}</h3>       
                     </div>
-                    <p className="testimonials">{story.testimonial1}</p>
+                        <div className="mobile-bubble-container">
+                            <img className="mobile-bubble-image" src={mobileBubble} alt="speech 1"/>
+                            <p className="mobile-bubble-text">{story.testimonial1}</p>
+                        </div> 
                 </div>
             </div>
             <div className="story-slider-container">
@@ -176,7 +180,10 @@ const Story = () => {
                     <h3 className="name">{story.person2}</h3> 
                         
                     </div>
-                    <p className="testimonials">{story.testimonial2}</p>
+                    <div className="mobile-bubble-container">
+                            <img className="mobile-bubble-image" src={mobileBubble} alt="speech 1"/>
+                            <p className="mobile-bubble-text">{story.testimonial2}</p>
+                        </div> 
                 </div>
             </div>
             <div className="story-slider-container">
@@ -186,7 +193,10 @@ const Story = () => {
                     <img className="star2" src={pixelStar} alt="star" />  
                         <h3 className="name">{story.person3}</h3>
                     </div>
-                    <p className="testimonials">{story.testimonial3}</p>
+                    <div className="mobile-bubble-container">
+                            <img className="mobile-bubble-image" src={mobileBubble} alt="speech 1"/>
+                            <p className="mobile-bubble-text">{story.testimonial3}</p>
+                    </div> 
                 </div>
             </div>
             </Slider>
