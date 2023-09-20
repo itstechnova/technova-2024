@@ -203,15 +203,15 @@
 }
 
 .name {
-  padding-top: 2%;
   padding-left: 38%;
   font-family: Poppins;
   font-size: 20px;
   font-weight: 500;
   line-height: 30px;
   letter-spacing: 0em;
+  margin: auto 0px;
   @media (max-width: 500px) {
-    padding-left: 30%;
+    padding-left: 5%;
   }
 }
 
