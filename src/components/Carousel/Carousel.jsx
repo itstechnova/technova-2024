@@ -1,140 +1,150 @@
 import React from "react";
-import { useState, useEffect, useRef } from 'react';
 import "./Carousel.scss";
-import speechBackground from "../../resources/images/speechBubble.svg";
-import speechBackgroundMobile from "../../resources/images/speechPoint2.svg";
-import controlLeftLight1 from "../../resources/images/icons/control-left-light-1.svg";
-import controlRightLight1 from "../../resources/images/icons/control-right-light-1.svg";
+import pixelStar from "../../resources/images/graphics/pixel-star.svg";
+import pixelHeart from "../../resources/images/icons/pixel-heart.svg";
+import arrow from "../../resources/images/icons/arrow.svg";
+import cursor from "../../resources/images/icons/cursor.png";
 
-const useIntersection = (ref) => {
-    const [isIntersecting, setIntersecting] = useState(false)
-    const observer = new IntersectionObserver(
-        ([entry]) => setIntersecting(entry.isIntersecting)
-    )
-    useEffect(() => {
-        observer.observe(ref.current)
-        // Remove the observer as soon as the component is unmounted
-        return () => { observer.disconnect() }
-    });
-    return isIntersecting;
-}
-
-export const CarouselTypes = {
-    sponsor: "sponsor",
-    story: "story",
-}
-
-export const Carousel = ({ content, type }) => {
-    const autoPlayRef = useRef()
-    var ref = useRef();
-    const intervalRef = useRef(0);
-    const isVisible = useIntersection(ref);
-    const [currentSlide, setcurrentSlide] = useState(0);
-    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-    const [resetTimer, setResetTimer] = useState(true);
-
-    const updateWindowDimensions = () => {
-        setScreenWidth(window.innerWidth);
-    }
-
-    useEffect(() => {
-        window.addEventListener("resize", updateWindowDimensions);
-        return () => {
-            window.removeEventListener("resize", updateWindowDimensions)
-        }
-    });
-
-    useEffect(() => {
-        autoPlayRef.current = nextSlide;
-    });
-
-    useEffect(() => {
-        if (resetTimer) {
-            const play = () => {
-                clearTimeout(intervalRef.current);
-                autoPlayRef.current();
-            }
-            if (isVisible && resetTimer) {
-                clearTimeout(intervalRef.current);
-                intervalRef.current = setTimeout(play, 7000);
-                setResetTimer(false);
-            }
-            return () => {
-                if (isVisible) {
-                    //clearTimeout(timer);
-                }
-            }
-        }
-    }, [isVisible, resetTimer]);
-
-    const nextSlide = () => {
-        setResetTimer(true);
-        const newSlide = currentSlide + 1 >= content.length ? 0 : currentSlide + 1;
-        setcurrentSlide(newSlide);
-    };
-
-    const prevSlide = () => {
-        setResetTimer(true);
-        const newSlide = currentSlide - 1 < 0 ? content.length - 1 : currentSlide - 1;
-        setcurrentSlide(newSlide);
-    };
-
-    const SpeechBubble = () => (
-        <div className="carousel-speech-bubble">
-            {screenWidth && screenWidth <= 900
-                ? <img className="carousel-background-bubble2" alt="" src={speechBackgroundMobile} />
-                : <img className="carousel-background-bubble" alt="" src={speechBackground} />
-            }
-            <div className="carousel-text">
-                <p>{content[currentSlide].quote}</p>
-                <p className="carousel-quote-name-role">
-                    {content[currentSlide].name}, {content[currentSlide].role}
-                </p>
-            </div>
-        </div>
-    );
-
-    const SponsorBubble = () => (
-        <div className="carousel-sponsor-bubble">
-            <div className="carousel-sponsor-image-wrapper">
-                <img className="carousel-sponsor-image" alt="" src={content[currentSlide].image} />
-            </div>
-            <div className="carousel-sponsor-text">
-                <p>{content[currentSlide].quote}</p>
-                <br />
-                <div className="carousel-link-wrapper">
-                    <a href={content[currentSlide].link} target="_blank" rel="noreferrer noopener">Explore Career Page {'>'}</a>
-                </div>
-            </div>
-        </div>
-    );
-
-    return (
-        <div className="carousel-wrapper" ref={ref} id="carousel">
-            {type === CarouselTypes.story &&
-                <img className="carousel-image" alt="" src={content[currentSlide].image} />
-            }
-            <div className="carousel-speech-wrapper">
-                {type === CarouselTypes.story && <SpeechBubble />}
-                {type === CarouselTypes.sponsor && <SponsorBubble />}
-
-                <div className="carousel-controls-wrapper" >
-                    <div className="carousel-progress-bar">
-                        <div
-                            id="carousel-progress-made"
-                            style={{ width: `${((currentSlide + 1) / content.length) * 100}%` }}
-                        />
-                    </div>
-                    <p className="carousel-progress-score">
-                        {`${currentSlide + 1} / ${content.length}`}
-                    </p>
-                    <div className="carousel-controls">
-                        <img onClick={() => prevSlide()} src={controlLeftLight1} alt="" />
-                        <img onClick={() => nextSlide()} alt="" src={controlRightLight1} />
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    );
+var colourCodes = {
+  lightGold: "#FFCA69", // gold sponsor
+  lightPurple: "#ADB4F9", // silver sponsor
+  lightPink: "#FFA3AF", // bronze sponsor
+  darkPink: "#FC6D83", // startup
+  turquoise: "#A8EFE4", // other sponsors
+  
+  // pink: "#f8b3b8",
+  // purple: "#7676E8",
+  // darkPink: "#FC6D83",
 };
+
+export const Carousel = ({ content, slideNext, slidePrev }) => {
+  const handleNextClick = () => {
+    slideNext();
+  };
+
+  const handlePrevClick = () => {
+    slidePrev();
+  };
+
+  const { title, quote, links, colour, sponsorTier } = content;
+
+  let carouselContent = null;
+
+  if (sponsorTier === 'bronze' || sponsorTier === 'other') {
+    carouselContent = (
+        <div className="carousel-wrapper" id="carousel">
+        <div className="carousel-box">
+          <div
+            className="carousel-header"
+            style={{ backgroundColor: colourCodes[colour] }}
+          >
+            {[...Array(3)].map((_, index) => (
+              <div key={index} className="white-box"></div>
+            ))}
+          </div>
+          <div className="carousel-card">
+            <div className="carousel-title">
+              <p>{title}</p>
+            </div>
+            {/* Render each link and its associated image */}
+            <div className="carousel-images-box">
+              {links.map((link, index) => (
+                <div key={index} className="carousel-link">
+                  <a
+                    className="carousel-img-wrapper-bronze"
+                    href={link.url}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    <img className="carousel-image" src={link.image} alt="Carousel" />
+                  </a>
+                </div>
+              ))}
+            </div>
+            <div className="carousel-button-section">
+              <div onClick={handlePrevClick} className="carousel-button">
+                  <a className="button">
+                    <img className="pixel" src={cursor} alt="Cursor" />
+                    <div className="label">Previous</div>
+                  </a>
+              </div>
+              {sponsorTier === 'bronze' && (
+                <div onClick={handleNextClick} className="carousel-button">
+                  <a className="button">
+                    <img className="pixel" src={pixelStar} alt="Pixel Star" />
+                    <div className="label">Next</div>
+                  </a>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  } else {
+    carouselContent = (
+        <div className="carousel-wrapper" id="carousel">
+        <div className="carousel-box">
+          <div
+            className="carousel-header"
+            style={{ backgroundColor: colourCodes[colour] }}
+          >
+            {[...Array(3)].map((_, index) => (
+              <div key={index} className="white-box"></div>
+            ))}
+          </div>
+          <div className="carousel-card">
+            <div className="carousel-title">
+              <p>{title}</p>
+            </div>
+            <div className="carousel-img-wrapper">
+              <img className="carousel-image" src={links[0].image} alt="Carousel" />
+            </div>
+            <div className="carousel-text">
+              <p>{quote}</p>
+            </div>
+
+            <div className="carousel-button-section">
+              {sponsorTier != 'gold' && (
+                <div onClick={handlePrevClick} className="carousel-button">
+                  <a className="button">
+                    <img className="pixel" src={cursor} alt="Cursor" />
+                    <div className="label">Previous</div>
+                  </a>
+                </div>
+              )}
+
+              <div className="carousel-button">
+                <a
+                  className="button"
+                  href={links[0].url}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  <img
+                    className="career-pixel"
+                    src={pixelHeart}
+                    alt="Pixel Heart"
+                  />
+                  <div className="career-text">Explore</div>
+                  <img className="career-pixel" src={arrow} alt="Pixel Heart" />
+                </a>
+              </div>
+
+              <div onClick={handleNextClick} className="carousel-button">
+                <a className="button">
+                  <img className="pixel" src={pixelStar} alt="Pixel Star" />
+                  <div className="label">Next</div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  return carouselContent;
+};
+
+export default Carousel;

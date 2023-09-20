@@ -7,7 +7,7 @@ import arrow from "../../resources/images/graphics/arrow.svg";
 import pinkFlower from "../../resources/images/graphics/pink-flower.svg";
 import purpleFlower from "../../resources/images/graphics/purple-flower.svg";
 import tealFlower from "../../resources/images/graphics/teal-flower.svg";
-import LandingButton from "../Landing/LandingButton";
+import Button from "../../components/Button/Button";
 
 const Partner = () => (
   <SectionWrapper id="partner">
@@ -40,7 +40,7 @@ const Partner = () => (
           </div>
 
           <div className="wics_button">
-            <LandingButton
+            <Button
               link="https://cs.uwaterloo.ca/wics"
               label="Learn more"
             />

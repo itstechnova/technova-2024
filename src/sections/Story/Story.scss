@@ -91,6 +91,7 @@
       width: 80%;
       margin: 10px 0;
       border: 1.5px solid black;
+      height: 90%;
     }
 
     &-selector {
@@ -172,12 +173,14 @@
 }
 
 .story-slider-container {
+  height: 100%;
   position: relative;
   margin-bottom: 45px;
   justify-content: center;
+  max-height: 68vh;
 }
 
-.mobile-image {
+.testimonials-mobile-image {
   position: relative;
   margin-left: auto;
   margin-right: auto;
@@ -185,6 +188,7 @@
   margin-bottom: 20px;
   margin-top: 10px;
   border: 1.5px solid black;
+  height: 85%;
 }
 
 .mobile-text {
@@ -313,5 +317,18 @@
     font-size: 11.5px;
   }
 }
+.pic2 {
+  background-color: #A8EFE466;
+  img {
+    width: 70%;
+    padding: 20% 15%;
+  }
+}
 
-
+.pic3 {
+  background-color: #ADB4F966;
+  img {
+    width: 70%;
+    padding: 20% 15%;
+  }
+}

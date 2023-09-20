@@ -1,5 +1,9 @@
 @import "../../constants";
 
+:root {
+  --screensize: 100vw;
+}
+
 @keyframes rotate {
   0% {
     transform: rotate(5deg);
@@ -28,11 +32,8 @@
 }
 
 .sponsor-us {
-  &-container {
+  &-title {
     text-align: left;
-    @include phone {
-      height: auto;
-    }
   }
 
   &-content {
@@ -44,35 +45,13 @@
   }
 
   &-text {
+    text-align: left;
     width: 50%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     @include phone {
       width: 100%;
-    }
-  }
-
-  &-images {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-evenly;
-    width: 50%;
-    padding-top: 0px;
-    padding-left: 100px;
-    @include phone {
-      width: 100%;
-      justify-content: center;
-      align-items: center;
-      padding-left: 0px;
-      padding-top: 40px;
-    }
-    .flowers {
-      width: 50%;
-      @include phone {
-        padding-top: 0;
-        padding-bottom: 20px;
-      }
     }
   }
 
@@ -110,10 +89,34 @@
     }
   }
 
-  &-showcase {
-    margin: 50px 96px;
-    @include phone {
-      margin: 0px;
+  &-carousel {
+    padding-top: 50px;
+    display: block;
+    width: 100vw;
+    left: 0;
+    position: absolute;
+    padding-bottom: 50px;
+  }
+
+  &-carousel-wrapper {
+    @media (min-width: 800px){
+      padding-bottom: 700px;
+    }
+    @media (max-width: 800px) {
+      padding-bottom: 800px;
     }
   }
+}
+
+#flowers {
+  position: relative;
+  left: 40%;
+  top: 400px;
+  z-index: -100;
+  width: 350px;
+  margin-top: -400px;
+}
+
+#sponsor {
+  overflow: hidden;
 }

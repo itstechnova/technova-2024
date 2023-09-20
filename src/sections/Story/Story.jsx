@@ -13,6 +13,7 @@ import speech1 from "../../resources/images/testimonials/bubbleLeft.png";
 import speech2 from "../../resources/images/testimonials/bubbleMiddle.png";
 import speech3 from "../../resources/images/testimonials/bubbleRight.png";
 import mobileBubble from "../../resources/images/testimonials/mobileBubble.png";
+import goose from "../../resources/images/graphics/ms-goose.png"
 
 const Story = () => {
     const [state, setState] = useState({
@@ -120,7 +121,9 @@ const Story = () => {
                     }
                 </div>
 
-                    <img className="hack-image" style={{ gridArea: "hack-image" }} src={pic2} alt="hack-tile" onMouseOver={handleHover2}/>
+                    <div className="hack-image pic2" style={{ gridArea: "hack-image" }}>
+                        <img src={goose} alt="hack-tile" onMouseOver={handleHover2}/>
+                    </div>
                     <div style={{ gridArea: "hack-caption"}} className="story-caption">
                         <div className="story-description" onMouseOver={handleHover2}>
                             <img className="star" src={pixelStar} alt="star" />    
@@ -138,7 +141,9 @@ const Story = () => {
                         }
                     </div>
 
-                    <img className="connect-image" style={{gridArea: "connect-image"}} src={pic3} alt="connect-tile" onMouseOver={handleHover3}/>
+                    <div className="connect-image pic3" style={{gridArea: "connect-image"}}>
+                         <img src={goose} alt="connect-tile" onMouseOver={handleHover3}/>
+                    </div>
                     <div style={{ gridArea: "connect-caption"}} className="story-caption">
                         <div className="story-description" onMouseOver={handleHover3}>
                             <img className="star" src={pixelStar} alt="star"/>
@@ -160,7 +165,7 @@ const Story = () => {
             <div className="story-mobile">
             <Slider {...settings}>
             <div className="story-slider-container">
-                <img className="mobile-image" src={pic1} alt="profile pic 1" />
+                <img className="testimonials-mobile-image" src={pic1} alt="profile pic 1" />
                 <div className="mobile-text">
                     <div className="story-title">
                         <img className="star2" src={pixelStar} alt="star" /> 
@@ -173,7 +178,9 @@ const Story = () => {
                 </div>
             </div>
             <div className="story-slider-container">
-                <img className="mobile-image" src={pic2} alt="profile pic 2" />
+                <div className="testimonials-mobile-image pic2">
+                    <img src={goose} alt="profile pic 2" />
+                </div> 
                 <div className="mobile-text">
                     <div className="story-title">
                     <img className="star2" src={pixelStar} alt="star" />
@@ -187,7 +194,9 @@ const Story = () => {
                 </div>
             </div>
             <div className="story-slider-container">
-                <img className="mobile-image" src={pic3} alt="profile pic 3" />
+                <div className="testimonials-mobile-image pic3">
+                    <img src={goose} alt="profile pic 3" />
+                </div>
                 <div className="mobile-text">
                     <div className="story-title">
                     <img className="star2" src={pixelStar} alt="star" />  
