@@ -41,6 +41,7 @@ const photosByTeam = {
     "FINANCE": [
         { hot: seriousImages['joyce1.png'], goof: funnyImages['joyce2.png'], name: "Joyce Jorda", role: "Finance Lead", linkedin: "" },
         { hot: seriousImages['saanika1.png'], goof: funnyImages['saanika2.png'], name: "Saanika Sharma", role: "Finance Coordinator", linkedin: "" },
+        { hot: seriousImages['amanda1.png'], goof: funnyImages['amanda2.png'], name: "Amanda Gressmann", role: "Finance Coordinator", linkedin: "" },
     ],
     "DESIGN": [
         { hot: seriousImages['jennifer1.png'], goof: funnyImages['jennifer2.png'], name: "Jennifer Lin", role: "Design Coordinator", linkedin: "" },
@@ -61,7 +62,7 @@ const photosByTeam = {
         { hot: seriousImages['darya1.png'], goof: funnyImages['darya2.png'], name: "Darya Zakharova", role: "Sponsorship Coordinator", linkedin: "" },
         { hot: seriousImages['katherine1.png'], goof: funnyImages['katherine2.png'], name: "Katherine Li", role: "Sponsorship Coordinator", linkedin: "" },
         { hot: seriousImages['prasanna1.png'], goof: funnyImages['prasanna2.png'], name: "Prasanna Thallapalli", role: "Sponsorship Coordinator", linkedin: "" },
-        { hot: seriousImages['darya1.png'], goof: funnyImages['darya2.png'], name: "Diliara Kaniazova", role: "Sponsorship Coordinator", linkedin: "" },
+        { hot: seriousImages['member1.png'], goof: funnyImages['member2.png'], name: "Diliara Kaniazova", role: "Sponsorship Coordinator", linkedin: "" },
     ],
     "MARKETING": [
         { hot: seriousImages['alenka1.png'], goof: funnyImages['alenka2.png'], name: "Alenka Rondon", role: "Marketing Lead", linkedin: "" },
@@ -154,7 +155,7 @@ const Team = () => {
     };
 
     const handleWindowSizeChange = () => {
-        if (window.innerWidth < 430) {
+        if (window.innerWidth <= 768) {
             setFoldersPerPage(1);
         } else {
             setFoldersPerPage(3);
