@@ -155,7 +155,7 @@ const Team = () => {
     };
 
     const handleWindowSizeChange = () => {
-        if (window.innerWidth < 430) {
+        if (window.innerWidth <= 768) {
             setFoldersPerPage(1);
         } else {
             setFoldersPerPage(3);
