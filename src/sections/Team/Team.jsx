@@ -1,124 +1,240 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Team.scss";
-import abby from "../../resources/images/team/abby.jpg"
-import abby2 from "../../resources/images/team/abby2.jpg"
-import alex from "../../resources/images/team/alex.jpg"
-import alex2 from "../../resources/images/team/alex2.jpg"
-import amyl from "../../resources/images/team/amyl.jpg"
-import amyl2 from "../../resources/images/team/amyl2.jpg"
-import amys from "../../resources/images/team/amys.jpg"
-import amys2 from "../../resources/images/team/amys2.jpg"
-import annette from "../../resources/images/team/annette.jpg"
-import annette2 from "../../resources/images/team/annette2.jpg"
-import annie from "../../resources/images/team/annie.jpg"
-import annie2 from "../../resources/images/team/annie2.jpg"
-import ayla from "../../resources/images/team/ayla.jpg"
-import ayla2 from "../../resources/images/team/ayla2.jpg"
-import bernie from "../../resources/images/team/bernie.png"
-import bernie2 from "../../resources/images/team/bernie2.png"
-import bonnie from "../../resources/images/team/bonnie.jpg"
-import bonnie2 from "../../resources/images/team/bonnie2.jpg"
-import brittney from "../../resources/images/team/brittney.jpeg"
-import brittney2 from "../../resources/images/team/brittney2.jpeg"
-import caroline from "../../resources/images/team/caroline.jpg"
-import caroline2 from "../../resources/images/team/caroline2.png"
-import celine from "../../resources/images/team/celine.png"
-import celine2 from "../../resources/images/team/celine2.jpg"
-import dea from "../../resources/images/team/dea.jpg"
-import dea2 from "../../resources/images/team/dea2.jpg"
-import faith from "../../resources/images/team/faith.jpeg"
-import faith2 from "../../resources/images/team/faith2.png"
-import grace from "../../resources/images/team/grace.jpg"
-import grace2 from "../../resources/images/team/grace2.jpg"
-import jas from "../../resources/images/team/jas.jpg"
-import jas2 from "../../resources/images/team/jas2.jpg"
-import kaylee from "../../resources/images/team/kaylee.jpg"
-import kaylee2 from "../../resources/images/team/kaylee2.jpg"
-import kun from "../../resources/images/team/kun.jpg"
-import kun2 from "../../resources/images/team/kun2.jpg"
-import lucy from "../../resources/images/team/lucy.jpg"
-import lucy2 from "../../resources/images/team/lucy2.jpg"
-import prianka from "../../resources/images/team/prianka.jpg"
-import prianka2 from "../../resources/images/team/prianka2.jpg"
-import sam from "../../resources/images/team/sam.jpg"
-import sam2 from "../../resources/images/team/sam2.jpg"
-import tianke from "../../resources/images/team/tianke.jpg"
-import tianke2 from "../../resources/images/team/tianke2.jpg"
-
+import SectionWrapper from "../../components/SectionWrapper/SectionWrapper";
 
 import SocialMediaLink from "../../components/SocialMediaLink/SocialMediaLink";
 import linkedin from "../../resources/images/socials/linkedinFill.svg";
 
-const photos = [
-    { hot: abby, goof: abby2, name: "Abby Zinman (she/her)", role: "Marketing Coordinator", linkedin: "https://www.linkedin.com/in/abby-zinman-79212a1aa/" },
-    { hot: alex, goof: alex2, name: "Alex Bray (she/her)", role: "Design Co-Lead", linkedin: "https://www.linkedin.com/in/alex-bray-/" },
-    { hot: amyl, goof: amyl2, name: "Amy Li (she/her)", role: "Logistics Coordinator", linkedin: "https://www.linkedin.com/in/aamyli/" },
-    { hot: amys, goof: amys2, name: "Amy Shao (she/her)", role: "Engineering Lead", linkedin: "https://www.linkedin.com/in/amy-shao-/" },
-    { hot: annette, goof: annette2, name: "Annette Le (she/her)", role: "Marketing Lead", linkedin: "http://linkedin.com/in/annettele/" },
-    { hot: annie, goof: annie2, name: "Annie Zhou (she/her)", role: "Sponsorship Lead", linkedin: "https://www.linkedin.com/in/annie-zhou-08/" },
-    { hot: ayla, goof: ayla2, name: "Ayla Orucevic (she/her)", role: "Co-Director, Founder", linkedin: "https://www.linkedin.com/in/ayla/" },
-    { hot: bernie, goof: bernie2, name: "Bernadette Cheng (she/her)", role: "Sponsorship Coordinator", linkedin: "https://www.linkedin.com/in/bernadettecheng/" },
-    { hot: bonnie, goof: bonnie2, name: "Bonnie Peng (she/her)", role: "Logistics Coordinator", linkedin: "https://www.linkedin.com/in/bonniepeng/" },
-    { hot: brittney, goof: brittney2, name: "Brittney Cheng (she/her)", role: "Design Co-Lead", linkedin: "https://www.linkedin.com/in/brittney-cheng/" },
-    { hot: caroline, goof: caroline2, name: "Caroline Chen (she/her)", role: "Co-Director, Founder", linkedin: "https://www.linkedin.com/in/itscarolinechen/" },
-    { hot: celine, goof: celine2, name: "Celine Nguyen (she/her)", role: "Logistics Lead", linkedin: "https://www.linkedin.com/in/celineqnnguyen/" },
-    { hot: dea, goof: dea2, name: "Dea Gjini (she/her)", role: "Logistics Coordinator", linkedin: "https://www.linkedin.com/in/dea-gjini/" },
-    { hot: faith, goof: faith2, name: "Faith Lum (she/her)", role: "Logistics Coordinator", linkedin: "https://www.linkedin.com/in/faithlum/" },
-    { hot: grace, goof: grace2, name: "Grace Nguyen (she/her)", role: "Sponsorship Coordinator", linkedin: "https://www.linkedin.com/in/grace-nguyen-ba5028158/" },
-    { hot: jas, goof: jas2, name: "Jasmine Bal (she/her)", role: "Co-Director, Founder", linkedin: "https://www.linkedin.com/in/jasminekbal/" },
-    { hot: kaylee, goof: kaylee2, name: "Kaylee Ainsworth (she/they)", role: "Marketing Coordinator, Designer", linkedin: "http://linkedin.com/in/kaylee-ainsworth/" },
-    { hot: kun, goof: kun2, name: "Kun Zhu (she/her)", role: "Designer", linkedin: "https://www.linkedin.com/in/kun-zhu/" },
-    { hot: lucy, goof: lucy2, name: "Lucy Shen (she/her)", role: "Finance Lead, Sponsorship Coordinator", linkedin: "https://www.linkedin.com/in/lucy-shen/" },
-    { hot: prianka, goof: prianka2, name: "Prianka Hoque (she/her)", role: "Sponsorship Coordinator", linkedin: "https://www.linkedin.com/in/prianka-hoque/" },
-    { hot: sam, goof: sam2, name: "Samantha Kaiser (she/her)", role: "Finance Coordinator, Logistics Coordinator", linkedin: "https://www.linkedin.com/in/samanthakaiser03/" },
-    { hot: tianke, goof: tianke2, name: "Tianke Li (she/her)", role: "Designer", linkedin: "https://www.linkedin.com/in/tianke-li-57b7b4193/" },
+import folderClosed from "../../resources/images/graphics/folder-closed.png";
+import folderHoverClosed from "../../resources/images/graphics/folder-hover-closed.png";
+import folderOpen from "../../resources/images/graphics/folder-open.png";
+import folderHoverOpen from "../../resources/images/graphics/folder-hover-open.png";
+
+import carouselArrow from "../../resources/images/graphics/carousel-button-default.png";
+import carouselArrowHover from "../../resources/images/graphics/carousel-button-hover.png";
+
+import Carousel from "./Carousel";
+
+function importAll(r) {
+    let images = {};
+    r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
+    return images;
+}
+
+const seriousImages = importAll(require.context('../../resources/images/team/', false, /1\.(png|jpe?g|svg)$/));
+const funnyImages = importAll(require.context('../../resources/images/team/', false, /2\.(png|jpe?g|svg)$/));
+
+const photosByTeam = {
+    "LEADERSHIP": [
+        { hot: seriousImages['julianne1.png'], goof: funnyImages['julianne2.png'], name: "Julianne Jorda", role: "Leadership", linkedin: "" },
+        { hot: seriousImages['angela1.png'], goof: funnyImages['angela2.png'], name: "Angela Law", role: "Leadership", linkedin: "" },
+    ],
+    "LOGISTICS": [
+        { hot: seriousImages['malvika1.png'], goof: funnyImages['malvika2.png'], name: "Malvika Patel", role: "Logistics Lead", linkedin: "" },
+        { hot: seriousImages['bhavneet1.png'], goof: funnyImages['bhavneet2.png'], name: "Bhavneet Bola", role: "Logistics Coordinator", linkedin: "" },
+        { hot: seriousImages['scarlett1.png'], goof: funnyImages['scarlett2.png'], name: "Scarlett Jett", role: "Logistics Coordinator", linkedin: "" },
+        { hot: seriousImages['sagun1.png'], goof: funnyImages['sagun2.png'], name: "Sagun Malwatkar", role: "Logistics Coordinator", linkedin: "" },
+        { hot: seriousImages['ivy1.png'], goof: funnyImages['ivy2.png'], name: "Ivy Lei", role: "Logistics Coordinator", linkedin: "" },
+        { hot: seriousImages['victoria1.png'], goof: funnyImages['victoria2.png'], name: "Victoria Chakma", role: "Logistics Coordinator", linkedin: "" },
+        { hot: seriousImages['jasleen1.png'], goof: funnyImages['jasleen2.png'], name: "Jasleen Badwal", role: "Logistics Coordinator", linkedin: "" },
+    ],
+    "FINANCE": [
+        { hot: seriousImages['joyce1.png'], goof: funnyImages['joyce2.png'], name: "Joyce Jorda", role: "Finance Lead", linkedin: "" },
+        { hot: seriousImages['saanika1.png'], goof: funnyImages['saanika2.png'], name: "Saanika Sharma", role: "Finance Coordinator", linkedin: "" },
+        { hot: seriousImages['amanda1.png'], goof: funnyImages['amanda2.png'], name: "Amanda Gressmann", role: "Finance Coordinator", linkedin: "" },
+    ],
+    "DESIGN": [
+        { hot: seriousImages['jennifer1.png'], goof: funnyImages['jennifer2.png'], name: "Jennifer Lin", role: "Design Coordinator", linkedin: "" },
+        { hot: seriousImages['rachel1.png'], goof: funnyImages['rachel2.png'], name: "Rachel Joy Copreros", role: "Design Coordinator", linkedin: "" },
+        { hot: seriousImages['clara1.png'], goof: funnyImages['clara2.png'], name: "Clara Liu", role: "Design Coordinator", linkedin: "" },
+        { hot: seriousImages['jessica1.png'], goof: funnyImages['jessica2.png'], name: "Jess Wu", role: "Design Coordinator", linkedin: "" },
+        { hot: seriousImages['kaley1.png'], goof: funnyImages['kaley2.png'], name: "Kaley Lam", role: "Design Coordinator", linkedin: "" },
+        { hot: seriousImages['tasnouva1.png'], goof: funnyImages['tasnouva2.png'], name: "Tasnouva Khan", role: "Design Coordinator", linkedin: "" },
+    ],
+    "ENGINEERING": [
+        { hot: seriousImages['mahzabin1.png'], goof: funnyImages['mahzabin2.png'], name: "Mahzabin Rashid Fariha", role: "Engineering Lead", linkedin: "" },
+        { hot: seriousImages['rachelle1.png'], goof: funnyImages['rachelle2.png'], name: "Rachelle Fontanilla", role: "Engineering Coordinator", linkedin: "" },
+        { hot: seriousImages['lucy1.png'], goof: funnyImages['lucy2.png'], name: "Lucy Wang", role: "Engineering Coordinator", linkedin: "" },
+        { hot: seriousImages['chun1.png'], goof: funnyImages['chun2.png'], name: "Chun Ye", role: "Engineering Coordinator", linkedin: "" },
+    ],
+    "SPONSORSHIP": [
+        { hot: seriousImages['kriti1.png'], goof: funnyImages['kriti2.png'], name: "Kriti Sodhi", role: "Sponsorship Lead", linkedin: "" },
+        { hot: seriousImages['darya1.png'], goof: funnyImages['darya2.png'], name: "Darya Zakharova", role: "Sponsorship Coordinator", linkedin: "" },
+        { hot: seriousImages['katherine1.png'], goof: funnyImages['katherine2.png'], name: "Katherine Li", role: "Sponsorship Coordinator", linkedin: "" },
+        { hot: seriousImages['prasanna1.png'], goof: funnyImages['prasanna2.png'], name: "Prasanna Thallapalli", role: "Sponsorship Coordinator", linkedin: "" },
+        { hot: seriousImages['member1.png'], goof: funnyImages['member2.png'], name: "Diliara Kaniazova", role: "Sponsorship Coordinator", linkedin: "" },
+    ],
+    "MARKETING": [
+        { hot: seriousImages['alenka1.png'], goof: funnyImages['alenka2.png'], name: "Alenka Rondon", role: "Marketing Lead", linkedin: "" },
+        { hot: seriousImages['jasmine1.png'], goof: funnyImages['jasmine2.png'], name: "Jasmine Jiang", role: "Marketing Coordinator", linkedin: "" },
+        { hot: seriousImages['haley1.png'], goof: funnyImages['haley2.png'], name: "Haley Song", role: "Marketing Coordinator", linkedin: "" },
+        { hot: seriousImages['kshama1.png'], goof: funnyImages['kshama2.png'], name: "Kshama Patel", role: "Marketing Coordinator", linkedin: "" },    
+    ],
+}
+
+const teams = [
+    "LEADERSHIP", 
+    "LOGISTICS",
+    "FINANCE",
+    "ENGINEERING",
+    "DESIGN",
+    "SPONSORSHIP",
+    "MARKETING",
 ]
 
-const PhotoCard = (props) => {
-    const { photo, onHover, onUnhover } = props;
+const MemberCard = (props) => {
+    const { photo, name } = props;
     const [imgSrc, setImgSrc] = useState(photo.hot);
 
     const handleHover = () => {
         setImgSrc(photo.goof);
-        onHover && onHover();
     }
 
     const handleUnhover = () => {
         setImgSrc(photo.hot);
-        onUnhover && onUnhover();
     }
 
     return (
-        <img
-            onMouseOver={() => handleHover()}
-            onMouseOut={() => handleUnhover()}
-            src={imgSrc}
-            alt={photo.desc}
-        />
+        <div className="team-member-card" >
+            <div className="team-img-container">
+                <img
+                    onMouseOver={handleHover}
+                    onMouseOut={handleUnhover}
+                    src={imgSrc}
+                    alt={name}
+                />
+            </div>
+            <p>{name}</p>
+        </div>
+    );
+}
+
+const Folder = (props) => {
+    const { team, handleOnClick, isActive } = props;
+    const [isHovered, setIsHovered] = useState(false);
+
+    // Determine the folder image based on isActive and isHovered state
+    let folderImage = folderClosed;
+    if (isActive) {
+        folderImage = isHovered ? folderHoverOpen : folderOpen;
+    } else {
+        folderImage = isHovered ? folderHoverClosed : folderClosed;
+    }
+
+    const handleMouseEnter = () => {
+        setIsHovered(true);
+    };
+
+    const handleMouseLeave = () => {
+        setIsHovered(false);
+    };
+
+    return (
+        <div
+            className={`team-folder ${isActive ? 'active' : ''}`}
+            onClick={() => handleOnClick(team)}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+        >
+            <div className="team-folder-img-container">
+                <img src={folderImage} alt={team}/>
+            </div>
+            <h3>{team}</h3>
+        </div>
     );
 }
 
 const Team = () => {
-    const [id, setId] = useState(0);
+    const [selectedTeam, setSelectedTeam] = useState("LEADERSHIP");
+    const [currentPage, setCurrentPage] = useState(0);
+    const [foldersPerPage, setFoldersPerPage] = useState(3);
+
+    const handleTeamSelect = (teamName) => {
+        setSelectedTeam(teamName);
+        console.log(selectedTeam)
+    };
+
+    const handleWindowSizeChange = () => {
+        if (window.innerWidth <= 768) {
+            setFoldersPerPage(1);
+        } else {
+            setFoldersPerPage(3);
+        }
+    };
+
+    const filteredPhotos = photosByTeam[selectedTeam];
+    const totalFolders = teams.length;
+    const totalPages = Math.ceil(totalFolders / foldersPerPage);
+
+    const startIndex = currentPage * foldersPerPage;
+    const endIndex = Math.min(startIndex + foldersPerPage, totalFolders);
+
+    const handlePrevPage = () => {
+        const newPage = Math.max(currentPage - 1, 0);
+        setCurrentPage(newPage);
+        const newSelectedTeam = teams[newPage * foldersPerPage]; // Select the first folder on the new page
+        setSelectedTeam(newSelectedTeam);
+    };
+
+    const handleNextPage = () => {
+        const newPage = Math.min(currentPage + 1, totalPages - 1);
+        setCurrentPage(newPage);
+        const newSelectedTeam = teams[newPage * foldersPerPage]; // Select the first folder on the new page
+        setSelectedTeam(newSelectedTeam);
+    };
+
+    useEffect(() => {
+        handleWindowSizeChange();
+
+        window.addEventListener("resize", handleWindowSizeChange);
+
+        return () => {
+            window.removeEventListener("resize", handleWindowSizeChange);
+        };
+    }, []);
+
     return (
-        <div className="team-container">
-            <div className="team-text">
-                <h2>Meet the Team</h2>
-                <div>
-                    <SocialMediaLink src={linkedin} link={photos[id].linkedin} />
-                    <p className="team-text-default">{photos[id].name} | {photos[id].role}</p>
-                    <p className="team-text-mobile">{photos[id].name} <br /> {photos[id].role}</p>
+        <SectionWrapper id="team" >
+            <div className="team-container">
+                <div className="team-text">
+                    <h1 className="team-title">Meet the Team</h1>
+                </div>
+                <hr></hr>
+                <div className="team-carousel">
+                    <div className="team-pagination prev" onClick={handlePrevPage}>
+                        {currentPage !== 0 && ( <img src={carouselArrow} alt="Previous" />)}
+                    </div>
+                    <div className="team-folders">
+                        {teams.slice(startIndex, endIndex).map((team, index) => {
+                            return (
+                                <Folder 
+                                    team={team} 
+                                    key={team}
+                                    handleOnClick={() => handleTeamSelect(team)} 
+                                    isActive={team === selectedTeam}
+                                />
+                            )
+                        })}
+                    </div>
+                    <div className="team-pagination next" onClick={handleNextPage}>
+                        {currentPage !== totalPages - 1 && ( <img src={carouselArrow} alt="Next" />)}
+                    </div>
+                    
                 </div>
 
+                <div className="team-members">
+                    {filteredPhotos.map((photo, index) => {
+                        return (
+                            <MemberCard 
+                                key={`${selectedTeam}-${photo.name}`}
+                                photo={photo}  
+                                name={photo.name} 
+                            />
+                        )
+                    })}
+                </div>
             </div>
-            <div className="team-photos">
-                {photos.map((photo, index) => {
-                    return (
-                        <PhotoCard photo={photo} id={index} onHover={() => setId(index)} />
-                    )
-                })}
-            </div>
-        </div>
+        </SectionWrapper>
     );
 }
 
