@@ -3,11 +3,45 @@
         text-align: left;
     }
 
+    &-carousel {
+        width: 100vw;
+        display: block;
+        position: absolute;
+        left: 0;
+
+        @media (min-width: 1441px) {
+            width: 1300px;
+            margin-left: calc((100vw - 1300px) / 2);
+        }
+
+        @media(min-width: 900px) and (max-width: 1000px) {
+            left: 5 !important;
+        }
+    }
+
+    &-carousel-wrapper {
+        padding-bottom: 700px;
+
+        @media(max-width: 768px) {
+            padding-bottom: 500px;
+        }
+    }
+
     &-picture  {
-        width: calc(100% - 20px);
-        height: 320px;
-        border-radius: 10px;
+        width: 95%;
+        min-height: 400px;
+        border-radius: 20px;
         object-fit: cover;
+        margin: auto;
+
+        @media(max-width: 1020px) and (min-width: 768px) {
+            min-height: 320px;
+        }
+
+        @media(max-width: 768px) {
+            min-height: 300px;
+            max-width: 230px;
+        }
     }
 
     &-star {
@@ -22,17 +56,32 @@
 
     &-arrow {
         height: 100%;
+
+        @media(max-width: 768px) {
+            height: 80%;
+        }
     }
 
     &-card {
         height: 100%;
+        width: 120%;
+
+        @media(max-width: 768px) {
+            width: 70% !important;
+            height: 90% !important;
+        }
     }
 
     &-flower {
         position: relative;
-        right: -600px;
-        top: -300px;
-        z-index: -1;
+        margin-right: -95%;
+        margin-top: -590px;
+        z-index: -100;
+
+        @media(max-width: 768px) {
+            display: none;
+        }
+
     }
 
 }
@@ -42,6 +91,7 @@
     .judges-picture {
         transform: scale(1) !important;
         border: 13px solid #ADB4F9 !important;
+        margin: auto;
     }
 
     .judges-desc{
@@ -52,6 +102,11 @@
         align-items: center;
         height: 50px;
         margin-top: 30px;
+
+        @media(max-width: 768px) {
+            width: 100% !important;
+            margin-left: 0 !important;
+        }
     }
 
     .judges-namecard {
@@ -69,6 +124,9 @@
         margin: auto;
         width: 25%;
         padding-bottom: 30px;
+        @media(max-width: 768px) {
+            width: 15%;
+        }
     }
 }
 
@@ -77,7 +135,7 @@
     .judges-picture {
         transform: scale(0.75);
         border: 3px solid black;
-        margin: auto;
+        margin-right: auto;
     }
 
     .judges-desc {
@@ -89,85 +147,3 @@
     }
 
 }
-
-
-// *, *::before, *::after {
-//     box-sizing: border-box;
-//   }
-//   body {
-//     margin: 0;
-//     padding: 20vh 0;
-//   }
-  
-//   .slick span {
-//     display: block;
-//     background: #3498db;
-//     color: #fff;
-//     font-size: 36px;
-//     height: 100px;
-//     line-height: 100px;
-//     position: relative;
-//     text-align: center;
-//     //border: solid 1px rgb(145, 195, 0);
-    
-//     transform: translate(0, 0) scale(.4);
-//     transition: all .4s ease;
-//     opacity: .5;
-//   }
-  
-//   .slick-slide {
-//     border: solid 1px #2dc37f;
-//   }
-  
-//   .slick-slide.lt2 span {
-//     transform: translate(10%, 0) scale(.6);
-//   }
-//   .slick-slide.lt1 span {
-//     opacity: .7;
-//     transform: translate(5%, 0) scale(.8);
-//   }
-//   .slick-slide.gt1 span {
-//     opacity: .7;
-//     transform: translate(-5%, 0) scale(.8);
-//   }
-//   .slick-slide.gt2 span {
-//     transform: translate(-10%, 0) scale(.6);
-//   }
-//   .slick-slide.slick-center span {
-//     z-index: 1;
-//     transform: scale(1);
-//     opacity: 1;
-//     color: #e67e22;
-//   }
-  
-//   .slick-prev,
-//   .slick-next{
-//     position: absolute;
-//     top: 50%;
-//     appearance: none;
-//     margin-top: -10px;
-//     padding: 0;
-//     border: 0;
-//     background: none;
-//     cursor: pointer;
-//     color: transparent;
-//     outline: none;
-//     z-index: 100;
-//   }
-  
-//   .slick-prev {
-//     width: 0;
-//     height: 0;
-//     border-style: solid;
-//     border-width: 15px 15px 15px 0;
-//     border-color: transparent #007bff transparent transparent;
-//     left: 0;
-//   }
-//   .slick-next {
-//     width: 0;
-//     height: 0;
-//     border-style: solid;
-//     border-width: 15px 0 15px 15px;
-//     border-color: transparent transparent transparent #007bff;
-//     right: 0;
-//   }

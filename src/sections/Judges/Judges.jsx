@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -43,72 +43,40 @@ var showcase = [
 export const Judges = () => {    
     const settings = {
         centerMode: true,
-        centerPadding: '0px',
+        centerPadding: '160px',
         dots: false,
         infinite: true,
         speed: 520,
-        slidesToShow: 5,
+        slidesToShow: 3,
         slidesToScroll: 1,
         arrows: false,
-
-
+        focusOnSelect: false,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    centerPadding: '0px',
+                    slidesToShow: 1
+                }
+            },
+            {
+                breakpoint: 900,
+                settings: {
+                    centerPadding: '100px',
+                    slidesToShow: 3
+                }
+            }
+        ]
       };
       const sliderRef = useRef(null);
 
-    // this part is in progress
-      useEffect(() => {
-        const addClasses = () => {
-            const slideMinus2 = document.querySelector('.slick-active[data-index="-2"]');
-            const slideMinus1 = document.querySelector('.slick-active[data-index="-1"]');
-            const slide1 = document.querySelector('.slick-active[data-index="1"]');
-            const slide2 = document.querySelector('.slick-active[data-index="2"]');
-
-            if (slideMinus2) {
-                slideMinus2.classList.add('left2');
-            }
-            console.log(slideMinus1);
-
-            if (slideMinus1) {
-                slideMinus1.classList.add('left1');
-            }
-            if (slide1) {
-                slide1.classList.add('right1');
-            }
-            if (slide2) {
-                slide2.classList.add('right2');
-            }
-        };
-
-        addClasses();
-    }, []);
-
-    var leftIdx = -2;
 
     const prevSlide = () => {
-       let left2 = document.querySelector('.left2');
-       if (left2) {
-        left2.classList.remove('left2');
-       }
-       leftIdx -= 1;
-
-       sliderRef?.current?.slickPrev();
-       left2 = document.querySelector(`.slick-active[data-index="${leftIdx}"]`);
-       if (left2) {
-            left2.classList.add('left2');
-        }
+       sliderRef.current?.slickPrev();
     }
 
     const nextSlide = () => {
-        let right2 = document.querySelector('.right2');
-        if (right2) {
-            right2.classList.remove('right2');
-        };
-        sliderRef?.current?.slickNext();
-
-        right2 = document.querySelector('.slick-active[data-index="3"]')
-        if (right2) {
-            right2.classList.add('right2');
-        };
+        sliderRef.current?.slickNext();
     }
 
     return (
@@ -117,27 +85,29 @@ export const Judges = () => {
             <h1 className="judges-title">Judges</h1>
             <hr></hr>
             
-            <div className="judges-carousel">
-            <Slider ref={sliderRef} {...settings}>
-              {showcase.map((content, index) => (
-                <div className="judges-card">
-                    <img className="judges-pointer" src={pointer} />
-                    <img className="judges-picture" src={content.image} />
+            <div className="judges-carousel-wrapper">
+                <div className="judges-carousel">
+                <Slider ref={sliderRef} {...settings}>
+                {showcase.map((content, index) => (
+                    <div className="judges-card">
+                        <img className="judges-pointer" src={pointer} />
+                        <img className="judges-picture" src={content.image} />
 
-                    <div className="judges-desc">
-                        <img className="judges-arrow" src={leftarrow} onClick={prevSlide} />
-                        <div className="judges-namecard">
-                            <img className="judges-star" src={star}/>
-                            {content.name}
+                        <div className="judges-desc">
+                            <img className="judges-arrow" src={leftarrow} onClick={prevSlide} />
+                            <div className="judges-namecard">
+                                <img className="judges-star" src={star}/>
+                                {content.name}
+                            </div>
+                            <img className="judges-arrow" src={rightarrow} onClick={nextSlide}/>
                         </div>
-                        <img className="judges-arrow" src={rightarrow} onClick={nextSlide}/>
                     </div>
+                ))}
+                </Slider>
                 </div>
-              ))}
-            </Slider>
-          </div>
-
-          <img className="judges-flower" src={flower} />
+            </div>
+            <img className="judges-flower" src={flower} />
+    
         </SectionWrapper>
     );
 };
