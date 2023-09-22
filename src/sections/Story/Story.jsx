@@ -95,12 +95,12 @@ const Story = () => {
       <h1 className="title">Testimonials</h1>
       <hr></hr>
       <div className="story-container">
-      <h3 className="statement">
+      <p className="statement">
         Hackathons can be intimidating for those when you are new to the space, 
         and especially if you are a minority. So there needs to be a way to balance 
         the playing field and offer the opportunity, community, and support for women
         and non-binary individuals to thrive in tech.
-      </h3>
+      </p>
             <div className="story-events">
                 <img className="prep-image" style={{ gridArea: "prep-image" }} src={pic1} alt="prepare-tile" onMouseOver={handleHover1}/>
                 <div style={{ gridArea: "prep-caption"}} className="story-caption">
