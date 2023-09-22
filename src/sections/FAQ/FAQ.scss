@@ -5,11 +5,7 @@
     text-align: center;
   }
   &-title {
-    align-self: center;
-    @include tablet {
-      margin-bottom: 2rem;
-      font-size: $text-large;
-    }
+    text-align: left;
   }
   &-questions {
     display: grid;

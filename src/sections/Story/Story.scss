@@ -2,20 +2,10 @@
 
 .title {
     text-align: left;
-    color: #19123c;
-    font-size: 64px;
-    font-family: Lexend;
-    font-weight: 600;
     display: flex;
-    @include phone {
-      font-size: 32px;
-    }
 }
 
 .statement {
-  font-family: "Poppins";
-  font-weight: 400;
-  font-size: 20px;
   margin-top: 10px;
   @include phone {
     margin-bottom: 15px;
