@@ -63,7 +63,7 @@ const photosByTeam = {
         { hot: seriousImages['darya1.png'], goof: funnyImages['darya2.png'], name: "Darya Zakharova", role: "Sponsorship Coordinator", linkedin: "" },
         { hot: seriousImages['katherine1.png'], goof: funnyImages['katherine2.png'], name: "Katherine Li", role: "Sponsorship Coordinator", linkedin: "" },
         { hot: seriousImages['prasanna1.png'], goof: funnyImages['prasanna2.png'], name: "Prasanna Thallapalli", role: "Sponsorship Coordinator", linkedin: "" },
-        { hot: seriousImages['member1.png'], goof: funnyImages['member2.png'], name: "Diliara Kaniazova", role: "Sponsorship Coordinator", linkedin: "" },
+        { hot: seriousImages['diliara1.jpg'], goof: funnyImages['member2.png'], name: "Diliara Kaniazova", role: "Sponsorship Coordinator", linkedin: "" },
     ],
     "MARKETING": [
         { hot: seriousImages['alenka1.png'], goof: funnyImages['alenka2.png'], name: "Alenka Rondon", role: "Marketing Lead", linkedin: "" },
