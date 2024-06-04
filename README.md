@@ -1,13 +1,13 @@
 # itstechnova Website
 
 **Live website: [www.itstechnova.com](https://itstechnova.com/), [www.itstechnova.org](https://itstechnova.org/)**  
-**Dev website: [itstechnova2023-dev.netlify.app/](https://itstechnova2023-dev.netlify.app/)** 
+**Dev website: [itstechnova2023-dev.netlify.app/](https://itstechnova2024-dev.netlify.app/)** 
 
 ## Getting Started
 
 Clone the project: 
 ```
-git clone https://github.com/itstechnova/technova-2023.git
+git clone https://github.com/itstechnova/technova-2024.git
 ```
 Open the project on VS Code and install required packages:
 ```
