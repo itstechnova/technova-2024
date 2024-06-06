@@ -46,7 +46,7 @@ const Landing = () => {
             <h4 className="landing-comingSoon">{landing.comingSoon}</h4>
           </div>
           <div className="landing-button-container">
-            <Button link={landing.appLink} label={landing.applyCTA} />
+            <Button link={landing.instaLink} label={landing.instaCTA} />
             <Button
               link={landing.mentorAppLink}
               label={landing.mentorApplyCTA}
