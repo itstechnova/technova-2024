@@ -3,7 +3,7 @@ const landing = {
     mentorAppLink: "https://docs.google.com/forms/d/e/1FAIpQLSegvJXivBVPB_s2kajSzvEEXO641uyDzSeY8XA9CdFcxizXHA/closedform",
     title1: "TECHNOVA",
     description: "University of Waterloo’s Women+ in Tech Hackathon",
-    dates: "SEP 22 - 24 2023.",
+    comingSoon: "2024 website coming soon!",
     applyCTA: "Hacker Applications",
     mentorApplyCTA: "Mentor/Volunteer Applications",
     applyCTAMobile: "Hacker Applications",

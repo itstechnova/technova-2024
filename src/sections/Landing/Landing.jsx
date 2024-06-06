@@ -43,7 +43,7 @@ const Landing = () => {
               />
             </div>
             <h4 className="landing-description">{landing.description}</h4>
-            <h4 className="landing-dates">{landing.dates}</h4>
+            <h4 className="landing-comingSoon">{landing.comingSoon}</h4>
           </div>
           <div className="landing-button-container">
             <Button link={landing.appLink} label={landing.applyCTA} />
