@@ -230,12 +230,6 @@ export const SponsorUs = () => {
             </div>
             <div className="sponsor-us-button-container">
               <Button
-                link="https://www.itstechnova.org/pdfs/sponsorship_package.pdf"
-                label="Sponsorship Package"
-                target="_blank"
-                rel="noreferrer noopener"
-              />
-              <Button
                 link="mailto:sponsors@itstechnova.org"
                 label="Join us as a sponsor"
                 target="_blank"
@@ -244,16 +238,6 @@ export const SponsorUs = () => {
             </div>
           </div>
         </div>
-        <div className="sponsor-us-carousel-wrapper">
-          <div className="sponsor-us-carousel">
-            <Slider ref={sliderRef} {...settings}>
-              {showcase.map((content, index) => (
-                <Carousel key={index} content={content} slideNext={next} slidePrev={prev}/>
-                ))}
-            </Slider>
-          </div>
-        </div>
-        <OurSponsors />
       </div>
     </SectionWrapper>
   );
