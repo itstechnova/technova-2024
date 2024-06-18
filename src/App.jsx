@@ -7,7 +7,6 @@ import SponsorUs from "./sections/Sponsor/SponsorUs";
 import FAQ from "./sections/FAQ/FAQ";
 import Contact from "./sections/Contact/Contact";
 import Partner from "./sections/Partner/Partner";
-import Keynote from "./sections/Keynote/Keynote";
 import logo from "./resources/images/logo/logo.png";
 import Footer from "./sections/Footer/Footer";
 import nav from "./resources/strings/nav";
@@ -49,7 +48,6 @@ const App = () => {
             <Story />
             <Partner />
             <SponsorUs />
-            <Keynote />
             <FAQ />
             <Team />
             <Contact />
