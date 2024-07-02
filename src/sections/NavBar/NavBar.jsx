@@ -56,18 +56,15 @@ const NavBar = ({ routes, logoRoute }) => {
           </div>
         </div>
 
-        {/* <a
-          className="mlh-banner"
-          id="mlh-trust-badge"
-          href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2024-season&utm_content=white"
-          rel="noreferrer"
-          target="_blank"
-        >
-          <img
-            src="https://s3.amazonaws.com/logged-assets/trust-badge/2024/mlh-trust-badge-2024-white.svg"
-            alt="Major League Hacking 2024 Hackathon Season"
-          />
-        </a> */}
+        <a 
+          className="mlh-banner" 
+          id="mlh-trust-badge" 
+          href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2025-season&utm_content=white" 
+          target="_blank">
+            <img 
+              src="https://s3.amazonaws.com/logged-assets/trust-badge/2025/mlh-trust-badge-2025-white.svg" alt="Major League Hacking 2025 Hackathon Season"
+            />
+        </a>
 
         {showNav && (
           <div className="nav-mobile-links">
