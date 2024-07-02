@@ -47,6 +47,7 @@ const Landing = () => {
           </div>
           <div className="landing-button-container">
             <Button link={landing.instaLink} label={landing.instaCTA} />
+            <Button link={landing.hackerApplyLink} label={landing.hackerApplyCTA} />
             <Button
               link={landing.mentorAppLink}
               label={landing.mentorApplyCTA}
