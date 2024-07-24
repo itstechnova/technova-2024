@@ -26,7 +26,6 @@ const funnyImages = importAll(require.context('../../resources/images/team', fal
 
 const photosByTeam = {
     "LEADERSHIP": [
-        { hot: seriousImages['julianne1.png'], goof: funnyImages['julianne2.png'], name: "Julianne Jorda", role: "Leadership Advisor", linkedin: "" },
         { hot: seriousImages['alenka1.png'], goof: funnyImages['alenka2.png'], name: "Alenka Rondon", role: "Leadership Co-director", linkedin: "" },
         { hot: seriousImages['kriti1.png'], goof: funnyImages['kriti2.png'], name: "Kriti Sodhi", role: "Leadership Co-director", linkedin: "" },
     ],
@@ -35,7 +34,7 @@ const photosByTeam = {
         { hot: seriousImages['smridhi1.png'], goof: funnyImages['smridhi2.png'], name: "Smridhi Bawa", role: "Logistics Coordinator", linkedin: "" },
         { hot: seriousImages['isabella1.png'], goof: funnyImages['isabella2.png'], name: "Isabella Rossi", role: "Logistics Coordinator", linkedin: "" },
         { hot: seriousImages['victoria1.png'], goof: funnyImages['victoria2.png'], name: "Victoria Chakma", role: "Logistics Coordinator", linkedin: "" },
-        { hot: seriousImages['simrit1.png'], goof: funnyImages['simrit2.png'], name: "Simrit Mangat", role: "Logistics Coordinator", linkedin: "" },
+        { hot: seriousImages['bhavneet1.png'], goof: funnyImages['bhavneet2.png'], name: "Bhavneet Bola", role: "Engineering Coordinator", linkedin: "" },
         { hot: seriousImages['miranda1.png'], goof: funnyImages['miranda2.png'], name: "Miranda Guo", role: "Logistics Coordinator", linkedin: "" },
         { hot: seriousImages['emily1.png'], goof: funnyImages['emily2.png'], name: "Emily Luo", role: "Logistics Coordinator", linkedin: "" },
         { hot: seriousImages['jansi1.png'], goof: funnyImages['jansi2.png'], name: "Jansi Shah", role: "Logistics Coordinator", linkedin: "" },
@@ -59,6 +58,7 @@ const photosByTeam = {
         { hot: seriousImages['lucy1.png'], goof: funnyImages['lucy2.png'], name: "Lucy Wang", role: "Engineering Lead", linkedin: "" },
         { hot: seriousImages['bhavneet1.png'], goof: funnyImages['bhavneet2.png'], name: "Bhavneet Bola", role: "Engineering Coordinator", linkedin: "" },
         { hot: seriousImages['prachee1.png'], goof: funnyImages['prachee2.png'], name: "Prachee Nanda", role: "Engineering Coordinator", linkedin: "" },
+        { hot: seriousImages['shivali1.png'], goof: funnyImages['shivali2.png'], name: "Shivali Sen", role: "Engineering Coordinator", linkedin: "" },
         { hot: seriousImages['lindsay1.png'], goof: funnyImages['lindsay2.png'], name: "Lindsay Zhang", role: "Engineering Coordinator", linkedin: "" },
     ],
     "SPONSORSHIP": [
@@ -72,6 +72,7 @@ const photosByTeam = {
     "MARKETING": [
         { hot: seriousImages['kshama1.png'], goof: funnyImages['kshama2.png'], name: "Kshama Patel", role: "Marketing Lead", linkedin: "" },  
         { hot: seriousImages['amie1.png'], goof: funnyImages['amie2.png'], name: "Amie Ahn", role: "Marketing Coordinator", linkedin: "" },  
+        { hot: seriousImages['vehara1.png'], goof: funnyImages['vehara2.png'], name: "Vehara Rupasinghe", role: "Marketing Coordinator", linkedin: "" }
     ],
 }
 
