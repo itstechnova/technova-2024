@@ -235,6 +235,12 @@ export const SponsorUs = () => {
                 target="_blank"
                 rel="noreferrer noopener"
               />
+              <Button
+                link="https://www.itstechnova.org/pdfs/sponsorship_package.pdf"
+                label="Sponsorship Package"
+                target="_blank"
+                rel="noreferrer noopener"
+              />
             </div>
           </div>
         </div>
