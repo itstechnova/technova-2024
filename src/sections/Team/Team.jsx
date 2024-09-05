@@ -8,8 +8,14 @@ function importAll(r) {
     return images;
 }
 
+function capitalizeFirstLetter(text) {
+    if (!text) return text; 
+    return text.charAt(0).toUpperCase() + text.slice(1).toLowerCase();
+}
+
 const seriousImages = importAll(require.context('../../resources/images/team/2024', false, /1\.(png|jpe?g|svg)$/));
 const funnyImages = importAll(require.context('../../resources/images/team/2024', false, /2\.(png|jpe?g|svg)$/));
+const teamIcons = importAll(require.context('../../resources/images/team/icons', false, /\.(png|jpe?g|svg)$/));
 
 const photosByTeam = {
     "LEADERSHIP": [
@@ -116,7 +122,16 @@ const Team = () => {
                 teams.map((team) => {
                 return (
                     <>
-                    <h4>{team}</h4>
+                    <div className="team-icon-card">
+                        <div className="team-icon-container">
+                            <img 
+                            src = {teamIcons[`${team}.png`]}
+                            alt={team} 
+                            />
+                            <p className="viaoda-libre-regular">{capitalizeFirstLetter(team.toLowerCase())}</p>
+                        </div>
+                    </div>
+                    
                     {
                     photosByTeam[team].map((photo, index) => {
                         return (
