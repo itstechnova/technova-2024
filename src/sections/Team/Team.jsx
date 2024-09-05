@@ -102,24 +102,6 @@ const MemberCard = (props) => {
 
 const Team = () => {
 
-    const handleWindowSizeChange = () => {
-        if (window.innerWidth <= 768) {
-            setFoldersPerPage(1);
-        } else {
-            setFoldersPerPage(3);
-        }
-    };
-
-    useEffect(() => {
-        handleWindowSizeChange();
-
-        window.addEventListener("resize", handleWindowSizeChange);
-
-        return () => {
-            window.removeEventListener("resize", handleWindowSizeChange);
-        };
-    }, []);
-
     return (
         <SectionWrapper id="team" >
             <div className="team-container">
