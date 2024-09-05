@@ -96,6 +96,7 @@
     }
 
     &-img-container {
+        clip-path: circle();
         width: 120px;
         height: 120px;
         outline-style: solid;
