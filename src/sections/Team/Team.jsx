@@ -8,8 +8,8 @@ function importAll(r) {
     return images;
 }
 
-const seriousImages = importAll(require.context('../../resources/images/team', false, /1\.(png|jpe?g|svg)$/));
-const funnyImages = importAll(require.context('../../resources/images/team', false, /2\.(png|jpe?g|svg)$/));
+const seriousImages = importAll(require.context('../../resources/images/team/2024', false, /1\.(png|jpe?g|svg)$/));
+const funnyImages = importAll(require.context('../../resources/images/team/2024', false, /2\.(png|jpe?g|svg)$/));
 
 const photosByTeam = {
     "LEADERSHIP": [
@@ -93,6 +93,7 @@ const MemberCard = (props) => {
                     onMouseOut={handleUnhover}
                     src={imgSrc}
                     alt={name}
+                    style = {{borderRadius: '50%', borderStyle:"solid", borderWidth: 2, borderColor:"black"}}
                 />
             </div>
             <p>{name}</p>
