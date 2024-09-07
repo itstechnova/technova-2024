@@ -22,6 +22,8 @@
   }
 
   &-divider {
+    position: relative;
+    z-index: -300;
     border: 1px solid;
     width: 100%;
     margin-bottom: 3em;
@@ -43,7 +45,7 @@
     border-style: solid;
     border-width: 6px;
     margin: 0 auto;
-    box-sizing: border-box
+    box-sizing: border-box;
   }
 
   &-pink-box {
@@ -53,7 +55,8 @@
     border-width: 6px;
     box-shadow: 10px 10px #19123c;
     margin: 0 auto;
-    box-sizing: border-box
+    box-sizing: border-box;
+    width: 90%;
   }
 
   &-blue-box {
@@ -63,7 +66,8 @@
     border-width: 6px;
     box-shadow: 10px 10px #19123c;
     margin: 0 auto;
-    box-sizing: border-box
+    box-sizing: border-box;
+    width: 90%;
   }
 
   &-text {
@@ -134,6 +138,24 @@
       }
     }
   }
+}
+
+#dominoes-1{
+  position: relative;
+  left: 47%;
+  top: 425px;
+  z-index: -100;
+  width: 275px;
+  margin-top: -200px;
+}
+
+#dominoes-2{
+  position: relative;
+  left: 31%;
+  top: 350px;
+  z-index: -50;
+  width: 200px;
+  margin-top: -200px;
 }
 
 #r-pinkflower {

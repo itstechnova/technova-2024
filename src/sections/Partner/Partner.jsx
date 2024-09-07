@@ -9,6 +9,9 @@ import arrow from "../../resources/images/graphics/arrow.svg";
 import pinkFlower from "../../resources/images/graphics/pink-flower.svg";
 import purpleFlower from "../../resources/images/graphics/purple-flower.svg";
 import tealFlower from "../../resources/images/graphics/teal-flower.svg";
+import dominoes1 from "../../resources/images/graphics/dominoes1.svg";
+import dominoes2 from "../../resources/images/graphics/dominoes2.svg";
+import funguy from "../../resources/images/graphics/funguy.svg";
 import Button from "../../components/Button/Button";
 
 const Partner = () => (
@@ -47,6 +50,10 @@ const Partner = () => (
     </div>
 
     <div className="our-partners-container">
+
+    <img id="dominoes-1" src={dominoes1} />
+    <img id="dominoes-2" src={dominoes2} />
+
       <h1 className="our-partners-title">Our Partners</h1>
       <hr className="our-partners-divider"></hr>
       <div className="our-partners-blue-box">
