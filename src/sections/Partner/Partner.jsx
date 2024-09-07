@@ -18,9 +18,7 @@ const Partner = () => (
       <hr className="our-partners-divider"></hr>
       <div className="our-partners-box">
         <div className="our-partners-header">
-          <div className="white-box"></div>
-          <div className="white-box"></div>
-          <div className="white-box"></div>
+          <h1 className="our-partners-title">Women in Computer Science</h1>
         </div>
         <div className="our-partners">
           <img src={wicsImg} alt="WiCS" className="wics_logo" />
@@ -37,14 +35,6 @@ const Partner = () => (
               careers in computing for the past 14 years, currently playing an
               active role in supporting over 2700 students.
             </p>
-          </div>
-
-          <div className="wics_button">
-            <Button
-              link="https://cs.uwaterloo.ca/wics"
-              label="Learn more"
-            />
-            
           </div>
         </div>
       </div>
