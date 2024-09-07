@@ -2,6 +2,8 @@ import React from "react";
 import "./Partner.scss";
 import SectionWrapper from "../../components/SectionWrapper/SectionWrapper";
 import wicsImg from "../../resources/images/logo/wics.svg";
+import wieImg from "../../resources/images/logo/wie-logo.svg";
+import velocityImg from "../../resources/images/logo/velocity.svg";
 import pixelHeart from "../../resources/images/graphics/pixel-heart.svg";
 import arrow from "../../resources/images/graphics/arrow.svg";
 import pinkFlower from "../../resources/images/graphics/pink-flower.svg";
@@ -40,11 +42,23 @@ const Partner = () => (
           </div>
         </div>
       </div>
-      
       <img id="l-pinkflower" src={pinkFlower} />
       <img id="teal-flower" src={tealFlower} />
     </div>
+
+    <div className="our-partners-container">
+      <h1 className="our-partners-title">Our Partners</h1>
+      <hr className="our-partners-divider"></hr>
+      <div className="our-partners-blue-box">
+        <div className="our-partners-box">
+          <img src={wieImg} alt="WiCS" className="our-partners-logo" />
+          <img src={wicsImg} alt="WiCS" className="our-partners-logo" />
+          <img src={velocityImg} alt="WiCS" className="our-partners-logo" />
+        </div>
+      </div>
+    </div>
   </SectionWrapper>
+  
 );
 
 export default Partner;
