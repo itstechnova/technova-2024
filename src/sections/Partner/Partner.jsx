@@ -12,6 +12,7 @@ import tealFlower from "../../resources/images/graphics/teal-flower.svg";
 import dominoes1 from "../../resources/images/graphics/dominoes1.svg";
 import dominoes2 from "../../resources/images/graphics/dominoes2.svg";
 import funguy from "../../resources/images/graphics/funguy.svg";
+import guyshadow from "../../resources/images/graphics/guyshadow.svg";
 import Button from "../../components/Button/Button";
 
 const Partner = () => (
@@ -63,6 +64,9 @@ const Partner = () => (
           <img src={velocityImg} alt="WiCS" className="our-partners-logo" />
         </div>
       </div>
+
+      <img id="fun-guy" src={funguy} />
+      <img id="shadow" src={guyshadow} />
     </div>
   </SectionWrapper>
   
