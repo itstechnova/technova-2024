@@ -23,8 +23,10 @@ import Button from "../../components/Button/Button";
 const Partner = () => (
   <SectionWrapper id="partner">
     <div className="our-partners-container">
-      <img id="r-pinkflower" src={pinkFlower} />
-      <img id="purple-flower" src={purpleFlower} />
+
+      {/* <img id="r-pinkflower" src={lightbluepokerchip} />
+      <img id="purple-flower" src={purplepokerchip} /> */}
+
       <h1 className="our-partners-title">In Partnership With</h1>
       <hr className="our-partners-divider"></hr>
       <div className="our-partners-pink-box">
@@ -51,8 +53,12 @@ const Partner = () => (
           </div>
         </div>
       </div>
-      <img id="l-pinkflower" src={pinkFlower} />
-      <img id="teal-flower" src={tealFlower} />
+      <div id = "pushed">
+        <img id="purple-guy" src={purpleguy} />
+        <img id="purple-shadow" src={guyshadow} />
+        <img id="pushed-chip" src={pinkchip} />
+      </div>
+      
     </div>
 
     <div className="our-partners-container">

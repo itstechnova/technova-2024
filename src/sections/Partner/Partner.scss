@@ -140,6 +140,33 @@
   }
 }
 
+#pushed{
+  position: relative;
+  top: -150px;
+  left: 40%;
+}
+
+#purple-guy{
+  position: relative;
+  width: 225px;
+  z-index: 200;
+}
+
+#purple-shadow{
+  position: relative;
+  right: 190px;
+  top: 10px;
+  z-index: 200;
+}
+
+#pushed-chip{
+  position: relative;
+  z-index: 100;
+  top: 20px;
+  width: 225px;
+  right: 215px;
+}
+
 #dominoes{
   position: relative;
   left: 44%;
