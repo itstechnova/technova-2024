@@ -140,38 +140,70 @@
   }
 }
 
+#dominoes{
+  position: relative;
+  left: 44%;
+  top: 300px;
+  margin-top: -200px;
+}
+
 #dominoes-1{
   position: relative;
-  left: 47%;
-  top: 425px;
+  top: 70px;
+  left: 80px;
   z-index: -100;
-  width: 275px;
-  margin-top: -200px;
+  width: 125px;
+  transform: rotate(-35deg);
 }
 
 #dominoes-2{
   position: relative;
-  left: 31%;
-  top: 350px;
   z-index: -50;
-  width: 200px;
-  margin-top: -200px;
+  width: 125px;
+  transform: rotate(-15deg);
+}
+
+#fun{
+  position: relative;
+  top: -125px;
+  right: 30%;
 }
 
 #fun-guy{
   position: relative;
-  top: -125px;
-  right:25%;
   z-index: 100;
   width: 175px;
 }
 
 #shadow{
   position: relative;
-  top: -115px;
-  right:38%;
   z-index: 50;
-  width: 150px;
+  width: 125px;
+  top: 10px;
+  right: 150px;
+}
+
+#r-chips{
+  position: relative;
+  top: -350px;
+  left: 48%;
+}
+
+#r-purple-chip{
+  position: relative;
+  z-index: 50;
+  top: -100px;
+  right: 5%;
+  width: 235px;
+}
+
+#r-pink-chip{
+  position: relative;
+  z-index: 50;
+  width: 200px;
+  top: 50px;
+  right: 315px;
+  transform: rotate(-10deg);
 }
 
 #r-pinkflower {

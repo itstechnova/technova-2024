@@ -13,6 +13,11 @@ import dominoes1 from "../../resources/images/graphics/dominoes1.svg";
 import dominoes2 from "../../resources/images/graphics/dominoes2.svg";
 import funguy from "../../resources/images/graphics/funguy.svg";
 import guyshadow from "../../resources/images/graphics/guyshadow.svg";
+import bluepokerchip from "../../resources/images/graphics/bluepokerchip.png";
+import lightbluepokerchip from "../../resources/images/graphics/lightbluepoker.svg";
+import purplepokerchip from "../../resources/images/graphics/purplepoker.svg";
+import purpleguy from "../../resources/images/graphics/purpleguy.svg";
+import pinkchip from "../../resources/images/graphics/pinkchip.png";
 import Button from "../../components/Button/Button";
 
 const Partner = () => (
@@ -52,8 +57,10 @@ const Partner = () => (
 
     <div className="our-partners-container">
 
-    <img id="dominoes-1" src={dominoes1} />
-    <img id="dominoes-2" src={dominoes2} />
+      <div id = "dominoes">
+      <img id="dominoes-1" src={dominoes1} />
+      <img id="dominoes-2" src={dominoes2} />
+      </div>
 
       <h1 className="our-partners-title">Our Partners</h1>
       <hr className="our-partners-divider"></hr>
@@ -65,8 +72,18 @@ const Partner = () => (
         </div>
       </div>
 
-      <img id="fun-guy" src={funguy} />
-      <img id="shadow" src={guyshadow} />
+      <div>
+      <div id="fun">
+        <img id="fun-guy" src={funguy} />
+        <img id = "shadow" src={guyshadow} />
+      </div>
+
+      <div id="r-chips">
+        <img id="r-purple-chip" src={bluepokerchip} />
+        <img id="r-pink-chip" src={pinkchip} />
+      </div>
+      </div>
+      
     </div>
   </SectionWrapper>
   
