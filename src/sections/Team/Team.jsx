@@ -49,7 +49,6 @@ const photosByTeam = {
     ],
     "ENGINEERING": [
         { hot: seriousImages['lucy1.png'], goof: funnyImages['lucy2.png'], name: "Lucy Wang", role: "Engineering Lead", linkedin: "" },
-        { hot: seriousImages['bhavneet1.png'], goof: funnyImages['bhavneet2.png'], name: "Bhavneet Bola", role: "Engineering Coordinator", linkedin: "" },
         { hot: seriousImages['prachee1.png'], goof: funnyImages['prachee2.png'], name: "Prachee Nanda", role: "Engineering Coordinator", linkedin: "" },
         { hot: seriousImages['shivali1.png'], goof: funnyImages['shivali2.png'], name: "Shivali Sen", role: "Engineering Coordinator", linkedin: "" },
         { hot: seriousImages['lindsay1.png'], goof: funnyImages['lindsay2.png'], name: "Lindsay Zhang", role: "Engineering Coordinator", linkedin: "" },
@@ -128,7 +127,7 @@ const Team = () => {
                             src = {teamIcons[`${team}.png`]}
                             alt={team} 
                             />
-                            <p className="viaoda-libre-regular">{capitalizeFirstLetter(team.toLowerCase())}</p>
+                            <p>{capitalizeFirstLetter(team.toLowerCase())}</p>
                         </div>
                     </div>
                     
