@@ -11,7 +11,6 @@ const Button = ({ label, link, type }) => {
       target="_blank"
       rel="noreferrer noopener"
     >
-      <img className="pixel" src={pixelHeart} alt="Pixel Heart" />
       <div className="label">{label}</div>
       <img className="arrow" src={arrow} alt="Arrow" />
     </a>

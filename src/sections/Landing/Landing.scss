@@ -2,7 +2,7 @@
 
 .landing {
   &-container {
-    height: 95vh;
+    height: 85vh;
     margin-top: 7vh;
     display: flex;
     align-items: center;
@@ -14,9 +14,9 @@
   }
   &-main-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 
-    row-gap: 15px;
+    column-gap: 6vw;
     @include tablet {
       max-width: 50vw;
     }
@@ -28,6 +28,7 @@
   }
 
   &-text {
+    padding: 50px 0px;
     display: flex;
     flex-direction: column;
     font-family: $font-regular;
@@ -66,7 +67,7 @@
     gap: 20px;
 
     img {
-      height: 60px;
+      height: 45px;
     }
     @include tablet {
       img {
@@ -106,6 +107,20 @@
     }
   }
 
+  &-statement {
+    font-family: "Quicksand";
+    font-size: $text-xlarge;
+    font-weight: 400;
+    @include tablet {
+      font-size: $text-small;
+    }
+    @include phone {
+      font-size: $text-xsmall;
+      width: 270px;
+      line-height: normal;
+    }
+  }
+
   &-description {
     font-size: $text-medium;
     font-weight: 400;
@@ -119,7 +134,7 @@
     }
   }
 
-  &-comingSoon {
+  &-date {
     grid-area: text-dates;
     font-family: "Lexend";
     font-weight: 600;
@@ -131,7 +146,7 @@
   }
 
   &-button-container {
-    // margin-top: 30px;
+    margin-top: 30px;
     height: auto;
     display: flex;
     gap: 30px;
@@ -142,7 +157,7 @@
 
   &-graphic-container {
     z-index: -100;
-    #ms-goose-flowers {
+    #snakes-and-latters {
       width: 30em;
       @include desktop {
         width: 15em;
@@ -155,13 +170,6 @@
   }
 }
 
-#ms-goose {
-  display: none;
-  @include phone {
-    display: block;
-    width: 9em;
-  }
-}
 #teal-asterisk {
   position: absolute;
   z-index: -100;
