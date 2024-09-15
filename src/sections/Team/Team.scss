@@ -76,16 +76,13 @@
 
     &-members {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 20px;
-        // @include tablet {
-        //     grid-template-columns: repeat(5, 1fr);
-        // }
-        @include phone {
-            grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(7, minmax(130px, 1fr));
+        @include desktop {
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
         }
-        @include small-phone {
-            grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        @include phone {
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
         }
     }
 
@@ -98,16 +95,45 @@
     &-img-container {
         width: 120px;
         height: 120px;
-        outline-style: solid;
-        outline-width: 2px;
         :hover {
             transform: scale(0.95);
         }
         img {
             align-self: flex-start;
-            width: 100%;
-            height: auto;
+            height: 100%;
+            width: auto;
         }
+        @include phone {
+            width: 90px;
+            height: 90px;
+        }
+    }
+
+    &-icon-card {
+        display: flex;
+        justify-content: center;        
+        position: relative;
+    }
+
+
+    &-icon-container {
+        width: 130px;
+        height: 130px;
+        position: absolute;
+
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            height: 95%;
+            width: auto;
+        }
+
+        p {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
         @include phone {
             width: 90px;
             height: 90px;

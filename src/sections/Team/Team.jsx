@@ -2,27 +2,20 @@ import React, { useState, useEffect } from "react";
 import "./Team.scss";
 import SectionWrapper from "../../components/SectionWrapper/SectionWrapper";
 
-import SocialMediaLink from "../../components/SocialMediaLink/SocialMediaLink";
-import linkedin from "../../resources/images/socials/linkedinFill.svg";
-
-import folderClosed from "../../resources/images/graphics/folder-closed.png";
-import folderHoverClosed from "../../resources/images/graphics/folder-hover-closed.png";
-import folderOpen from "../../resources/images/graphics/folder-open.png";
-import folderHoverOpen from "../../resources/images/graphics/folder-hover-open.png";
-
-import carouselArrow from "../../resources/images/graphics/carousel-button-default.png";
-import carouselArrowHover from "../../resources/images/graphics/carousel-button-hover.png";
-
-import Carousel from "./Carousel";
-
 function importAll(r) {
     let images = {};
     r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
     return images;
 }
 
-const seriousImages = importAll(require.context('../../resources/images/team', false, /1\.(png|jpe?g|svg)$/));
-const funnyImages = importAll(require.context('../../resources/images/team', false, /2\.(png|jpe?g|svg)$/));
+function capitalizeFirstLetter(text) {
+    if (!text) return text; 
+    return text.charAt(0).toUpperCase() + text.slice(1).toLowerCase();
+}
+
+const seriousImages = importAll(require.context('../../resources/images/team/2024', false, /1\.(png|jpe?g|svg)$/));
+const funnyImages = importAll(require.context('../../resources/images/team/2024', false, /2\.(png|jpe?g|svg)$/));
+const teamIcons = importAll(require.context('../../resources/images/team/icons', false, /\.(png|jpe?g|svg)$/));
 
 const photosByTeam = {
     "LEADERSHIP": [
@@ -56,7 +49,6 @@ const photosByTeam = {
     ],
     "ENGINEERING": [
         { hot: seriousImages['lucy1.png'], goof: funnyImages['lucy2.png'], name: "Lucy Wang", role: "Engineering Lead", linkedin: "" },
-        { hot: seriousImages['bhavneet1.png'], goof: funnyImages['bhavneet2.png'], name: "Bhavneet Bola", role: "Engineering Coordinator", linkedin: "" },
         { hot: seriousImages['prachee1.png'], goof: funnyImages['prachee2.png'], name: "Prachee Nanda", role: "Engineering Coordinator", linkedin: "" },
         { hot: seriousImages['shivali1.png'], goof: funnyImages['shivali2.png'], name: "Shivali Sen", role: "Engineering Coordinator", linkedin: "" },
         { hot: seriousImages['lindsay1.png'], goof: funnyImages['lindsay2.png'], name: "Lindsay Zhang", role: "Engineering Coordinator", linkedin: "" },
@@ -106,6 +98,7 @@ const MemberCard = (props) => {
                     onMouseOut={handleUnhover}
                     src={imgSrc}
                     alt={name}
+                    style = {{borderRadius: '50%', borderStyle:"solid", borderWidth: 2, borderColor:"black"}}
                 />
             </div>
             <p>{name}</p>
@@ -113,89 +106,7 @@ const MemberCard = (props) => {
     );
 }
 
-const Folder = (props) => {
-    const { team, handleOnClick, isActive } = props;
-    const [isHovered, setIsHovered] = useState(false);
-
-    // Determine the folder image based on isActive and isHovered state
-    let folderImage = folderClosed;
-    if (isActive) {
-        folderImage = isHovered ? folderHoverOpen : folderOpen;
-    } else {
-        folderImage = isHovered ? folderHoverClosed : folderClosed;
-    }
-
-    const handleMouseEnter = () => {
-        setIsHovered(true);
-    };
-
-    const handleMouseLeave = () => {
-        setIsHovered(false);
-    };
-
-    return (
-        <div
-            className={`team-folder ${isActive ? 'active' : ''}`}
-            onClick={() => handleOnClick(team)}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-        >
-            <div className="team-folder-img-container">
-                <img src={folderImage} alt={team}/>
-            </div>
-            <h3>{team}</h3>
-        </div>
-    );
-}
-
 const Team = () => {
-    const [selectedTeam, setSelectedTeam] = useState("LEADERSHIP");
-    const [currentPage, setCurrentPage] = useState(0);
-    const [foldersPerPage, setFoldersPerPage] = useState(3);
-
-    const handleTeamSelect = (teamName) => {
-        setSelectedTeam(teamName);
-        console.log(selectedTeam)
-    };
-
-    const handleWindowSizeChange = () => {
-        if (window.innerWidth <= 768) {
-            setFoldersPerPage(1);
-        } else {
-            setFoldersPerPage(3);
-        }
-    };
-
-    const filteredPhotos = photosByTeam[selectedTeam];
-    const totalFolders = teams.length;
-    const totalPages = Math.ceil(totalFolders / foldersPerPage);
-
-    const startIndex = currentPage * foldersPerPage;
-    const endIndex = Math.min(startIndex + foldersPerPage, totalFolders);
-
-    const handlePrevPage = () => {
-        const newPage = Math.max(currentPage - 1, 0);
-        setCurrentPage(newPage);
-        const newSelectedTeam = teams[newPage * foldersPerPage]; // Select the first folder on the new page
-        setSelectedTeam(newSelectedTeam);
-    };
-
-    const handleNextPage = () => {
-        const newPage = Math.min(currentPage + 1, totalPages - 1);
-        setCurrentPage(newPage);
-        const newSelectedTeam = teams[newPage * foldersPerPage]; // Select the first folder on the new page
-        setSelectedTeam(newSelectedTeam);
-    };
-
-    useEffect(() => {
-        handleWindowSizeChange();
-
-        window.addEventListener("resize", handleWindowSizeChange);
-
-        return () => {
-            window.removeEventListener("resize", handleWindowSizeChange);
-        };
-    }, []);
 
     return (
         <SectionWrapper id="team" >
@@ -204,39 +115,38 @@ const Team = () => {
                     <h1 className="team-title">Meet the Team</h1>
                 </div>
                 <hr></hr>
-                <div className="team-carousel">
-                    <div className="team-pagination prev" onClick={handlePrevPage}>
-                        {currentPage !== 0 && ( <img src={carouselArrow} alt="Previous" />)}
-                    </div>
-                    <div className="team-folders">
-                        {teams.slice(startIndex, endIndex).map((team, index) => {
-                            return (
-                                <Folder 
-                                    team={team} 
-                                    key={team}
-                                    handleOnClick={() => handleTeamSelect(team)} 
-                                    isActive={team === selectedTeam}
-                                />
-                            )
-                        })}
-                    </div>
-                    <div className="team-pagination next" onClick={handleNextPage}>
-                        {currentPage !== totalPages - 1 && ( <img src={carouselArrow} alt="Next" />)}
+
+            <div className="team-members">
+            {
+                teams.map((team) => {
+                return (
+                    <>
+                    <div className="team-icon-card">
+                        <div className="team-icon-container">
+                            <img 
+                            src = {teamIcons[`${team}.png`]}
+                            alt={team} 
+                            />
+                            <p>{capitalizeFirstLetter(team.toLowerCase())}</p>
+                        </div>
                     </div>
                     
-                </div>
-
-                <div className="team-members">
-                    {filteredPhotos.map((photo, index) => {
+                    {
+                    photosByTeam[team].map((photo, index) => {
                         return (
-                            <MemberCard 
-                                key={`${selectedTeam}-${photo.name}`}
-                                photo={photo}  
-                                name={photo.name} 
-                            />
-                        )
+                        <MemberCard
+                            key={`${team}-${photo.name}`}
+                            photo={photo}
+                            name={photo.name}
+                        />
+                        );
                     })}
-                </div>
+                    </>
+                );
+                })
+            }
+            </div>
+
             </div>
         </SectionWrapper>
     );
