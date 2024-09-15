@@ -39,13 +39,14 @@ $accent-purple: #7676e8;
 $accent-purple-focus: #6363d3;
 $background-light: #fffdfa;
 $background-dark: #19123c;
-$text-light: #fffdfa;
+$text-light: #FFFAF3;
 $text-muted: #c4c4c4;
 $text-dark: #19123c;
 $grey: #c4c4c4;
 $light-grey: #e5e9f2;
 $light-blue: #C0CBF2;
 $dark-blue: #7D92DB;
+$button-pink: #fc6d83;
 
 @mixin lightmode() {
     --text-color: #19123c;
