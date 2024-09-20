@@ -4,7 +4,7 @@ const landing = {
     title1: "TECHNOVA",
     statement: "Hack with Us",
     description: "University of Waterloo’s First Women+ in Tech Hackathon",
-    date: "Sept 22 - 24 2024",
+    date: "Sept 27 - 29 2024",
     instaCTA: "Our Instagram",
     mentorApplyCTA: "Mentor/Volunteer Applications",
     applyCTAMobile: "Hacker Applications",
