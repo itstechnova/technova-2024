@@ -4,28 +4,25 @@ import SectionWrapper from "../../components/SectionWrapper/SectionWrapper";
 import wicsImg from "../../resources/images/logo/wics.svg";
 import wieImg from "../../resources/images/logo/wie-logo.svg";
 import velocityImg from "../../resources/images/logo/velocity.svg";
-import pixelHeart from "../../resources/images/graphics/pixel-heart.svg";
-import arrow from "../../resources/images/graphics/arrow.svg";
-import pinkFlower from "../../resources/images/graphics/pink-flower.svg";
-import purpleFlower from "../../resources/images/graphics/purple-flower.svg";
-import tealFlower from "../../resources/images/graphics/teal-flower.svg";
 import dominoes1 from "../../resources/images/graphics/dominoes1.svg";
 import dominoes2 from "../../resources/images/graphics/dominoes2.svg";
 import funguy from "../../resources/images/graphics/funguy.svg";
 import guyshadow from "../../resources/images/graphics/guyshadow.svg";
 import bluepokerchip from "../../resources/images/graphics/bluepokerchip.png";
-import lightbluepokerchip from "../../resources/images/graphics/lightbluepoker.svg";
-import purplepokerchip from "../../resources/images/graphics/purplepoker.svg";
 import purpleguy from "../../resources/images/graphics/purpleguy.svg";
 import pinkchip from "../../resources/images/graphics/pinkchip.png";
-import Button from "../../components/Button/Button";
+import tealpokerchip from "../../resources/images/graphics/tealpokerchip.png"
+import purplepokerchip from "../../resources/images/graphics/purplepokerchip.png"
 
 const Partner = () => (
   <SectionWrapper id="partner">
     <div className="our-partners-container">
 
-      {/* <img id="r-pinkflower" src={lightbluepokerchip} />
-      <img id="purple-flower" src={purplepokerchip} /> */}
+      {/* <div id="l-upper-corner">
+        <img id="r-pinkflower" src={tealpokerchip} />
+        <img id="purple-flower" src={purplepokerchip} />
+      </div> */}
+      
 
       <h1 className="our-partners-title">In Partnership With</h1>
       <hr className="our-partners-divider"></hr>

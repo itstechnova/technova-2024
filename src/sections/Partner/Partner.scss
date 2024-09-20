@@ -149,6 +149,17 @@
   }
 }
 
+#l-upper-corner{
+  position: relative;
+  top: 150px;
+  right: 50%;
+  @include phone {
+    position: relative;
+    top: -100px;
+    left: 30%;
+  }
+}
+
 #pushed{
   position: relative;
   top: -150px;
