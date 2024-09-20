@@ -1,8 +1,7 @@
 import React from "react";
 import "./Keynote.scss";
 import SectionWrapper from "../../components/SectionWrapper/SectionWrapper";
-import pixelStar from "../../resources/images/graphics/pixel-star.svg";
-import KeynoteSpeaker from "../../resources/images/keynoteSpeaker.jpeg"
+import KeynoteSpeaker from "../../resources/images/keynote.svg"
 
 function Keynote() {
     return (
