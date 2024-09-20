@@ -28,94 +28,11 @@ const About = () => {
             <div className="about-content">
                 <div className="about-text">
                     <h1>{about.title}</h1>
+                    <br></br>
                     <p>{about.description1}</p>
                     <p>{about.description2}</p>
                 </div>
             </div>
-            <div className="about-events">
-                <div className="animate">
-                    <div className="hover_box">
-                        <img className="about-events-selector" src={careerSelector} alt="community-selector" />
-                        <img className="prep-image" style={{ gridArea: "prep-image" }} src={connectTile} alt="prepare-tile" />
-                        <div style={{ gridArea: "prep-caption"}} className="about-caption">
-                            <div className="about-title">
-                                <h3>{about.prepareTitle}</h3>
-                            </div>
-                            <div className="about-description">
-                                <p className="about-intro">{about.prepareDates}</p>
-                                <p className="about-details">{about.prepareCaption}</p>
-                            </div>
-                        </div>
-                    </div>  
-                </div>
-                <div className="animate">
-                    <img className="about-events-selector " src={createSelector} alt="create-selector" />
-                    <img className="hack-image" style={{ gridArea: "hack-image" }} src={hackTile} alt="hack-tile" />
-                    <div style={{ gridArea: "hack-caption"}} className="about-caption">
-                        <div className="about-title">
-                            <h3>{about.hackTitle}</h3>
-                        </div>
-                        <div className="about-description">
-                            <p className="about-intro">{about.hackDates}</p>
-                            <p className="about-details">{about.hackCaption}</p>
-                        </div>
-                    </div>
-                </div>
-                <div className="animate">
-                    <img className="about-events-selector" src={communitySelector} alt="career-selector" />
-                    <img className="connect-image" style={{gridArea: "connect-image"}} src={prepareTile} alt="connect-tile" />
-                    <div style={{ gridArea: "connect-caption"}} className="about-caption">
-                        <div className="about-title">
-                            <h3>{about.connectTitle}</h3>
-                        </div>
-                        <div className="about-description">
-                            <p className="about-intro">{about.connectDates}</p>
-                            <p className="about-details">{about.connectCaption}</p>
-                        </div>
-                    </div>
-                </div>
-            </div >
-
-            <div className="about-mobile">
-            <Slider {...settings}>
-            <div className="about-slider-container">
-                <img className="mobile-image" src={prepareTile} alt="prepare-mobile" />
-                <div className="mobile-text">
-                    <div className="about-title">
-                        <h3>{about.prepareTitle}</h3>
-                    </div>
-                    <div className="about-description">
-                        <p className="about-intro">{about.prepareDates}</p>
-                        <p>{about.prepareCaption}</p>
-                    </div>
-                </div>
-            </div>
-            <div className="about-slider-container">
-                <img className="mobile-image" src={hackTile} alt="hack-mobile" />
-                <div className="mobile-text">
-                    <div className="about-title">
-                        <h3>{about.hackTitle}</h3>
-                    </div>
-                    <div className="about-description">
-                        <p className="about-intro">{about.hackDates}</p>
-                        <p>{about.hackCaption}</p>
-                    </div>
-                </div>
-            </div>
-            <div className="about-slider-container">
-                <img className="mobile-image" src={connectTile} alt="connect-mobile" />
-                <div className="mobile-text">
-                    <div className="about-title">
-                        <h3>{about.connectTitle}</h3>
-                    </div>
-                    <div className="about-description">
-                        <p className="about-intro">{about.connectDates}</p>
-                        <p>{about.connectCaption}</p>
-                    </div>
-                </div>
-            </div>
-            </Slider>
-        </div>
         </div>
     </SectionWrapper>
     )
