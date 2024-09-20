@@ -6,20 +6,23 @@
   }
 
   &-header {
+    display: flex;
     background-color: #a8efe4;
     border-bottom: 2px solid;
-    height: 4em;
-    display: grid;
-    grid-template-columns: auto auto auto;
-    justify-content: end;
-    .white-box {
+    height: 6em;
+    &-name {
       margin: auto;
-      border-style: solid;
-      border-width: 2px;
-      margin-right: 0.5em;
-      background-color: #ffffff;
-      height: 2em;
-      width: 2em;
+      font-size: 40px;
+      font-weight: 700;
+      font-family: "Quicksand";
+    }
+    @include phone {
+      &-name {
+        margin: auto;
+        font-size: 26px;
+        font-weight: 600;
+        font-family: "Quicksand";
+      }
     }
   }
 
@@ -111,9 +114,13 @@
     }
     &-name {
       grid-area: card-title;
-      font-size: 40px;
+      font-size: 48px;
       padding: 20px 0px;
-      font-family: "Press Start 2P", cursive;
+      font-weight: 800;
+      font-family: "Quicksand";
+      @include phone {
+        font-size: 30px;
+      }
     }
     &-role {
       grid-area: card-title;

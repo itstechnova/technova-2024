@@ -13,31 +13,21 @@ function Keynote() {
 
             <div className="keynote-box">
                 <div className="keynote-header">
-                    <div className="white-box"></div>
-                    <div className="white-box"></div>
-                    <div className="white-box"></div>
+                    <h3 className="keynote-header-name">CEO and Founder of CodeGem</h3>
                 </div>
                 <div className="keynote-card">
                     <img className="keynote-card-img" src={KeynoteSpeaker} />
                     <div className="keynote-card-title">
                         <h3 className="keynote-card-name">
-                        Laura Money 
+                        Stephanie Mills
                         </h3>
-                        <div className="keynote-card-title-box">
-                            <div className="keynote-card-star">
-                                <img src={pixelStar} />
-                            </div>
-                            <p className="keynote-card-role">
-                            Chief Information and Technology Innovation Officer, Sun Life
-                            </p>
-                        </div>
                     </div>
                     <div className="keynote-card-desc-wrapper">
                         <p className="keynote-card-desc">
-                        Laura Money is Executive Vice-President, Chief Information and Technology Innovation Officer of Sun Life.
+                        Stephanie Mills is a 2020 Thiel fellow, and the CEO and founder of CodeGem; a people-first management platform built for software teams.
                         <br></br>
                         <br></br>
-                        She is a Top 100 Most Powerful Woman in Canada and a Top 10 Canadian CIO, serving as Chair at Bowtie Life Insurance Company and Vice President of the University of Toronto Schools Alumni Association. She's also an international representative for Age Group Team Canada in Standard Distance Triathlon.</p>
+                        CodeGem was inspired by her combined experience studying management engineering at UWaterloo and working as a software engineer at top companies like Apple, Uber, Dapper, and Deloitte.</p>
                     </div>
                 </div>
             </div>
