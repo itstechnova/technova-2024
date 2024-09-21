@@ -9,7 +9,7 @@
   }
   &-questions {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 33% 33% 33%;
     gap: 1rem;
     @include tablet {
       flex-direction: column;
@@ -17,15 +17,18 @@
     }
   }
   &-left-col,
+  &-middle-col,
   &-right-col {
     > * {
       margin-bottom: 1rem;
     }
   }
   &-left-col > :nth-last-child(1),
-  &-right-col > :nth-last-child(1) {
+  &-right-col > :nth-last-child(1),
+  &-middle-col > :nth-last-child(1) {
     margin-bottom: 0;
   }
+  
   &-contact {
     display: flex;
     flex-direction: column;
