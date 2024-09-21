@@ -31,15 +31,6 @@ const Landing = () => {
             <h4 className="landing-description">{landing.description}</h4>
             <h4 className="landing-date">{landing.date}</h4>
             <div className = "landing-button-container">
-              <Button 
-                label={landing.mentorApplyCTAMobile}
-                link={landing.mentorAppLink}
-              />
-              <Button 
-                label={landing.hackerApplyCTA}
-                link={landing.hackerApplyLink}
-                type="pink"
-              />
             </div>
           </div>
         </div>
