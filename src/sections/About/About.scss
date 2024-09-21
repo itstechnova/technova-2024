@@ -26,12 +26,6 @@
     }
   }
 
-  &-divider {
-    border: 1px solid;
-    width: 100%;
-    margin-left: 0px;
-  }
-
   &-text {
     padding: 20px, 0;
     display: flex;
@@ -51,18 +45,15 @@
     }
   }
 
-  &-events {
-    margin-top: 100px;
-    height: 400px;
+  &-container-des {
     display: grid;
     text-align: center;
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: 33% 67%;
     grid-template-rows: auto auto;
     grid-template-areas:
-      "prep-image hack-image connect-image"
-      "prep-caption hack-caption connect-caption";
+      "image description";
 
-    img {
+    image {
       align-self: flex-end;
       justify-self: center;
       width: 80%;

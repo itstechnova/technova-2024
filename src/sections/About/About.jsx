@@ -5,12 +5,12 @@ import "slick-carousel/slick/slick-theme.css";
 import SectionWrapper from "../../components/SectionWrapper/SectionWrapper";
 import "./About.scss";
 import about from "../../resources/strings/about";
-import prepareTile from "../../resources/images/graphics/prepare-tile.svg";
-import hackTile from "../../resources/images/graphics/hack-tile.svg";
-import connectTile from "../../resources/images/graphics/connect-tile.svg";
-import createSelector from "../../resources/images/graphics/create-selector.png";
-import careerSelector from "../../resources/images/graphics/career-selector.png";
-import communitySelector from "../../resources/images/graphics/community-selector.png";
+import connect from "../../resources/images/graphics/connect.svg"
+import connectImg from "../../resources/images/graphics/connectImg.svg"
+import community from "../../resources/images/graphics/community.svg"
+import communityImg from "../../resources/images/graphics/communityImg.svg"
+import create from "../../resources/images/graphics/create.svg"
+import createImg from "../../resources/images/graphics/createImg.svg"
 
 const About = () => {
     const settings = {
@@ -21,6 +21,12 @@ const About = () => {
         slidesToScroll: 1,
         arrows: false
     }
+
+    const description = [
+        {img: communityImg, des: community},
+        {img: createImg, des: create},
+        {img: connectImg, des: connect}
+    ]
 
     return (
     <SectionWrapper id="about" >
@@ -33,6 +39,14 @@ const About = () => {
                     <p>{about.description2}</p>
                 </div>
             </div>
+        </div>
+
+        <div className = "about-container-des">
+            <img 
+            className="about-container-des-image" 
+            src={description.at(0).img}
+            alt="community"
+            />
         </div>
     </SectionWrapper>
     )
