@@ -40,19 +40,19 @@
       "card-img card-title"
       "card-img card-desc";
     grid-template-columns: 35% 65%;
-    grid-template-rows: 45% 55%;
+    grid-template-rows: 30% 70%;
     justify-content: center;
     column-gap: 2em;
     align-items: center;
-    padding: 3em;
+    padding: 10%;
 
-    @media (max-width: 980px) {
+    @media (max-width: 800px) {
       grid-template-areas:
         "card-img"
         "card-title"
         "card-desc";
       grid-template-columns: 100%;
-      grid-template-rows: 40% 25% 35%;
+      grid-template-rows: 40% 15% 35%;
       row-gap: 20px;
 
       &-img {
@@ -71,7 +71,7 @@
     }
 
     @media (max-width: 450px) {
-      grid-template-rows: 30% 20% 50%;
+      grid-template-rows: 25% 10% 50%;
       &-name {
         font-size: 25px !important;
         line-height: 1.5;
