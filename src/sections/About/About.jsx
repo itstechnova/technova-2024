@@ -43,7 +43,7 @@ const About = () => {
 
         <div className = "about-container-des">
             <img 
-            className="about-container-des-image" 
+            className="about-container-des-img" 
             src={description.at(0).img}
             alt="community"
             />
