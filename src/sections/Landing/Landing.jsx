@@ -1,9 +1,9 @@
 import "./Landing.scss";
 import SectionWrapper from "../../components/SectionWrapper/SectionWrapper";
 import landing from "../../resources/strings/landing";
-import landingBanner from "../../resources/images/logo/techNovaTiles.png";
+import landingBanner from "../../resources/images/logo/techNovaTiles.svg";
 import Button from "../../components/Button/Button";
-import snakes from "../../resources/images/graphics/snakesnlatters.png"
+import snakes from "../../resources/images/graphics/snakesnlatters.svg"
 
 const Landing = () => {
   return (
@@ -31,27 +31,9 @@ const Landing = () => {
             <h4 className="landing-description">{landing.description}</h4>
             <h4 className="landing-date">{landing.date}</h4>
             <div className = "landing-button-container">
-              <Button 
-                label={landing.mentorApplyCTAMobile}
-                link={landing.mentorAppLink}
-              />
-              <Button 
-                label={landing.hackerApplyCTA}
-                link={landing.hackerApplyLink}
-                type="pink"
-              />
             </div>
           </div>
-          {/* <div className="landing-button-container">
-            <Button link={landing.instaLink} label={landing.instaCTA} />
-            <Button link={landing.hackerApplyLink} label={landing.hackerApplyCTA} />
-            <Button
-              link={landing.mentorAppLink}
-              label={landing.mentorApplyCTA}
-            />
-          </div> */}
         </div>
-      
       </div>
     </SectionWrapper>
   );
