@@ -58,11 +58,11 @@ const Partner = () => (
       
     </div>
 
-    <div className="our-partners-container">
+    <div className="our-partners-container-two">
 
       <div id = "dominoes">
-      <img id="dominoes-1" src={dominoes1} />
-      <img id="dominoes-2" src={dominoes2} />
+        <img id="dominoes-1" src={dominoes1} />
+        <img id="dominoes-2" src={dominoes2} />
       </div>
 
       <h1 className="our-partners-title">Our Partners</h1>
@@ -88,6 +88,7 @@ const Partner = () => (
       </div>
       
     </div>
+    
   </SectionWrapper>
   
 );
