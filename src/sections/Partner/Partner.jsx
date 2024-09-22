@@ -22,7 +22,6 @@ const Partner = () => (
         <img id="r-pinkflower" src={tealpokerchip} />
         <img id="purple-flower" src={purplepokerchip} />
       </div> */}
-      
 
       <h1 className="our-partners-title">In Partnership With</h1>
       <hr className="our-partners-divider"></hr>
