@@ -23,9 +23,9 @@ const About = () => {
     }
 
     const description = [
-        {img: communityImg, des: community},
-        {img: createImg, des: create},
-        {img: connectImg, des: connect}
+        {img: communityImg, des: community, cap: "Technical workshops and community-building events to prepare you for the hackathon and your career in technology!"},
+        {img: createImg, des: create, cap: "A 36-hour virtual hackathon to work with a team of dedicated individuals to design, create, and build - brinding your project idea to life!"},
+        {img: connectImg, des: connect, cap: "Tech fair to meet fellow hackers, make friends, and build bridges with industry professionals who want to connect with hackers like you!"}
     ]
 
     return (
@@ -47,6 +47,17 @@ const About = () => {
             src={description.at(0).img}
             alt="community"
             />
+
+            <div className="about-container-des-caption">
+                <img
+                    src={description.at(0).des}
+                    alt="communityDes"
+                />
+                
+                <p className="about-text-cap">
+                    {description.at(0).cap}
+                </p>
+            </div>
         </div>
     </SectionWrapper>
     )

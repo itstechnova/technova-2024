@@ -45,20 +45,43 @@
     }
   }
 
+  &-text-cap {
+    margin: 1em 0;
+    display: flex;
+    font-family: $font-regular;
+    font-size: $text-small;
+    font-weight: 400;
+    p {
+      margin-top: 15px;
+    }
+    @include phone {
+      width: 100%;
+      p {
+        margin-top: 10px;
+      }
+    }
+  }
+
   &-container-des {
     display: grid;
     text-align: center;
     margin-top: -8em;
     margin-bottom: 6em;
-    grid-template-columns: 33% 67%;
+    grid-template-columns: 50% 50%;
     grid-template-rows: auto auto;
     grid-template-areas:
-      "image description";
+      "img description";
 
-    img {
-      grid-area: image;
+    &-img {
+      grid-area: img;
       justify-self: center;
-      margin-left: 10em;
+    }
+
+    &-caption{
+      grid-area: description;
+      justify-content: left;
+      text-align: left;
+      margin: auto 2em;
     }
 
     &-selector {
@@ -97,17 +120,9 @@
   }
 
   &-description {
-    border-style: solid;
-    border-width: 2px;
-    border-top: none;
-    background-color: #ffffff;
-    width: 80%;
-    padding: 0px 5%;
     overflow: hidden;
     margin: auto;
-    transition: 0.3s ease;
-    min-height: 80px;
-    max-height: 90px;
+
 
     @include tablet {
       max-height: 300px;
