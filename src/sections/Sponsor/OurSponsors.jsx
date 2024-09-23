@@ -1,140 +1,69 @@
 import React from "react";
 import "./OurSponsors.scss";
-/*
-import google from "../../resources/images/sponsors/silver/google.png";
-import wish from "../../resources/images/sponsors/silver/wish.png";
-*/
-import facebook from "../../resources/images/sponsors/facebook.png";
-import scotiabank from "../../resources/images/sponsors/scotiabank.png";
-import pagerduty from "../../resources/images/sponsors/pagerduty.png";
-import amazon from "../../resources/images/sponsors/amazon.png";
-import hrt from "../../resources/images/sponsors/hrt.png";
-import zynga from "../../resources/images/sponsors/zynga.png";
-import cockroach from "../../resources/images/sponsors/cockroach.png";
-import expo from "../../resources/images/sponsors/expo.png";
-import ratiocity from "../../resources/images/sponsors/ratiocity.png";
-import sps from "../../resources/images/sponsors/sps.png";
-import rogers from "../../resources/images/sponsors/rogers.png";
-/*
-import splunk from "../../resources/images/sponsors/bronze/splunk.png";
-*/
-import wie from "../../resources/images/logo/wie.jpg";
-import wics from "../../resources/images/logo/wics.png";
-import ai from  "../../resources/images/logo/ai4good.png";
-import velocity from  "../../resources/images/logo/velocity.png";
-import wolfram from "../../resources/images/logo/wolfram.png";
-import voiceflow from "../../resources/images/logo/voiceflow.png";
-import auntys from "../../resources/images/sponsors/auntys.jpg";
 
+import wealthsimple from "../../resources/images/sponsors/wealthsimple.png";
+import opentext from "../../resources/images/sponsors/opentext.png";
+import bbb from "../../resources/images/sponsors/bigbluebubble.png";
+import cds from "../../resources/images/sponsors/cds.png";
+import ubisoft from "../../resources/images/sponsors/ubisoft.png";
+import cse from "../../resources/images/sponsors/cse.jpg";
+import janestreet from "../../resources/images/sponsors/janestreet.png";
+import manulife from "../../resources/images/sponsors/manulife.png";
 
+const sponsors = [
+  {
+    name: "Canadian Digital Service",
+    img: cds,
+    alt: "cds.png",
+    quote: "The Canadian Digital Service (CDS) is relentlessly focused on improving how the federal government designs and delivers digital services to people in Canada. They build digital products that solve common service problems for public servants and provide guidance and tools for Government of Canada (GC) teams to help improve the delivery of services to the public. They're a team of over 250 public servants- developers, designers, advisors and support staff who work across Canada to deliver seamless digital services at scale."
+  },
+  {
+    name: "Ubisoft Toronto",
+    img: ubisoft,
+    alt: "ubisoft.png",
+    quote: "Ubisoft Toronto is one of the largest development studios within Ubisoft, employing talented developers from around the world. They create worlds and tell stories that grip you, inspire you, and challenge you. Since opening in 2010, they have shipped innovative game projects on some of Ubisoft’s biggest brands: Assassin’s Creed, Far Cry, Watch Dogs, For Honor, and Tom Clancy’s Splinter Cell. Their team leverages cutting-edge technology and innovative approaches to push the boundaries of game development. They are committed to shaping the future of gaming in one of the most vibrant cities in the world. At Ubisoft Toronto, they celebrate diversity and individuality, believing that their unique perspectives help them build stronger, more creative teams. Caring for their people is at the heart of Ubisoft Toronto."
+  },
+  {
+    name: "Jane Street",
+    img: janestreet,
+    alt: "janetreet.png",
+    quote: "Jane Street is a quantitative trading firm and liquidity provider with a unique focus on technology and collaborative problem solving. They were founded by a small group of traders and technologists in a tiny New York office. Today, they have more than 2600 employees across five global offices. They trade a broad range of asset classes on more than 200 venues in 45 countries. They innovate in tech, from functional programming to machine learning to programmable hardware"
+  },
+  {
+    name: "Wealthsimple",
+    img: wealthsimple,
+    alt: "wealthsimple.png",
+    quote: "Wealthsimple is on a mission to help everyone achieve financial freedom by reimagining what it means to manage their money. Using smart technology, they take financial services that are often confusing, opaque and expensive and make them transparent and low-cost for everyone. They're the largest fintech company in Canada, with over 3 million users who trust them with more than $40 billion in assets."
+  },
+  {
+    name: "Big Blue Bubble",
+    img: bbb,
+    alt: "bigbluebubble.png",
+    quote: "Big Blue Bubble is a veteran mobile game developer with more than a decade of experience creating innovative and creative titles. Their studio’s inclusive and fun-loving culture makes every member of our team feel valued. Big Blue Bubble has released more than 100 titles to date across a variety of platforms, including our own award-winning franchise, My Singing Monsters."
+  },
+  {
+    name: "Communications Security Establishment",
+    img: cse,
+    alt: "cse.jpg",
+    quote: "Communications Security Establishment Canada (CSE) is the national cryptologic agency, providing the Government of Canada with information technology security and foreign signals intelligence. CSE hires Canadians with a wide range of skills, experiences and perspectives because diversity makes us stronger. They offer exciting career opportunities for both professionals and students. They are team players, pathfinders, and problem solvers, all different, all united by a common mission: protecting Canada and Canadians."
+  },
+  {
+    name: "OpenText",
+    img: opentext,
+    alt: "opentext.png",
+    quote: "OpenText is a world leader in Information Management, helping companies securely capture, govern and exchange information on a global scale. They offer cloud-native solutions in an integrated and flexible Information Management platform."
+  },
+  {
+    name: "Manulife",
+    img: manulife,
+    alt: "manulife.png",
+    quote: "Manulife Financial Corporation is a Canadian multinational insurance company and financial services provider headquartered in Toronto, Ontario. They are a leading international financial services group that helps people make their decisions easier and lives better. They operate primarily as John Hancock in the United States and Manulife elsewhere. They provide financial advice, insurance, as well as wealth and asset management solutions for individuals, groups and institutions. They believe their greatest contribution to society is the products they provide, which help people make their decisions easier and lives better. They also strive to make meaningful impacts in other ways: by adhering to the strongest standards of conduct, through environmental responsibility, philanthropy, employee volunteerism, promoting health and wellness, and much more."
+  },
+];
 
 const OurSponsors = () => (
   <div className="our-sponsors-container">
-    {/* <h2 className="our-sponsors-title">Our Sponsors</h2>
-    <div className="our-sponsors-logos">
-      <div className="our-sponsors-gold">
-        <a href="https://www.aboutamazon.com/">
-          <img src={amazon} alt="Amazon" style={{ width: '55%' }} />
-        </a>
-        <a href="https://www.cockroachlabs.com/careers/">
-          <img src={cockroach} alt="Cockroach Labs" style={{ width: '90%' }} />
-        </a>
-        <a href="https://jobs.spscommerce.com/">
-          <img src={sps} alt="SPS Commerce" style={{ width: '85%' }} />
-        </a>
-        
-                    <a href="https://about.google/">
-                        <img src={google} alt="Google" />
-                    </a>
-                    <a href="https://www.wish.com/careers?hide_login_modal=true">
-                        <img src={wish} alt="Wish" />
-                    </a>
-                    <a href="https://www.scotiabank.com/ca/en/about.html">
-                        <img src={scotiabank} alt="Scotiabank" />
-                    </a>
-                   
-      </div>
-      <div className="our-sponsors-silver">
-        <a href="https://about.facebook.com/">
-          <img src={facebook} alt="facebook" style={{ width: '90%' }} />
-        </a>
-        <a href="https://www.scotiabank.com/ca/en/about.html">
-          <img src={scotiabank} alt="Scotiabank" style={{ width: '100%' }} />
-        </a>
-        <a href="https://www.pagerduty.com/careers/">
-          <img src={pagerduty} alt="PagerDuty" style={{ width: '80%' }} />
-        </a>
-        
-                    <a href="https://about.google/">
-                        <img src={google} alt="Google" />
-                    </a>
-                    <a href="https://www.wish.com/careers?hide_login_modal=true">
-                        <img src={wish} alt="Wish" />
-                    </a>
-                    
-                   
-      </div>
-      <div className="our-sponsors-bronze">
-        <a href="https://www.hudsonrivertrading.com/campus-recruiting/">
-          <img src={hrt} alt="hrt" style={{ width: '70%' }} />
-        </a>
-        <a href="https://campus.rogers.com/">
-          <img src={rogers} alt="Rogers" />
-        </a>
-        <a href="https://www.zynga.com/jobs/careers/">
-          <img src={zynga} alt="zynga" />
-        </a>
-      </div>
-      <div className="our-sponsors-startup">
-        <a href="https://expo.io/">
-          <img src={expo} alt="Expo" style={{ width: '100%' }} />
-        </a>
-        <a href="https://www.ratio.city/">
-          <img src={ratiocity} alt="Ratio.city" style={{ width: '80%' }} />
-        </a>
-      </div>
-    </div> */}
-    <h1 className="our-sponsors-title">Our Partners</h1>
-    <hr className="our-sponsors-divider"></hr>
-    <div className="our-sponsors-shadow-container">
-      <div className="our-sponsors-tab">
-        <div className="our-sponsors-square"> </div>
-        <div className="our-sponsors-square"> </div>
-        <div className="our-sponsors-square"> </div>
-      </div>
-      <div className="our-sponsors-partners">
-        <div className="our-sponsors-partners-row">
-          <a href="https://cs.uwaterloo.ca/wics" target="_blank" rel="noreferrer noopener">
-            <img src={wics} alt="wics" />
-          </a>
-          <a href="https://uwaterloo.ca/women-in-engineering/" target="_blank" rel="noreferrer noopener">
-            <img src={wie} alt="wie" />
-          </a>
-          <a href="https://www.wolfram.com/" target="_blank" rel="noreferrer noopener">
-            <img src={wolfram} alt="wolfram" />
-          </a>
-        </div>
-        <div className="our-sponsors-partners-row">
-          <a href="https://www.ai4goodlab.com/" target="_blank" rel="noreferrer noopener">
-            <img src={ai} alt="ai" />
-          </a>
-          <a href="https://velocityincubator.com/" target="_blank" rel="noreferrer noopener">
-            <img src={velocity} alt="velocity" />
-          </a>
-          <a href="https://www.voiceflow.com/" target="_blank" rel="noreferrer noopener">
-            <img src={voiceflow} alt="voiceflow" />
-          </a>
-        </div>
-        <div className="our-sponsors-partners-row">
-          <a href="https://www.auntyskitchen.ca/" target="_blank" rel="noreferrer noopener">
-            <img src={auntys} alt="auntys kitchen" />
-          </a>
-        </div>
-        
-      </div>
-    </div>
   </div>
 );
 
 export default OurSponsors;
-// here is  code
