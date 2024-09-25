@@ -13,6 +13,7 @@ import nav from "./resources/strings/nav";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import FooterBar from "./sections/Footer/FooterBar";
 import Team from "./sections/Team/Team";
+import { ScrollContainer, ScrollPage } from "react-scroll-motion";
 
 const logoRoute = { logoSrc: logo, sectionId: "landing" };
 const routes = [
@@ -43,15 +44,15 @@ const App = () => {
         <Route exact path="/">
           <div className="App">
             <NavBar routes={routes} logoRoute={logoRoute} />
-            <Landing />
-            <About />
-            <Story />
-            <Partner />
-            <SponsorUs />
-            <FAQ />
-            <Team />
-            <Contact />
-            <FooterBar />       
+              <Landing />
+              <About />      
+              <Story /> 
+              <Partner />
+              <SponsorUs />
+              <FAQ />
+              <Team />
+              <Contact />
+              <FooterBar />  
           </div>
         </Route>
       </Switch>
