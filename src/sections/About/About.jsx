@@ -69,7 +69,7 @@ const About = () => {
             <div className="scroll-content">
               <img className="scroll-img" src={section.img} alt={section.id} />
               <div className="scroll-caption">
-                <img src={section.des} alt={`${section.id} description`} />
+                <img className="scroll-cap" src={section.des} alt={`${section.id} description`} />
                 <p className="scroll-description">{section.cap}</p>
               </div>
             </div>

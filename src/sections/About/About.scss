@@ -258,6 +258,7 @@
   height: 58vh;
   margin-top: -10em;
   scroll-snap-type: y mandatory;
+  -webkit-overflow-scrolling: touch;
 
   &::-webkit-scrollbar {
     display: none; /* Hide scrollbar in Webkit browsers */
@@ -290,11 +291,19 @@
     grid-template-rows: auto auto;
     grid-template-areas:
       "img description";
+
+    @include phone{
+      grid-template-columns: 40% 60%;
+    }
   }
 
   .scroll-img {
     grid-area: img;
     justify-self: center;
+
+    @include phone{
+      width: 150px;
+    }
   }
 
   .scroll-caption {
@@ -304,7 +313,18 @@
     margin: auto 2em;
   }
 
+  .scroll-cap{
+    @include phone{
+      height: 25px;
+      margin-top: -90px;
+      margin-left: -200px;
+    }
+  }
+
   .scroll-description {
     margin-top: 1em;
+    @include phone{
+      font-size: small;
+    }
   }
 }
