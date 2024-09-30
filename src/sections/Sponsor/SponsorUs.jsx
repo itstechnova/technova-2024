@@ -3,7 +3,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import SectionWrapper from "../../components/SectionWrapper/SectionWrapper";
 import Button from "../../components/Button/Button";
-import { Carousel, CarouselTypes } from "../../components/Carousel/Carousel";
 
 import OurSponsors from "./OurSponsors";
 import "./SponsorUs.scss";
@@ -15,7 +14,6 @@ var colourCodes = {
   darkPink: "#FC6D83", //startup
 
 };
-
 
 export const SponsorUs = () => {
   const [slidesToShow, setSlidesToShow] = useState(1.5);
@@ -95,6 +93,7 @@ export const SponsorUs = () => {
           </div>
         </div>
       </div>
+      <OurSponsors />
     </SectionWrapper>
   );
 };
