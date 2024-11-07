@@ -46,7 +46,6 @@ const App = () => {
             <NavBar routes={routes} logoRoute={logoRoute} />
             <Landing />
             <About />
-            <Story />
             <SponsorUs />
             <Partner />
             <Keynote />
