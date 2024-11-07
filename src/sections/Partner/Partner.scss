@@ -4,58 +4,82 @@
   margin: auto;
   background-color: #ffffff;
   display: grid;
-  grid-template-columns: 55% 45%;
+  grid-template-columns: 60% 40%;
   grid-template-areas:
-    "wics-description wics-logo"
-    "wics-description wics-button";
+    "wics-description wics-logo";
 
   @include tablet {
     display: flex;
     flex-wrap: wrap;
   }
-
+  
   &-container {
-    margin-top: -50px;
+    margin-top: 1em;
   }
 
-  &-title {
-    text-align: left;
+  &-container-two {
+    margin-top: -3em;
+    margin-bottom: -16em;
   }
 
   &-divider {
+    position: relative;
+    z-index: -300;
     border: 1px solid;
     width: 100%;
     margin-bottom: 3em;
   }
 
-  &-header {
-    background-color: #f8b3b8;
-    border-bottom: 2px solid;
-    height: 4em;
-    display: grid;
-    grid-template-columns: auto auto auto;
-    justify-content: end;
-    .white-box {
-      margin: auto;
-      border-style: solid;
-      border-width: 2px;
-      margin-right: 0.5em;
-      background-color: #ffffff;
-      height: 2em;
-      width: 2em;
+  &-box {
+    background-color: #ffffff;
+    border-style: solid;
+    border-width: 6px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    img {
+      padding: 10% 0;
     }
   }
 
-  &-box {
+  &-pink-box {
+    padding: 20px;
+    background-color: $accent-pink;
     border-style: solid;
-    border-width: 2px;
-    width: 95%;
-    box-shadow: 20px 20px #19123c;
+    border-width: 6px;
+    box-shadow: 10px 10px #19123c;
+    margin: 0 auto;
+    box-sizing: border-box;
+    width: 90%;
+    @include phone {
+      width: 90vw;
+      margin-left: -15px;
+    }
+  }
+
+  &-blue-box {
+    padding: 20px;
+    background-color: #68B1A6;
+    border-style: solid;
+    border-width: 6px;
+    box-shadow: 10px 10px #19123c;
+    margin: 0 auto;
+    box-sizing: border-box;
+    width: 90%;
+
+    @include phone {
+      width: 90vw;
+      margin-left: -15px;
+    }
   }
 
   &-text {
     grid-area: wics-description;
-    padding: 3em;
+    padding: 3em 0 3em 3em;
+    line-height: 36px;
 
     @include phone {
       padding-left: 1em;
@@ -90,18 +114,42 @@
     }
   }
 
+  &-logo {
+    padding: 4em 2em;
+    width: 30%;
+    justify-content: center;
+    margin: auto;
+
+    @include tablet {
+      background-image: none;
+      .mobile_img {
+        display: block;
+      }
+        width: 40%;
+        margin-top: 20px;
+    }
+
+    @include phone {
+      width: 60%;
+      padding: 20%;
+      margin: 0;
+    }
+
+    @include small-phone {
+      width: 80%;
+      padding: 0;
+      margin: 20% 0;
+    }
+  }
+
   & {
     text-align: left;
     .wics_logo {
       grid-area: wics-logo;
-      width: 60%;
+      width: 80%;
       margin: auto;
-      padding-bottom: 20px;
-    }
-
-    .wics_button {
-      text-align: center;
-      margin: auto auto 30px auto;
+      display: flex;
+      justify-content: center;
     }
 
     @include tablet {
@@ -112,9 +160,158 @@
       .wics_logo {
         width: 40%;
         margin-top: 20px;
-        margin-bottom: -40px;
       }
     }
+  }
+}
+
+#l-upper-corner{
+  position: relative;
+  top: 150px;
+  right: 50%;
+  @include phone {
+    position: relative;
+    top: -100px;
+    left: 30%;
+  }
+}
+
+#pushed{
+  position: relative;
+  top: -150px;
+  left: 40%;
+  @include phone {
+    position: relative;
+    top: -100px;
+    left: 30%;
+  }
+}
+
+#purple-guy{
+  position: relative;
+  width: 225px;
+  z-index: 200;
+  @include phone {
+    position: relative;
+    width: 30%;
+  }
+}
+
+#purple-shadow{
+  position: relative;
+  right: 190px;
+  top: 10px;
+  z-index: 200;
+  @include phone {
+    position: relative;
+    width: 20%;
+    right: 90px;
+    top: 5px;
+  }
+}
+
+#pushed-chip{
+  position: relative;
+  z-index: 100;
+  top: 20px;
+  width: 225px;
+  right: 215px;
+  @include phone {
+    position: relative;
+    width: 30%;
+    right: 100px;
+  }
+}
+
+#dominoes{
+  position: relative;
+  left: 44%;
+  top: 300px;
+  margin-top: -200px;
+}
+
+#dominoes-1{
+  position: relative;
+  top: 70px;
+  left: 80px;
+  z-index: -100;
+  width: 125px;
+  transform: rotate(-35deg);
+}
+
+#dominoes-2{
+  position: relative;
+  z-index: -50;
+  width: 125px;
+  transform: rotate(-15deg);
+}
+
+#fun{
+  position: relative;
+  top: -125px;
+  right: 30%;
+  @include phone{
+    position: relative;
+    top: -100px;
+  }
+}
+
+#fun-guy{
+  position: relative;
+  z-index: 100;
+  width: 175px;
+  @include phone{
+    position: relative;
+    width: 100px;
+  }
+}
+
+#shadow{
+  position: relative;
+  z-index: 50;
+  width: 125px;
+  top: 10px;
+  right: 150px;
+  @include phone{
+    position: relative;
+    width: 75px;
+    right: 87px;
+    top: 5px;
+  }
+}
+
+#r-chips{
+  position: relative;
+  top: -350px;
+  left: 48%;
+  @include phone{
+    top: -200px;
+    left: 220px;
+  }
+}
+
+#r-purple-chip{
+  position: relative;
+  z-index: 50;
+  top: -100px;
+  right: 5%;
+  width: 235px;
+  @include phone{
+    width: 135px;
+  }
+}
+
+#r-pink-chip{
+  position: relative;
+  z-index: 50;
+  width: 200px;
+  top: 50px;
+  right: 315px;
+  transform: rotate(-10deg);
+  @include phone{
+    width: 125px;
+    top: -10px;
+    right: 175px;
   }
 }
 

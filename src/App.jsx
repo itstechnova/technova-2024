@@ -47,8 +47,8 @@ const App = () => {
             <Landing />
             <About />
             <Story />
-            <Partner />
             <SponsorUs />
+            <Partner />
             <Keynote />
             <FAQ />
             <Team />
