@@ -1,8 +1,7 @@
 import React from "react";
 import "./Keynote.scss";
 import SectionWrapper from "../../components/SectionWrapper/SectionWrapper";
-import pixelStar from "../../resources/images/graphics/pixel-star.svg";
-import KeynoteSpeaker from "../../resources/images/keynoteSpeaker.jpeg"
+import KeynoteSpeaker from "../../resources/images/keynoteSpeaker.jpg"
 
 function Keynote() {
     return (
@@ -13,31 +12,19 @@ function Keynote() {
 
             <div className="keynote-box">
                 <div className="keynote-header">
-                    <div className="white-box"></div>
-                    <div className="white-box"></div>
-                    <div className="white-box"></div>
+                    {/* <h3 className="keynote-header-name">CEO and Founder of CodeGem</h3> */}
                 </div>
                 <div className="keynote-card">
                     <img className="keynote-card-img" src={KeynoteSpeaker} />
                     <div className="keynote-card-title">
                         <h3 className="keynote-card-name">
-                        Laura Money 
+                        Maura Grossman
                         </h3>
-                        <div className="keynote-card-title-box">
-                            <div className="keynote-card-star">
-                                <img src={pixelStar} />
-                            </div>
-                            <p className="keynote-card-role">
-                            Chief Information and Technology Innovation Officer, Sun Life
-                            </p>
-                        </div>
                     </div>
                     <div className="keynote-card-desc-wrapper">
                         <p className="keynote-card-desc">
-                        Laura Money is Executive Vice-President, Chief Information and Technology Innovation Officer of Sun Life.
-                        <br></br>
-                        <br></br>
-                        She is a Top 100 Most Powerful Woman in Canada and a Top 10 Canadian CIO, serving as Chair at Bowtie Life Insurance Company and Vice President of the University of Toronto Schools Alumni Association. She's also an international representative for Age Group Team Canada in Standard Distance Triathlon.</p>
+                        Maura R. Grossman is a Research Professor at the Cheriton School of Computer Science and the School of Public Health Sciences at the University of Waterloo, an Adjunct Professor at Osgoode Hall Law School of York University, and a Faculty Affiliate of the Vector Institute. Maura’s groundbreaking research on technology-assisted review (TAR), high-recall information retrieval, electronic discovery in law, and AI and Data Science relating to legal, ethical, and policy considerations, has set the standard for the responsible application of AI in critical legal contexts.
+                        </p>
                     </div>
                 </div>
             </div>
