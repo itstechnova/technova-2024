@@ -27,9 +27,6 @@ const Partner = () => (
       <hr className="our-partners-divider"></hr>
       <div className="our-partners-pink-box">
         <div className="our-partners-box">
-          <div className="our-partners-header">
-            <h1 className="our-partners-title">Women in Computer Science</h1>
-          </div>
           <div className="our-partners">
             <img src={wicsImg} alt="WiCS" className="wics_logo" />
             <div className="our-partners-text">
