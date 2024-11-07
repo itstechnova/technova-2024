@@ -21,14 +21,22 @@
   }
 
   &.pink{
-    background-color: $button-pink;
+    background-color: $accent-pink;
+
+    &:hover {
+      background-color: $accent-pink-focus;
+    }
   }
 
   &:hover {
-    opacity: 0.7;
-    box-shadow: 0 0 11px rgba(255, 96, 120, 0.5);
-    transform: translateY(-5px);
-    transition: 0.1s linear;
+    background-color: $accent-purple-focus;
+    opacity: 1;
+  }
+
+  &:active {
+    box-shadow: none;
+    border-width: 2px;
+    border-color: #19123c;
   }
 
   img {
