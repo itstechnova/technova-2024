@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./Team.scss";
 import SectionWrapper from "../../components/SectionWrapper/SectionWrapper";
 
@@ -80,23 +80,61 @@ const teams = [
 
 const MemberCard = (props) => {
     const { photo, name } = props;
-    const [imgSrc, setImgSrc] = useState(photo.hot);
+    const [imgSrc, setImgSrc] = useState(null);
+    const [isVisible, setIsVisible] = useState(false);
+    const imgRef = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        setIsVisible(true);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold: 0.1 }
+        );
+
+        if (imgRef.current) {
+            observer.observe(imgRef.current);
+        }
+
+        return () => {
+            if (imgRef.current) {
+                observer.unobserve(imgRef.current);
+            }
+        };
+    }, []);
+
+    useEffect(() => {
+        if (isVisible) {
+            setImgSrc(photo.hot);
+        }
+    }, [isVisible, photo]);
+
 
     const handleHover = () => {
-        setImgSrc(photo.goof);
+        if (isVisible) {
+            setImgSrc(photo.goof);
+        }
     }
 
     const handleUnhover = () => {
-        setImgSrc(photo.hot);
+        if (isVisible) {
+            setImgSrc(photo.hot);
+        }
     }
 
     return (
-        <div className="team-member-card" >
+        <div className="team-member-card">
             <div className="team-img-container">
                 <img
+                    ref={imgRef}
                     onMouseOver={handleHover}
                     onMouseOut={handleUnhover}
-                    src={imgSrc}
+                    src={imgSrc || ""}
                     alt={name}
                     style = {{borderRadius: '50%', borderStyle:"solid", borderWidth: 2, borderColor:"black"}}
                 />
