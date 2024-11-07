@@ -4,7 +4,7 @@ import "./FooterBar.scss";
 const FooterBar = () => (
     <React.Fragment>
         <div className="footerbar-container">
-            <p className="title">Made with 💖 by TechNova 2023</p>
+            <p className="title">Made with 💖 by TechNova 2024</p>
         </div>
     </React.Fragment>
 );
