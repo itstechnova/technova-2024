@@ -1,6 +1,5 @@
 import React, {onClick, useState} from "react";
 import "./Button.scss";
-import pixelHeart from "../../resources/images/icons/pixel-heart.svg";
 import arrow from "../../resources/images/icons/arrow.svg";
 
 const Button = ({ label, link, type }) => {

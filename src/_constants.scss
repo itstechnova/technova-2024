@@ -33,11 +33,11 @@ $text-logo: 36px;
 // Color Scheme
 
 $accent-pink: #FF6078;
-$accent-pink-focus: #c95566;
+$accent-pink-focus: #CD5769;
 $light-pink: #FFE4E1;
 $accent-purple: #7676e8;
-$accent-purple-focus: #6363d3;
-$background-light: #fffdfa;
+$accent-purple-focus: #5B5BA9;
+$background-light: #FFFAF3;
 $background-dark: #19123c;
 $text-light: #FFFAF3;
 $text-muted: #c4c4c4;
@@ -46,7 +46,7 @@ $grey: #c4c4c4;
 $light-grey: #e5e9f2;
 $light-blue: #C0CBF2;
 $dark-blue: #7D92DB;
-$button-pink: #fc6d83;
+$primary-purple: #ADB4F9;
 
 @mixin lightmode() {
     --text-color: #19123c;
