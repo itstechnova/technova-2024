@@ -1,11 +1,17 @@
 @import "../../constants";
 
 .social-link-container {
-    padding: 5px;
+    background-color: #F8D7B7;
+    width: 40px;
+    height: 40px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .social-icon {
-    height: 43px;
+    height: 45%;
     &:hover {
         transform: translateY(-5px);
         transition: 0.1s linear;

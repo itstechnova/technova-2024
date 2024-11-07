@@ -12,6 +12,7 @@ import facebook from "../../resources/images/socials/facebook.svg";
 import twitter from "../../resources/images/socials/twitter.svg";
 import emailVector from "../../resources/images/icons/emailvector.svg";
 import Button from "../../components/Button/Button";
+import contactImg from '../../resources/images/graphics/contact-us.png'
 
 function Contact() {
   const [state, setState] = useState({
@@ -76,21 +77,14 @@ function Contact() {
       {/* <Team /> */}
       <h1 className="contact-container">{contact.title}</h1>
       <hr></hr>
+      <div className="contact-grid">
       <div className="contact-method">
         <div className="contact-method-container">
           <div className="contact-method-shadow-container">
             <div className="contact-method-tab">
-              <div className="contact-method-square"></div>
-              <div className="contact-method-square"></div>
-              <div className="contact-method-square"></div>
+              <p>Reach out to us at hello@itstechnova.org</p>
             </div>
             <React.Fragment id="footer">
-              <div className="footer-container">
-                <span className="footer-title">
-                  Sign up for our newsletter!
-                </span>
-                <br />
-
                 <div className="email-wrapper">
                   {state.screenWidth >= 400 ? (
                     <input
@@ -128,25 +122,25 @@ function Contact() {
                   <p> Thanks for signing up, we'll keep you updated!</p>
                 )}
                 {state.error && <p> Please enter a valid email.</p>}
-              </div>
             </React.Fragment>
             <br />
-            <div className="socials-row">
-              <SocialMediaLink src={mail} link={socials.email} />
-              <SocialMediaLink src={ig} link={socials.instagram} />
-              <SocialMediaLink src={linkedin} link={socials.linkedin} />
-              <SocialMediaLink src={facebook} link={socials.facebook} />
-              <SocialMediaLink src={twitter} link={socials.twitter} />
-            </div>
-            <div className="contact-button-container">
-              <Button
-                link="https://static.mlh.io/docs/mlh-code-of-conduct.pdf"
-                label="Code of Conduct"
-              />
-            </div>
           </div>
         </div>
       </div>
+
+      <div className="contact-img">
+        <img src={contactImg} alt="Contact Us Image"/>
+      </div>
+
+      <div className="socials-row">
+        <SocialMediaLink src={mail} link={socials.email} />
+        <SocialMediaLink src={ig} link={socials.instagram} />
+        <SocialMediaLink src={linkedin} link={socials.linkedin} />
+        <SocialMediaLink src={facebook} link={socials.facebook} />
+        <SocialMediaLink src={twitter} link={socials.twitter} />
+      </div>
+      </div>
+      <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" className="code-of-conduct">Code of Conduct</a>
 
       <div className="inclusivity-statement-container">
         <h2 className="inclusivity-statement-title">Inclusivity Statement</h2>
